@@ -13,7 +13,8 @@
  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
  	<title>${title}</title>
 </head>
-<body>
+<body class="d-flex flex-column h-100">
+	<header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 	  <a class="navbar-brand" href="#">SlimYB</a>
 	  <!-- toggler for mobile devices -->
@@ -33,4 +34,5 @@
 	  </div>
 	  <a href="#" class="btn btn-outline-light my-2 my-sm-0" role="button">Log in</a>
 	</nav>
-</body>
+	</header>
+	<div class="container mt-3">
