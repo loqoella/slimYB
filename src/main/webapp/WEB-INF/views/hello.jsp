@@ -1,5 +1,3 @@
-<%@ include file="/WEB-INF/views/include.jsp" %>
-
 <html>
 
 <head><title>Hello :: Spring Application</title></head>

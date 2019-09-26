@@ -1,3 +1,9 @@
-<%@ include file="/WEB-INF/views/include.jsp" %>
+<%@ include file="/WEB-INF/views/header.jsp" %>
 
-<%-- Redirected because we can't set the welcome page to a virtual URL. --%>
+<body>
+<h1>This is a homepage</h1>
+
+<p>Greetings, it is now ${now}</p>
+</body>
+
+<%@ include file="/WEB-INF/views/footer.jsp" %>
