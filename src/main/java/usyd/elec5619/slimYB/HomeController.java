@@ -36,4 +36,19 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
+	public String home2(Model model) {
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("now", formattedDate );
+		model.addAttribute("title", "Homepage");
+		
+		return "admin/adminHome";
+	}
+	
+	
 }
