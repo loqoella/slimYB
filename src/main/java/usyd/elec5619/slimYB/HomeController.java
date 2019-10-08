@@ -31,6 +31,7 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("now", formattedDate );
+		//test
 		model.addAttribute("title", "Homepage");
 		
 		return "home";
