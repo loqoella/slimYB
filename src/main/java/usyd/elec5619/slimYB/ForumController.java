@@ -12,17 +12,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * Handles requests for the application home page.
+ * Handles requests for the application marketplace page.
  */
 @Controller
-public class HomeController {
+@RequestMapping("/forum")
+public class ForumController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	/**
-	 * Simply selects the home view to render by returning its name.
+	 * administrator home page
+	 * @param model - jsp context
+	 * @return
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/forum", method = RequestMethod.GET)
 	public String home(Model model) {
 		
 		Date date = new Date();
@@ -31,8 +34,10 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("now", formattedDate );
-		model.addAttribute("title", "Homepage");
+		model.addAttribute("title", "Forum");
 		
-		return "home";
+		
+		return "adminSystem/forumhome";
 	}
+	
 }

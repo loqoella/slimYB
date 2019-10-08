@@ -1,0 +1,13 @@
+. jumbotron .models{
+	display: inline;
+	background: red;
+	width: 1000px;
+}
+
+
+. jumbotron .models .models{
+	
+	background: blue;
+	width: 500px;
+	height: 300px;
+}
