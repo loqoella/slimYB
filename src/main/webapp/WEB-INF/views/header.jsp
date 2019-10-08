@@ -40,4 +40,4 @@
 	  <a href="#" class="btn btn-outline-light my-2 my-sm-0" role="button">Log in</a>
 	</nav>
 	</header>
-	<div class="container mt-2">
+	<div class="container mt-2 mb-4">
