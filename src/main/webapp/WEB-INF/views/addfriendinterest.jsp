@@ -17,39 +17,64 @@
 				</ol>
 			</nav>
 			
-<!-- 			<div class="row">
-				<div class="col-md-3">
-					<h3 class="text-center">
-						Search By
-					</h3>
+			<br/>
+			
+			<div class="row">
+				<div class="col-md-7">
+					<dl>
+						<dt>
+							Search your interest users
+						</dt>
+						<dd>
+							Fill in the blanks and we will help you filter out the relevant users!
+						</dd>
+					</dl>
 				</div>
-				<div class="col-md-9">
-					<div class="btn-group btn-group-lg" role="group">
-						 
-						<button class="btn btn-secondary" type="button">
-							User Name
-						</button> 
-
-						<button class="btn btn-secondary" type="button">
-							Your Interest
-						</button>
-						
+				<div class="col-md-5">
+					<a class="btn btn-outline-success" href="/slimYB/friends/addfriend/">Change: search by username</a>
+				</div>
+			</div>
+			
+			<br/>
+			
+			<form class="jumbotron px-4 py-3">
+			
+				<h5> Age Range </h5>
+	    		<div class="form-inline align-items-center">
+	    			<div class="col-auto row">
+				    	<input type="email" class="form-control form-control-sm" id="priceRangeLow">
+			    	</div>
+			    	<div class="col-auto"><label>-</label></div>
+			    	<div class="col-auto row">
+				    	<input type="email" class="form-control form-control-sm" id="priceRangeLow">
+			    	</div>
+			  	</div>
+			  	
+			  	<br/>
+			  	
+			  	<h5> Gender </h5>
+	    		<div class="form-inline align-items-center">
+				
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="gender" id="gender_male" value="gender_male" checked>
+						<label class="form-check-label" for="gender_male">
+						    Male
+						</label>
 					</div>
-				</div>
-			</div> -->
-			
-			 <a class="btn btn-outline-primary btn-lg" href="/slimYB/friends/addfriend/">Normal Search</a>
-			
-			<br/><br/>
-			
-			<dl>
-				<dt>
-					Search your interest users
-				</dt>
-				<dd>
-					Fill in the blanks and we will help you filter out the relevant users!
-				</dd>
-			</dl>
+					
+			    	<div class="col-auto"><label>|</label></div>
+			    	
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="gender" id="gender_female" value="gender_female">
+						<label class="form-check-label" for="gender_female">
+						    Female
+						</label>
+					</div>
+			    	
+			  	</div>
+			    
+				<button type="search" class="btn btn-primary mt-4">Search</button>
+			</form>
 			
 			<div id="card-239657">
 				<div class="card">

@@ -26,38 +26,23 @@
 				</ol>
 			</nav>
 
-<!-- 			<div class="row">
-				<div class="col-md-3">
-					<h3 class="text-center">
-						Search By
-					</h3>
+			<div class="row">
+				<div class="col-md-7">
+					<dl>
+						<dt>
+							Search User by Username
+						</dt>
+						<dd>
+							Hover on the search icon, then enter the username and click search!
+						</dd>
+					</dl>
 				</div>
-				<div class="col-md-9">
-					<div class="btn-group btn-group-lg" role="group">
-						 
-						<button class="btn btn-secondary" type="button">
-							User Name
-						</button> 
+				<div class="col-md-5">
+					<a class="btn btn-outline-success" href="/slimYB/friends/addfriend/addfriendinterest">Change: search by interest</a>
+				</div>
+			</div>
 
-						<button class="btn btn-secondary" type="button">
-							Your Interest
-						</button>
-						
-					</div>
-				</div>
-			</div> -->
-			
-			<a class="btn btn-outline-primary btn-lg" href="/slimYB/friends/addfriend/addfriendinterest">Search the Interest Friends</a>
-			
 			<br/><br/>
-			<dl>
-				<dt>
-					Search User by Username
-				</dt>
-				<dd>
-					Hover on the search icon, then enter the username and click search!
-				</dd>
-			</dl>
 			
 			<div class="container h-100">
       			<div class="d-flex justify-content-center h-100">
