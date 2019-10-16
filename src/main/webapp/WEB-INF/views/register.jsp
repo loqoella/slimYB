@@ -3,7 +3,7 @@
 <div class="jumbotron">
     <h1 class="display-4" style="text-align:center;"> Create an account </h1>
     <br>
-	<form>
+	<form action='/slimYB/login'>
 		<nobr>
 			<a style="position:absolute;left: 23%;">FirstName :</a>
 			<input type="text" name="firstname" style="margin-left: 28%;color:#999999">

@@ -52,7 +52,9 @@
     <br>
     <br>
     <br>
-    <button type="button" style="position:absolute;left: 45%;font-size: 20px;width:300px" > Change Data </button>
+    <a href="/slimYB/profile/profile-change/">
+    	<button type="button" style="position:absolute;left: 38%;font-size: 20px;width:300px" > Change Data </button>
+    </a>
     <br>
     <br>
     <p class = "lead" style="font-size:15px;text-align:center;text-decoration:underline"><i>More detail professional body data report</i></p>

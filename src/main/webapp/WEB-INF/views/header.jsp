@@ -32,7 +32,7 @@
 	      <a class="nav-item nav-link" href="/slimYB/marketplace">Marketplace</a>
 	    </div>
 	  </div>
-	  <a href="#" class="btn btn-outline-light my-2 my-sm-0" role="button">Log in</a>
+	  <a href="/slimYB/login/" class="btn btn-outline-light my-2 my-sm-0" role="button">Log in</a>
 	</nav>
 	</header>
 	<div class="container mt-3">

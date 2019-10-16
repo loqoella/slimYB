@@ -7,7 +7,7 @@
 	Sorry, The Email you entered doesn't belong to an account OR your password was incorrect. <br>
 	Please double-check your Email or password.</p>
 	<br>
-	<form>
+	<form action='/slimYB'>
 	<a style="position:absolute;left: 35%;">Email Address : </a>
 	<input type="text" name="email-address" style="margin-left: 50%;">
 	<br>
@@ -17,9 +17,8 @@
 	<br>
 	<br>
 	<p style="font-size:13px;text-align:center;text-decoration:underline">Forgotten account or password?</p>
-	<br>
 	<input type="submit" value="login" style="margin-left: 38%;"> 
-	<a style="position:absolute;left: 52%;font-size:15px;text-decoration:underline">Create an account</a>
+	<a href="/slimYB/register" style="position:absolute;left: 52%;font-size:15px;text-decoration:underline">Create an account</a>
 	</form>
 	<br>
 	
