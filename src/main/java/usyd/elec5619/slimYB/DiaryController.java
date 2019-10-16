@@ -51,4 +51,49 @@ public class DiaryController {
 		return "calendar";
 	}
 
+	
+	
+	@RequestMapping(value = "/life-recording/personal-dairy", method = RequestMethod.GET)
+	public String PersonanlD(Model model) {
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("now", formattedDate );
+		//test
+		model.addAttribute("title", "Personal Diary");
+		
+		return "Personal-diary";
+	}
+	
+	
+	@RequestMapping(value = "/life-recording/add-recording", method = RequestMethod.GET)
+	public String AddR(Model model) {
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("now", formattedDate );
+		//test
+		model.addAttribute("title", "Add recording");
+		
+		return "add-recording";
+	}
+	
+	
+	@RequestMapping(value = "/life-recording/friend-recording", method = RequestMethod.GET)
+	public String FriendR(Model model) {
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("now", formattedDate );
+		//test
+		model.addAttribute("title", "Friend recording");
+		
+		return "friend-recording";
+	}
 }
