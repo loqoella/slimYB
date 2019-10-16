@@ -21,10 +21,8 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="usyd.elec5619.slimYB.web" />
+	<context:component-scan base-package="usyd.elec5619.slimYB" />
 	
-	<beans:bean id="userManager" class="usyd.elec5619.slimYB.service.UserManager">
-	</beans:bean>
 	
 	
 </beans:beans>
