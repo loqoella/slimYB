@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="adminpages.css">
 
 <%@ include file="/WEB-INF/views/headerAdmin.jsp" %>
 

@@ -16,7 +16,7 @@
 <body class="d-flex flex-column h-100">
 	<header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-	  <a class="navbar-brand" href="#">SlimYB</a>
+	  <a class="navbar-brand" href="/slimYB/">SlimYB</a>
 	  <!-- toggler for mobile devices -->
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
@@ -26,12 +26,13 @@
 	      <a class="nav-item nav-link" href="/slimYB/admin">Home <span class="sr-only">(current)</span></a>
 	      <a class="nav-item nav-link" href="/slimYB/userprofile">User Profile</a>
 	      <a class="nav-item nav-link" href="/slimYB/forum">Forum</a>
-	      <a class="nav-item nav-link" href="/slimYB/login">Log in</a>
-	      <a class="nav-item nav-link" href="/slimYB/logout">Log out</a>
+	     
 	     
 	    </div>
 	  </div>
-	  <a href="#" class="btn btn-outline-light my-2 my-sm-0" role="button">Log in</a>
+	  <a href="#" class="btn btn-outline-light my-2 my-sm-0" role="button">Log out</a>
 	</nav>
 	</header>
+	
 	<div class="container mt-3">
+	

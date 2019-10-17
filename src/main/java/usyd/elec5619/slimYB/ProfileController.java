@@ -15,17 +15,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application marketplace page.
  */
 @Controller
-@RequestMapping("/forum")
-public class ForumController {
+@RequestMapping("/userprofile")
+public class ProfileController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	/**
-	 * administrator home page
-	 * @param model - jsp context
-	 * @return
-	 */
-	@RequestMapping(value = "/forum", method = RequestMethod.GET)
+	
+	@RequestMapping(value = "/userprofile", method = RequestMethod.GET)
 	public String home(Model model) {
 		
 		Date date = new Date();
@@ -34,10 +30,10 @@ public class ForumController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("now", formattedDate );
-		model.addAttribute("title", "Forum");
+		model.addAttribute("title", "User Profile");
 		
 		
-		return "adminSystem/forumhome";
+		return "adminSystem/userprofilehome";
 	}
 	
 }
