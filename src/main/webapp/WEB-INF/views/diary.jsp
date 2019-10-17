@@ -10,7 +10,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-6">
-			<div class="jumbotron">
+			<div class="jumbotron" style="background:url(http://pic.pc6.com/up/2016-10/2016101119811082091.jpg) no-repeat 5px 6px " >
 				<h2>
 					Calendar!
 				</h2>
@@ -21,7 +21,7 @@
 					<a class="btn btn-primary btn-large" href="/slimYB/life-recording/calendar/">Click to calendar</a>
 				</p>
 			</div>
-			<div class="jumbotron">
+			<div class="jumbotron" style="background:url(https://st3.depositphotos.com/11191882/17820/i/1600/depositphotos_178200660-stock-photo-notebook-paper-pen-dry-flowers.jpg) no-repeat 5px 6px">
 				<h2>
 					Personal Diary!
 				</h2>
@@ -34,7 +34,7 @@
 			</div>
 		</div>
 		<div class="col-md-6">
-			<div class="jumbotron">
+			<div class="jumbotron" style="background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQx3iITgsIQ4mJMWZEtVdkzV1UIRpyaSwOenD6F2Jz0bQ7gmmlw) no-repeat 5px 6px">
 				<h2>
 					Add Recording!
 				</h2>
@@ -45,7 +45,7 @@
 					<a class="btn btn-primary btn-large" href="/slimYB/life-recording/add-recording/">Click to Add Recording</a>
 				</p>
 			</div>
-			<div class="jumbotron">
+			<div class="jumbotron" style="background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTH52VWT88lO92NyBxiJhqIvJanxHZYh1R4Q6PDeo-1TQkd4ZHX) no-repeat 5px 6px">
 				<h2>
 					Friend's Life!
 				</h2>

@@ -2,8 +2,12 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    
+    
+    
 
-<div class="container-fluid">
+<div class="container-fluid" style="background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSCDN_zGumnihAWBPJ3XgtFZbz51VAgSwTxvDvJkJkuC98OMBnf) repeat 5px 6px">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="page-header text-center">
@@ -23,7 +27,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 </body>
 			</h3>
 			
-	<table class="table table-bordered">
+	<table class="table table-bordered text-center">
 				<thead>
 					<tr>
 						<th>
@@ -39,7 +43,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 					</tr>
 				</thead>
 				<tbody>
-					<tr class="table-warning">
+					<tr >
 						<td>
 							1
 						</td>
@@ -53,7 +57,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 						</button>
 						</td>
 					</tr>
-					<tr class="table-warning">
+					<tr ">
 						<td>
 							2
 						</td>
@@ -67,7 +71,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 						</button>
 						</td>
 					</tr>
-					<tr class="table-warning">
+					<tr >
 						<td>
 							3
 						</td>
@@ -81,7 +85,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 						</button>
 						</td>
 					</tr>
-					<tr class="table-warning">
+					<tr >
 						<td>
 							4
 						</td>
@@ -95,7 +99,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 						</button>
 						</td>
 					</tr>
-					<tr class="table-danger">
+					<tr >
 						<td>
 							5
 						</td>
@@ -110,7 +114,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 						</td>
 					</tr>
 					
-					<tr class="table-success">
+					<tr >
 						<td>
 							6
 						</td>
@@ -130,6 +134,27 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 	</div>
 </div>
 
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6">
+		<h2>
+					Text Input
+				</h2>
+			<textarea name="Text input" style="width:500px;height:200px;" placeholder="Entry Content......">
+			</textarea>
+			<button type="button" class="btn btn-success">
+				Submit
+						</button>
+		</div>
+		<div class="col-md-6" >
+		<h2>
+					Image Input
+				</h2>
+				
+
+		</div>
+	</div>
+</div>
 
 <!DOCTYPE html>
 <html>
