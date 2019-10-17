@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<link rel="stylesheet" href="../../open-iconic/font/css/chat.css">
+		<link href="/slimYB/static/chat.css" rel="stylesheet">
 		<script>
 			$(document).ready(function(){
 				$('#action_menu_btn').click(function(){

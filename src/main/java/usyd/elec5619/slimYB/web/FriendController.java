@@ -1,4 +1,4 @@
-package usyd.elec5619.slimYB;
+package usyd.elec5619.slimYB.web;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -33,7 +33,7 @@ public class FriendController {
 //		model.addAttribute("now", formattedDate );
 //		model.addAttribute("title", "Friend");
 		
-		return "friends";
+		return "Friend/friends";
 	}
 	
 	
@@ -51,7 +51,7 @@ public class FriendController {
 //		model.addAttribute("now", formattedDate );
 //		model.addAttribute("title", "Friend");
 		
-		return "friendlist";
+		return "Friend/friendlist";
 	}
 	
 	/**
@@ -68,7 +68,7 @@ public class FriendController {
 //		model.addAttribute("now", formattedDate );
 //		model.addAttribute("title", "Friend");
 		
-		return "chatzone";
+		return "Friend/chatzone";
 	}
 	
 	/**
@@ -85,7 +85,7 @@ public class FriendController {
 //		model.addAttribute("now", formattedDate );
 //		model.addAttribute("title", "Friend");
 		
-		return "chatwithfriend";
+		return "Friend/chatwithfriend";
 	}
 	
 	/**
@@ -102,7 +102,7 @@ public class FriendController {
 //		model.addAttribute("now", formattedDate );
 //		model.addAttribute("title", "Friend");
 		
-		return "addfriend";
+		return "Friend/addfriend";
 	}
 	
 	/**
@@ -119,7 +119,7 @@ public class FriendController {
 //		model.addAttribute("now", formattedDate );
 //		model.addAttribute("title", "Friend");
 		
-		return "addfriendinterest";
+		return "Friend/addfriendinterest";
 	}
 	
 }
