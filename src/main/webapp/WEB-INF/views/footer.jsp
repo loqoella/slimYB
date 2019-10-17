@@ -3,9 +3,9 @@
     
 </div>
 <footer class="page-footer bg-light mt-auto py-3">
-  <div class="text-muted text-center">© 2019 Copyright:
-    <a href="/slimYB/"> SlimYB</a>
-  </div>
+  	<div class="text-muted text-center">© 2019 Copyright:
+    	<a href="/slimYB/"> SlimYB</a>
+  	</div>
 </footer>
 </body>
 
@@ -13,8 +13,8 @@
 <script type="text/javascript">
     $(document).ready(function () {
         var url = window.location;
-        $('.nav-item').filter(function() {
-             return this.href.includes(url);
-        }).first().addClass('active');
+        $('.navbar-nav .nav-item.nav-link').filter(function() {
+             return url.toString().includes(this.href);
+        }).last().addClass('active');
     });
-</script> 
+</script>

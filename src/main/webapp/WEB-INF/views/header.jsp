@@ -8,9 +8,14 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<!-- jquery cdn -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- popper.js plugin -->
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<!-- bootstrap cdn -->
  	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ 	<link href="/slimYB/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+ 	<!-- custom css -->
+ 	<link href="/slimYB/static/custom.css" rel="stylesheet">
  	<title>${title}</title>
 </head>
 <body class="d-flex flex-column h-100">
@@ -24,15 +29,15 @@
 	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 	    <div class="navbar-nav">
 	      <a class="nav-item nav-link" href="/slimYB/">Home <span class="sr-only">(current)</span></a>
-	      <a class="nav-item nav-link" href="/slimYB/profile">Profile</a>
-	      <a class="nav-item nav-link" href="/slimYB/goal">Goal</a>
-	      <a class="nav-item nav-link" href="/slimYB/self-test">Self-test</a>
-	      <a class="nav-item nav-link" href="/slimYB/friends">Friends</a>
-	      <a class="nav-item nav-link" href="/slimYB/life-recording">Life-Recording</a>
-	      <a class="nav-item nav-link" href="/slimYB/marketplace">Marketplace</a>
+	      <a class="nav-item nav-link" href="/slimYB/profile/">Profile</a>
+	      <a class="nav-item nav-link" href="/slimYB/goal/">Goal</a>
+	      <a class="nav-item nav-link" href="/slimYB/self-test/">Self-test</a>
+	      <a class="nav-item nav-link" href="/slimYB/friends/">Friends</a>
+	      <a class="nav-item nav-link" href="/slimYB/life-recording/">Life-Recording</a>
+	      <a class="nav-item nav-link" href="/slimYB/marketplace/">Marketplace</a>
 	    </div>
 	  </div>
-	  <a href="/slimYB/login/" class="btn btn-outline-light my-2 my-sm-0" role="button">Log in</a>
+	  <a href="/slimYB/login" class="btn btn-outline-light my-2 my-sm-0" role="button">Log in</a>
 	</nav>
 	</header>
-	<div class="container mt-3">
+	<div class="container mt-2 mb-4">
