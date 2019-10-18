@@ -7,7 +7,7 @@
     
     
 
-<div class="container-fluid" style="background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSCDN_zGumnihAWBPJ3XgtFZbz51VAgSwTxvDvJkJkuC98OMBnf) repeat 5px 6px">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="page-header text-center">
@@ -52,7 +52,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 						</td>
 						
 						<td>
-						<button type="button" class="btn btn-success">
+						<button type="button" class="btn btn-primary">
 				Done
 						</button>
 						</td>
@@ -66,7 +66,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 						</td>
 						
 						<td>
-						<button type="button" class="btn btn-success  ">
+						<button type="button" class="btn btn-primary">
 				Done
 						</button>
 						</td>
@@ -80,7 +80,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 						</td>
 						
 						<td>
-						<button type="button" class="btn btn-success  ">
+						<button type="button" class="btn btn-primary">
 				Done
 						</button>
 						</td>
@@ -94,7 +94,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 						</td>
 						
 						<td>
-						<button type="button" class="btn btn-success  ">
+						<button type="button" class="btn btn-primary">
 				Done
 						</button>
 						</td>
@@ -108,7 +108,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 						</td>
 						
 						<td>
-						<button type="button" class="btn btn-success  ">
+						<button type="button" class="btn btn-primary">
 				Done
 						</button>
 						</td>
@@ -123,7 +123,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 						</td>
 						
 						<td>
-						<button type="button" class="btn btn-success  ">
+						<button type="button" class="btn btn-primary">
 				Done
 						</button>
 						</td>
@@ -140,16 +140,45 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 		<h2>
 					Text Input
 				</h2>
+				<form role="form">
 			<textarea name="Text input" style="width:500px;height:200px;" placeholder="Entry Content......">
 			</textarea>
-			<button type="button" class="btn btn-success">
-				Submit
-						</button>
+			<button type="submit" class="btn btn-primary">
+					Submit
+				</button>
+				</form>
 		</div>
 		<div class="col-md-6" >
 		<h2>
 					Image Input
 				</h2>
+		<form role="form">
+				
+				<div class="form-group">
+					 
+					<label for="exampleInputTitle">
+						 Title
+					</label>
+					<input type="text" class="form-control"  placeholder="Entry Title......" />
+				</div>
+				<div class="form-group">
+					 
+					<label for="exampleInputImage">
+						Image input
+					</label>
+					<input type="file" class="form-control-file" id="exampleInputFile" />
+					
+				</div>
+				<div class="checkbox">
+					 
+					<label>
+						<input type="checkbox" /> Show to All of Friends
+					</label>
+				</div> 
+				<button type="submit" class="btn btn-primary">
+					Submit
+				</button>
+			</form>
 				
 
 		</div>
