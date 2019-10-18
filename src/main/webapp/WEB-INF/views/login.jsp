@@ -68,12 +68,14 @@
                                 <p>                                	
                                 	<label for="gender" >Gender</label>
                                 	<nobr>
-                                		<div class="form-check">
-                                		<input class="form-check-input" type="radio" name="gender" id="gender" value="gender" checked>
- 										<label class="form-check-label" for="male">Male</label>
- 										<label class="form-check-label" for="female">FeMale</label>
-  										</div>
+                                		<select id="gender" name="gender" style="margin-left: 39%;">
+                                			<option value="-">-</option>
+   											<option value="Male">Male</option>
+    										<option value="Female">Female</option>
+                                		</select>
                                 	</nobr>
+                                
+        							
                                 </p>                                
                                 <p> 
                                     <label for="birthday" >Your birthday </label>
@@ -233,13 +235,22 @@
 									<a href="#tologin" class="to_register"> Go and log in </a>
 								</p>
                             </form>
+                            
                         </div>
-						
+                        
                     </div>
-                </div>  
+                    
+                </div> 
+                 
             </section>
             
         </div>
-	
+        
+	<footer style="position:absolute;;margin-top: -10px;width: 100%;height: 100px;bottom:0px;left:0px;clear:both;">
+		<%@ include file="/WEB-INF/views/footer.jsp" %>
+	</footer>
 	</body>
-<%@ include file="/WEB-INF/views/footer.jsp" %>
+
+
+
+

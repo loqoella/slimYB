@@ -48,7 +48,12 @@ body{
 	font-weight: 400;
 	font-size: 15px;
 	color: #1d3c41;
-	overflow-y: scroll;
+	overflow-y: auto;
+	background-attachment: fixed; 
+	height:100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }
 a{
 	color: #333;
@@ -59,7 +64,12 @@ a{
 	height: 100%;
 	position: relative;
 	text-align: center;
-
+	min-height: 100%;
+	height: auto !important;
+	padding-bottom: 10px;	
+}
+.page {
+/*高度等于footer的高度*/
 }
 .clr{
 	clear: both;
@@ -175,10 +185,11 @@ a.hiddenanchor{
 #wrapper{
 	width: 60%;
 	right: 0px;
-	min-height: 560px;	
+	min-height: 100%;	
 	margin: 0px auto;	
 	width: 500px;
 	position: relative;	
+	margin-bottom:-70px;
 }
 /**** Styling the form elements **/
 
