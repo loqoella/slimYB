@@ -1,4 +1,4 @@
-package usyd.elec5619.slimYB;
+package usyd.elec5619.slimYB.web;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application marketplace page.
  */
 @Controller
-@RequestMapping("/admin")
-public class AdminController {
+@RequestMapping("/forum")
+public class ForumController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
@@ -25,7 +25,7 @@ public class AdminController {
 	 * @param model - jsp context
 	 * @return
 	 */
-	@RequestMapping(value = "/admin", method = RequestMethod.GET)
+	@RequestMapping(value = "/forum", method = RequestMethod.GET)
 	public String home(Model model) {
 		
 		Date date = new Date();
@@ -34,10 +34,10 @@ public class AdminController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("now", formattedDate );
-		model.addAttribute("title", "Administrator");
+		model.addAttribute("title", "Forum");
 		
 		
-		return "adminSystem/adminHome";
+		return "adminSystem/forumhome";
 	}
 	
 }

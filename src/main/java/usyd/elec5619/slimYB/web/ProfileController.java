@@ -1,4 +1,4 @@
-package usyd.elec5619.slimYB;
+package usyd.elec5619.slimYB.web;
 
 import java.text.DateFormat;
 import java.util.Date;
