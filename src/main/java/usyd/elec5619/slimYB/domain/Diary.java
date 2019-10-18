@@ -18,7 +18,7 @@ public class Diary implements Serializable{
 	private int snack;
 	private int gym;
 	private  String text;
-	//TODO image
+	private String image;
 	public Date getDate() {
 		return date;
 	}
@@ -85,8 +85,15 @@ public class Diary implements Serializable{
 		buffer.append("Snack: "+ snack + ";");
 		buffer.append("Gym: "+ gym + ";");
 		buffer.append("Text: "+ text + ";");
+		buffer.append("Image: "+ image + ";");
 		
 		return buffer.toString();
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
 	}
 	
 	
