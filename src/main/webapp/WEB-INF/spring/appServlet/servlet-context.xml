@@ -23,6 +23,8 @@
 	
 	<context:component-scan base-package="usyd.elec5619.slimYB.web" />
 	
+	<beans:bean id="userManager" class="usyd.elec5619.slimYB.service.UserManager">
+	</beans:bean>
 	
 	
 </beans:beans>
