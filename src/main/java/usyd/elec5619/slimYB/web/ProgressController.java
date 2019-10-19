@@ -1,4 +1,4 @@
-package usyd.elec5619.slimYB;
+package usyd.elec5619.slimYB.web;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
