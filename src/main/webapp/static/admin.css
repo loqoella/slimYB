@@ -1,0 +1,75 @@
+/*Header*/
+.navbar-brand{
+	color:white;
+	margin:0 50px 0 50px;
+}
+.nav-item{
+	color:white;
+	margin:0 50px 0 50px;
+}
+
+
+
+/*Admin Homepage*/
+
+.titlemes{
+	background:url(../images/admin/b2.jpg) center center no-repeat;
+	height:400px;	
+	margin: -20px -158px 100px -158px;
+}
+
+.titlemes .display-4{
+	font-size: 50px;
+	color:white;
+	font-family:helvetica;
+	margin:8px 200px 0 200px;
+	padding: 120px 0 20px 0;
+	
+}
+
+.titlemes .lead{
+	font-size: 30px;
+	color:white;
+	font-family:helvetica;
+	margin: 0 200px 0 200px;
+}
+
+
+
+.endblock{
+	padding: 500px 0 100px 0;
+	
+}
+
+/*User Profile*/
+
+.input-group{
+	padding: 0 0 80px 0;
+	
+}
+.endblock2{
+	padding: 100px 0 100px 0;
+	
+}
+
+/*Profile Data*/
+
+.dataprofile{
+	margin: 0 200px 0 200px;
+	
+}
+
+.profilebutton{
+	 text-align:center;
+	
+}
+
+/*Forum Home*/
+.modulehome{	
+	padding: 10px 75px 180px 75px;
+	display: inline-block;
+}
+.module1{
+	background:url(../images/admin/b2.jpg) center center no-repeat;
+}
+

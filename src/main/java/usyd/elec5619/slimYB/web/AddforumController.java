@@ -11,17 +11,18 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-/**
- * Handles requests for the application marketplace page.
- */
 @Controller
-@RequestMapping("/userprofile")
-public class ProfileController {
+@RequestMapping("/addforum")
+public class AddforumController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	
-	@RequestMapping(value = "/userprofile", method = RequestMethod.GET)
+	/**
+	 * administrator home page
+	 * @param model - jsp context
+	 * @return
+	 */
+	@RequestMapping(value = "/addforum", method = RequestMethod.GET)
 	public String home(Model model) {
 		
 		Date date = new Date();
@@ -30,11 +31,10 @@ public class ProfileController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("now", formattedDate );
-		model.addAttribute("title", "User Profile");
+		model.addAttribute("title", "AddForum");
 		
 		
-		return "adminSystem/userprofilehome";
+		return "adminSystem/addforum";
 	}
-	
 	
 }
