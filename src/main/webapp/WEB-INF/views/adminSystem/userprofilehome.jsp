@@ -36,70 +36,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                	<th>1</th>
-                	<td>1</td>
-                    <td>123@gmail.com</td>
-                    <td>123ff</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                	<td>2</td>
-                    <td>1e23@gmail.com</td>
-                    <td>123ff</td>    
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                                   
-                </tr>
-                <tr>
-                    <th>3</th>
-                	<td>3</td>
-                    <td>123@gmail.com</td>
-                    <td>123ff</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                <tr>
-                    <th>4</th>
-                	<td>4</td>
-                    <td>123@gmail.com</td>
-                    <td>123ff</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                <tr>
-                    <th>5</th>
-                	<td>5</td>
-                    <td>123@gmail.com</td>
-                    <td>123ff</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                <tr>
-                    <th>6</th>
-                	<td>6</td>
-                    <td>123@gmail.com</td>
-                    <td>123ff</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                <tr>
-                    <th>7</th>
-                	<td>7</td>
-                    <td>123@gmail.com</td>
-                    <td>123ff</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                <tr>
-                    <th>8</th>
-                	<td>8</td>
-                    <td>123@gmail.com</td>
-                    <td>123ff</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                <tr>
-                    <th>9</th>
-                	<td>9</td>
-                    <td>123@gmail.com</td>
-                    <td>123ff</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
+                <c:forEach items="${users}" var="user" varStatus="tagStatus">
+                	 <tr>
+        				<td><c:out value="${user.getId()}"> </c:out></td>
+        				<td><c:out value="${user.getUsername()}"> </c:out></td>
+        				<td></td>
+        				<td><c:out value="${user.getPassword()}"> </c:out></td>
+        				<td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
+   					 </tr>
+                </c:forEach>
                 
             </tbody>
         </table>

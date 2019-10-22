@@ -48,6 +48,10 @@ public class User implements Serializable {
 		this.password = password;
 	}
 	
+	public User getUser() {
+		return this;
+	}
+	
 	public String toString() {
 		StringBuffer buffer = new StringBuffer();
 		buffer.append("Id: " + id + ";");
