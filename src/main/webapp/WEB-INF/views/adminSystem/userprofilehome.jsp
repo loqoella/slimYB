@@ -42,7 +42,7 @@
         				<td><c:out value="${user.getUsername()}"> </c:out></td>
         				<td><c:out value="${user.getEmail()}"> </c:out></td>
         				<td><c:out value="${user.getPassword()}"> </c:out></td>
-        				<td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
+        				<td><a href="/slimYB/profiledata?id=${user.getId()}"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
    					 </tr>
                 </c:forEach>
                 

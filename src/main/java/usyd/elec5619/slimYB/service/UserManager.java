@@ -39,6 +39,13 @@ public class UserManager implements Serializable {
 		List<User> list =this.sessionFactory.getCurrentSession().createQuery("from User").list();
 		return list;
 	}
+	
+	
+	public User getUserById(int id)throws Exception {
+		User q =(User) this.sessionFactory.getCurrentSession().get(User.class,id);
+		System.out.print(q);
+		return q;
+	}
 
 
 
