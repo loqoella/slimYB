@@ -5,32 +5,63 @@ import java.io.Serializable;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 
+@Entity
+@Table(name="Diary")
 public class Diary implements Serializable{
 	
-	private int DiaryID;
+	@Id
+	@GeneratedValue
+	@Column(name="DiaryId")
+	private long DiaryId;
+	
+	@Column(name="Title")
+	private String title;
+	
+	@Column(name="Date")
 	private Date date;
+	
+	@Column(name="breakfast")
 	private int breakfast;
+	
+	@Column(name="lunch")
 	private int lunch;
+	
+	@Column(name="dinner")
 	private int dinner;
+	
+	@Column(name="water")
 	private int water;
+	
+	@Column(name="snack")
 	private int snack;
+	
+	@Column(name="gym")
 	private int gym;
+	
+	@Column(name="text")
 	private  String text;
+	
+	@Column(name="image")
 	private String image;
+	
+	
 	public Date getDate() {
 		return date;
 	}
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public int getID() {
-		return DiaryID;
+	public long getID() {
+		return DiaryId;
 	}
-	public void setID(int DiaryID) {
-		DiaryID = DiaryID;
-	}
+	
 	public int getBreakfast() {
 		return breakfast;
 	}
@@ -76,7 +107,7 @@ public class Diary implements Serializable{
 	
 	public String toString() {
 		StringBuffer buffer = new StringBuffer();
-		buffer.append("DiaryID: "+ DiaryID + ";");
+		buffer.append("DiaryID: "+ DiaryId + ";");
 		buffer.append("Date: "+ date + ";");
 		buffer.append("Breakfast: "+ breakfast + ";");
 		buffer.append("Lunch: "+ lunch + ";");

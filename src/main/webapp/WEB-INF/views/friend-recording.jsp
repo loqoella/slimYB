@@ -25,7 +25,7 @@
 						<h2>
 							FriendA
 						</h2>
-						<img src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" width=150xp height=150xp/>
+						<img src="${pageContext.request.contextPath}/static/头像.jpeg" width=150xp height=150xp/>
 						<table>
 <tr>
 <td style="width:100%;height:14px;font-size:14px;border:0"> 

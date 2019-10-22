@@ -23,6 +23,11 @@
 <script>
 
 setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
+
+
+function click(breakfast){
+	document.getElementById("Breakfast").style.color = "red";
+}
 </script>
 </body>
 			</h3>
@@ -52,7 +57,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 						</td>
 						
 						<td>
-						<button type="button" class="btn btn-primary">
+						<button type="button" class="btn btn-primary" id = "Breakfast" onclick="click(breakfast)" >
 				Done
 						</button>
 						</td>
@@ -175,7 +180,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 						<input type="checkbox" /> Show to All of Friends
 					</label>
 				</div> 
-				<button type="submit" class="btn btn-primary">
+				<button type="submit" class="btn btn-primary" >
 					Submit
 				</button>
 			</form>
@@ -192,6 +197,7 @@ setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
 <title>Insert title here</title>
 </head>
 <body>
+
 
 </body>
 </html>
