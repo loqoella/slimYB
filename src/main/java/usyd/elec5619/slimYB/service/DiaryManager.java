@@ -24,7 +24,7 @@ public class DiaryManager implements Serializable {
 		this.sessionFactory = sf;
 	}
 
-	public void testAddDiary() throws ParseException {
+	public void testAddDiary()  {
 		Session currentSession = this.sessionFactory.getCurrentSession();
 		Diary d = new Diary();
 		
@@ -34,9 +34,10 @@ public class DiaryManager implements Serializable {
 		d.setSnack(0);
 		d.setGym(1);
 		d.setWater(1);
+		d.setDate("2019-10-10");
 		
-		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
-		d.setDate(dateformat.parse("2019-10-10"));
+		
+		
 		d.setText("This function will record life based on the calendar, users can query, add, modify and delete specific content through the calendar.");
 		
 		

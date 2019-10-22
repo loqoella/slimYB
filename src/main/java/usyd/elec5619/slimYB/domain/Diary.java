@@ -25,7 +25,7 @@ public class Diary implements Serializable{
 	private String title;
 	
 	@Column(name="Date")
-	private Date date;
+	private String date;
 	
 	@Column(name="breakfast")
 	private int breakfast;
@@ -52,10 +52,10 @@ public class Diary implements Serializable{
 	private String image;
 	
 	
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	public long getID() {
