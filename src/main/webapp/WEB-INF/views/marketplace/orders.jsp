@@ -3,7 +3,8 @@
 
 <div class="card mb-2">
 	<div class="card-header text-muted">
-	  	Order Number: aaaaa
+	  	<div>Order Number: aaaaa</div>
+	  	<div class="align-self-end">Status: Delivering</div>
 	</div>
 	<div class="card">
 		<div class="row no-gutters">

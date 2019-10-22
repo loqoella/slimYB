@@ -26,5 +26,15 @@
 	<beans:bean id="userManager" class="usyd.elec5619.slimYB.service.UserManager">
 	</beans:bean>
 	
+	<beans:bean id="cartManager" class="usyd.elec5619.slimYB.service.CartManager">
+	</beans:bean>
 	
+	<beans:bean id="itemCommentManager" class="usyd.elec5619.slimYB.service.ItemCommentManager">
+	</beans:bean>
+	
+	<beans:bean id="orderManager" class="usyd.elec5619.slimYB.service.OrderManager">
+	</beans:bean>
+	
+	<beans:bean id="productManager" class="usyd.elec5619.slimYB.service.ProductManager">
+	</beans:bean>
 </beans:beans>

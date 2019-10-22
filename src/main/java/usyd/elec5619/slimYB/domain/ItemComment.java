@@ -16,8 +16,8 @@ import javax.persistence.TemporalType;
 import javax.persistence.GeneratedValue;
 
 @Entity
-@Table(name="Product")
-public class Product implements Serializable {
+@Table(name="ItemComment")
+public class ItemComment implements Serializable {
 	
 	@Id
 	@GeneratedValue
@@ -25,33 +25,28 @@ public class Product implements Serializable {
 	private long id;
 	
 	@ManyToOne
-	@JoinColumn(name="UserId")
+	@JoinColumn(name="Userid")
 	private User userId;
 	
-	@Column(name="ProductName")
-	private String productName;
+	@ManyToOne
+	@JoinColumn(name="ProductId")
+	private Product productId;
 	
-	@Column(name="ImagePath")
-	private String imagePath;
-	
-	@Column(name="Price")
-	private double price;
-	
-	@Column(name="Description")
-	private String description;
+	@Column(name="Comment")
+	private String comment;
 	
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "LastUpdateTime")
-	private Date lastUpdateTime;
+	@Column(name="CommentTime")
+	private Date commentTime;
 	
 	@PrePersist
     protected void onCreate() {
-		lastUpdateTime = new Date();
+		commentTime = new Date();
     }
 	
 	@PreUpdate
     protected void onUpdate() {
-		lastUpdateTime = new Date();
+		commentTime = new Date();
     }
 
 	public User getUserId() {
@@ -62,27 +57,19 @@ public class Product implements Serializable {
 		this.userId = userId;
 	}
 
-	public String getImagePath() {
-		return imagePath;
+	public Product getProductId() {
+		return productId;
 	}
 
-	public void setImagePath(String imagePath) {
-		this.imagePath = imagePath;
+	public void setProductId(Product productId) {
+		this.productId = productId;
 	}
 
-	public double getPrice() {
-		return price;
+	public String getComment() {
+		return comment;
 	}
 
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
+	public void setComment(String comment) {
+		this.comment = comment;
 	}
 }

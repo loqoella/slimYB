@@ -4,12 +4,20 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.annotation.Resource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import usyd.elec5619.slimYB.service.CartManager;
+import usyd.elec5619.slimYB.service.ItemCommentManager;
+import usyd.elec5619.slimYB.service.OrderManager;
+import usyd.elec5619.slimYB.service.ProductManager;
+import usyd.elec5619.slimYB.service.UserManager;
 
 /**
  * Handles requests for the application marketplace page.
@@ -19,6 +27,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class MarketplaceController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	
+	@Resource(name="userManager")
+	private UserManager userManager;
+	
+	@Resource(name="cartManager")
+	private CartManager cartManager;
+	
+	@Resource(name="itemCommentManager")
+	private ItemCommentManager itemCommentManager;
+	
+	@Resource(name="orderManager")
+	private OrderManager orderManager;
+	
+	@Resource(name="productManager")
+	private ProductManager productManager;
 	
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public String home(Model model) {
