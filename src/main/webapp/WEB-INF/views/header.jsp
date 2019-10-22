@@ -15,7 +15,7 @@
  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
  	<link href="/slimYB/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
  	<!-- custom css -->
- 	<link href="/slimYB/static/custom.css" rel="stylesheet">
+ 	<link href="/slimYB/static/custom.css?v=aaaa" rel="stylesheet">
  	<title>${title}</title>
 </head>
 <body class="d-flex flex-column h-100">
@@ -34,7 +34,7 @@
 	      <a class="nav-item nav-link" href="/slimYB/self-test/">Self-test</a>
 	      <a class="nav-item nav-link" href="/slimYB/friends/">Friends</a>
 	      <a class="nav-item nav-link" href="/slimYB/life-recording/">Life-Recording</a>
-	      <a class="nav-item nav-link" href="/slimYB/marketplace/">Marketplace</a>
+	      <a class="nav-item nav-link" href="/slimYB/marketplace">Marketplace</a>
 	    </div>
 	  </div>
 	  <a href="#" class="btn btn-outline-light my-2 my-sm-0" role="button">Log in</a>

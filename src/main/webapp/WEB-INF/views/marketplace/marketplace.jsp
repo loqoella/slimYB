@@ -92,10 +92,20 @@
 		    </div>
 	  	</li>
 	</ul>
-	<button type="button" class="btn btn-info">
-		<span class="oi oi-cart"></span>
-	  	Cart <span class="badge badge-light ml-1">${cartNum}</span>
-	</button>
+	<span>
+		<a href="/slimYB/marketplace/sell" class="btn btn-primary">
+			<span class="oi oi-dollar"></span>
+		  	Sell
+		</a>
+		<a href="/slimYB/marketplace/orders" class="btn btn-Secondary">
+			<span class="oi oi-document"></span>
+		  	Orders
+		</a>
+		<a href="/slimYB/marketplace/cart" class="btn btn-info">
+			<span class="oi oi-cart"></span>
+		  	Cart <span class="badge badge-light ml-1">${cartNum}</span>
+		</a>
+	</span>
 </div>
 
 <div class="jumbotron mt-2 py-5">
@@ -112,29 +122,28 @@
 	  		</svg>
 			<div class="card-body">
 				<div class="container row justify-content-between mx-0 px-0">
-				    <h5 class="card-title">Item 1</h5>
+				    <a href="#"><h5 class="card-title">Item 1</h5></a>
 				    <h5 class="card-title">AU$26.00</h5>
 				</div>
 				<p class="card-text">Item's description. Lorem ipsum.............description.........description........</p>
-			    <div class="d-flex justify-content-between align-items-center">
+			    <div class="d-flex justify-content-between">
 			    	<a href="#" class="btn btn-primary">Add to cart</a>
-			    	<a href="#" class="">user1</a>
 			    </div>
 			</div>
 		</div>
 	</div>
 	<div class="col-md-4">
-		<div class="card mb-4 shadow-sm" >
+		<div class="card mb-4 shadow-sm">
 		  	<svg class="bd-placeholder-img card-img-top" width="100%" height="180">
 			  	<rect width="100%" height="100%" fill="#868e96"></rect>
 	  		</svg>
 			<div class="card-body">
 				<div class="container row justify-content-between mx-0 px-0">
-				    <h5 class="card-title">Item 1</h5>
+				    <a href="#"><h5 class="card-title">Item 1</h5></a>
 				    <h5 class="card-title">AU$26.00</h5>
 				</div>
 				<p class="card-text">Item's description. Lorem ipsum.............description.........description........</p>
-			    <div class="d-flex justify-content-between align-items-center">
+			    <div class="d-flex justify-content-between align-items-left">
 			    	<a href="#" class="btn btn-primary">Add to cart</a>
 			    	<a href="#" class="">user1</a>
 			    </div>
@@ -148,11 +157,11 @@
 	  		</svg>
 			<div class="card-body">
 				<div class="container row justify-content-between mx-0 px-0">
-				    <h5 class="card-title">Item 1</h5>
+				    <a href="#"><h5 class="card-title">Item 1</h5></a>
 				    <h5 class="card-title">AU$26.00</h5>
 				</div>
 				<p class="card-text">Item's description. Lorem ipsum.............description.........description........</p>
-			    <div class="d-flex justify-content-between align-items-center">
+			    <div class="d-flex justify-content-between align-items-left">
 			    	<a href="#" class="btn btn-primary">Add to cart</a>
 			    	<a href="#" class="">user1</a>
 			    </div>
@@ -166,11 +175,11 @@
 	  		</svg>
 			<div class="card-body">
 				<div class="container row justify-content-between mx-0 px-0">
-				    <h5 class="card-title">Item 1</h5>
+				    <a href="#"><h5 class="card-title">Item 1</h5></a>
 				    <h5 class="card-title">AU$26.00</h5>
 				</div>
 				<p class="card-text">Item's description. Lorem ipsum.............description.........description........</p>
-			    <div class="d-flex justify-content-between align-items-center">
+			    <div class="d-flex justify-content-between align-items-left">
 			    	<a href="#" class="btn btn-primary">Add to cart</a>
 			    	<a href="#" class="">user1</a>
 			    </div>
@@ -184,11 +193,11 @@
 	  		</svg>
 			<div class="card-body">
 				<div class="container row justify-content-between mx-0 px-0">
-				    <h5 class="card-title">Item 1</h5>
+				    <a href="#"><h5 class="card-title">Item 1</h5></a>
 				    <h5 class="card-title">AU$26.00</h5>
 				</div>
 				<p class="card-text">Item's description. Lorem ipsum.............description.........description........</p>
-			    <div class="d-flex justify-content-between align-items-center">
+			    <div class="d-flex justify-content-between align-items-left">
 			    	<a href="#" class="btn btn-primary">Add to cart</a>
 			    	<a href="#" class="">user1</a>
 			    </div>
@@ -202,11 +211,11 @@
 	  		</svg>
 			<div class="card-body">
 				<div class="container row justify-content-between mx-0 px-0">
-				    <h5 class="card-title">Item 1</h5>
+				    <a href="#"><h5 class="card-title">Item 1</h5></a>
 				    <h5 class="card-title">AU$26.00</h5>
 				</div>
 				<p class="card-text">Item's description. Lorem ipsum.............description.........description........</p>
-			    <div class="d-flex justify-content-between align-items-center">
+			    <div class="d-flex justify-content-between align-items-left">
 			    	<a href="#" class="btn btn-primary">Add to cart</a>
 			    	<a href="#" class="">user1</a>
 			    </div>
@@ -220,11 +229,11 @@
 	  		</svg>
 			<div class="card-body">
 				<div class="container row justify-content-between mx-0 px-0">
-				    <h5 class="card-title">Item 1</h5>
+				    <a href="#"><h5 class="card-title">Item 1</h5></a>
 				    <h5 class="card-title">AU$26.00</h5>
 				</div>
 				<p class="card-text">Item's description. Lorem ipsum.............description.........description........</p>
-			    <div class="d-flex justify-content-between align-items-center">
+			    <div class="d-flex justify-content-between align-items-left">
 			    	<a href="#" class="btn btn-primary">Add to cart</a>
 			    	<a href="#" class="">user1</a>
 			    </div>
@@ -238,11 +247,11 @@
 	  		</svg>
 			<div class="card-body">
 				<div class="container row justify-content-between mx-0 px-0">
-				    <h5 class="card-title">Item 1</h5>
+				    <a href="#"><h5 class="card-title">Item 1</h5></a>
 				    <h5 class="card-title">AU$26.00</h5>
 				</div>
 				<p class="card-text">Item's description. Lorem ipsum.............description.........description........</p>
-			    <div class="d-flex justify-content-between align-items-center">
+			    <div class="d-flex justify-content-between align-items-left">
 			    	<a href="#" class="btn btn-primary">Add to cart</a>
 			    	<a href="#" class="">user1</a>
 			    </div>
@@ -256,47 +265,11 @@
 	  		</svg>
 			<div class="card-body">
 				<div class="container row justify-content-between mx-0 px-0">
-				    <h5 class="card-title">Item 1</h5>
+				    <a href="#"><h5 class="card-title">Item 1</h5></a>
 				    <h5 class="card-title">AU$26.00</h5>
 				</div>
 				<p class="card-text">Item's description. Lorem ipsum.............description.........description........</p>
-			    <div class="d-flex justify-content-between align-items-center">
-			    	<a href="#" class="btn btn-primary">Add to cart</a>
-			    	<a href="#" class="">user1</a>
-			    </div>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="card mb-4 shadow-sm">
-		  	<svg class="bd-placeholder-img card-img-top" width="100%" height="180">
-			  	<rect width="100%" height="100%" fill="#868e96"></rect>
-	  		</svg>
-			<div class="card-body">
-				<div class="container row justify-content-between mx-0 px-0">
-				    <h5 class="card-title">Item 1</h5>
-				    <h5 class="card-title">AU$26.00</h5>
-				</div>
-				<p class="card-text">Item's description. Lorem ipsum.............description.........description........</p>
-			    <div class="d-flex justify-content-between align-items-center">
-			    	<a href="#" class="btn btn-primary">Add to cart</a>
-			    	<a href="#" class="">user1</a>
-			    </div>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="card mb-4 shadow-sm">
-		  	<svg class="bd-placeholder-img card-img-top" width="100%" height="180">
-			  	<rect width="100%" height="100%" fill="#868e96"></rect>
-	  		</svg>
-			<div class="card-body">
-				<div class="container row justify-content-between mx-0 px-0">
-				    <h5 class="card-title">Item 1</h5>
-				    <h5 class="card-title">AU$26.00</h5>
-				</div>
-				<p class="card-text">Item's description. Lorem ipsum.............description.........description........</p>
-			    <div class="d-flex justify-content-between align-items-center">
+			    <div class="d-flex justify-content-between align-items-left">
 			    	<a href="#" class="btn btn-primary">Add to cart</a>
 			    	<a href="#" class="">user1</a>
 			    </div>

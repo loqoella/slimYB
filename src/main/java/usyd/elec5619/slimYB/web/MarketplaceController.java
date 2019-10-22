@@ -20,12 +20,7 @@ public class MarketplaceController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	/**
-	 * marketplace home page
-	 * @param model - jsp context
-	 * @return
-	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "", method = RequestMethod.GET)
 	public String home(Model model) {
 		
 		Date date = new Date();
@@ -40,4 +35,75 @@ public class MarketplaceController {
 		return "marketplace/marketplace";
 	}
 	
+	@RequestMapping(value = "/cart")
+	public String cart(Model model) {
+		
+		model.addAttribute("title", "Cart");
+		model.addAttribute("subtitle", "SHOPPING CART");
+		
+		return "marketplace/cart";
+	}
+	
+	@RequestMapping(value = "/item")
+	public String item(Model model) {
+		
+		model.addAttribute("title", "Marketplace - item");
+		model.addAttribute("subtitle", "ITEM NAME");
+		model.addAttribute("subsubtitle", "ITEM PRICE");
+		
+		return "marketplace/item";
+	}
+	
+	@RequestMapping(value = "/checkout")
+	public String checkout(Model model) {
+		
+		model.addAttribute("title", "Checkout");
+		model.addAttribute("subtitle", "CHECKOUT");
+		
+		return "marketplace/checkout";
+	}
+	
+	@RequestMapping(value = "/success")
+	public String success(Model model) {
+		
+		model.addAttribute("title", "success");
+		
+		return "marketplace/success";
+	}
+	
+	@RequestMapping(value = "/sell")
+	public String sell(Model model) {
+		
+		model.addAttribute("title", "Marketplace - sell");
+		model.addAttribute("subtitle", "SELLING ITEMS");
+		
+		return "marketplace/sell";
+	}
+	
+	@RequestMapping(value = "/sellNew")
+	public String sellNew(Model model) {
+		
+		model.addAttribute("title", "Marketplace - sell");
+		model.addAttribute("subtitle", "SELL YOUR ITEM");
+		
+		return "marketplace/sellNew";
+	}
+	
+	@RequestMapping(value = "/orders")
+	public String orders(Model model) {
+		
+		model.addAttribute("title", "Marketplace - orders");
+		model.addAttribute("subtitle", "YOUR ORDERS");
+		
+		return "marketplace/orders";
+	}
+	
+	@RequestMapping(value = "/comment")
+	public String comment(Model model) {
+		
+		model.addAttribute("title", "Marketplace - comment");
+		model.addAttribute("subtitle", "COMMENT - ITEM NAME");
+		
+		return "marketplace/comment";
+	}
 }

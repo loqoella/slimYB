@@ -3,3 +3,12 @@
 .filter-dropdown {
 	min-width:500px;
 }
+.imagePreview {
+	width: 100%;
+	padding-top: 100%; 
+	background-position: center center;
+  	background:url(/slimYB/static/placeholder_image.png);
+  	background-color:#fff;
+    background-size: cover;
+  	background-repeat:no-repeat;
+}
