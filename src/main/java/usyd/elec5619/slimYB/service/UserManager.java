@@ -37,13 +37,6 @@ public class UserManager implements Serializable {
 		
 		
 		List<User> list =this.sessionFactory.getCurrentSession().createQuery("from User").list();
-		
-		for(User user:list) {
-			System.out.print(user);
-		}
-	
-		
-		
 		return list;
 	}
 

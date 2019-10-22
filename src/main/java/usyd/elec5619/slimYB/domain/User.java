@@ -23,6 +23,8 @@ public class User implements Serializable {
 	
 	@Column(name="Password")
 	private String password;
+	
+	private String Email;
 
 	public long getId() {
 		return id;
@@ -51,6 +53,11 @@ public class User implements Serializable {
 	public User getUser() {
 		return this;
 	}
+	
+	public String getEmail() {
+		return Email;
+	}
+	
 	
 	public String toString() {
 		StringBuffer buffer = new StringBuffer();
