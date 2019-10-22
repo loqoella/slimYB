@@ -1,6 +1,7 @@
 package usyd.elec5619.slimYB.service;
 
 import java.io.Serializable;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,4 +31,26 @@ public class UserManager implements Serializable {
 		
 		System.out.print("new user added!");
 	}
+	
+
+	public List<User> getAllUsers() throws Exception {
+		
+		
+		List<User> list =this.sessionFactory.getCurrentSession().createQuery("from User").list();
+		return list;
+	}
+	
+	
+	public User getUserById(int id)throws Exception {
+		User q =(User) this.sessionFactory.getCurrentSession().get(User.class,id);
+		System.out.print(q);
+		return q;
+	}
+
+
+
+	
+
+	
+	
 }

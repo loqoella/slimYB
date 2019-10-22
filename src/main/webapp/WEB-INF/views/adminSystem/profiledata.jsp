@@ -18,10 +18,10 @@
 	<h2 class=subtitle>Information</h2><br>
 	<div class="info">
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/name2.jpg" style="width: 3rem;">&nbsp;&nbsp;Username:</font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/name2.jpg" style="width: 3rem;">&nbsp;&nbsp;Username:&nbsp;&nbsp;<c:out value="${user.getUsername()}"> </c:out></font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/email1.jpg" style="width: 3rem;">&nbsp;&nbsp;Email:</font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/email1.jpg" style="width: 3rem;">&nbsp;&nbsp;Email:&nbsp;&nbsp;<c:out value="${user.getEmail()}"> </c:out></font><br><br>
 		</div>
 		<div class="detailedinfo">
 			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/birth.jpg" style="width: 3rem;">&nbsp;&nbsp;Birthday:</font><br><br>

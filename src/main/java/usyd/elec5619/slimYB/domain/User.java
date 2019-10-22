@@ -16,15 +16,17 @@ public class User implements Serializable {
 	@Id
 	@GeneratedValue
 	@Column(name="Id")
-	private long id;
+	private int id;
 	
 	@Column(name="Username")
 	private String username;
 	
 	@Column(name="Password")
 	private String password;
+	
+	private String Email;
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 //
@@ -47,6 +49,15 @@ public class User implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	public User getUser() {
+		return this;
+	}
+	
+	public String getEmail() {
+		return Email;
+	}
+	
 	
 	public String toString() {
 		StringBuffer buffer = new StringBuffer();
