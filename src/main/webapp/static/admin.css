@@ -1,11 +1,11 @@
 /*Header*/
 .navbar-brand{
 	color:white;
-	margin:0 50px 0 50px;
+	margin:0 2rem 0 1rem;
 }
-.nav-item{
+.nav-item{	
 	color:white;
-	margin:0 50px 0 50px;
+	margin:0 4rem 0 4rem;
 }
 
 
@@ -14,14 +14,14 @@
 
 .titlemes{
 	background:url(../images/admin/b2.jpg) center center no-repeat;
-	height:400px;	
-	margin: -20px -158px 100px -158px;
+	height:25rem;	
+	margin: -1.25rem -10.3rem 6.25rem -10.3rem;
 }
 
 .titlemes .display-4{
 	font-size: 50px;
 	color:white;
-	font-family:helvetica;
+	font-family: helvetica;
 	margin:8px 200px 0 200px;
 	padding: 120px 0 20px 0;
 	
@@ -47,6 +47,7 @@
 	padding: 0 0 80px 0;
 	
 }
+
 .endblock2{
 	padding: 100px 0 100px 0;
 	
@@ -60,16 +61,100 @@
 }
 
 .profilebutton{
-	 text-align:center;
-	
+	text-align:center;	
 }
 
 /*Forum Home*/
-.modulehome{	
-	padding: 10px 75px 180px 75px;
+.modulehome1{	
+	padding: 10px 75px 0px 75px;
 	display: inline-block;
 }
-.module1{
-	background:url(../images/admin/b2.jpg) center center no-repeat;
+
+.textforum{	
+	text-align:center;
+	color:white;
+	font-size: 3rem;
+	font-family: helvetica;
+} 
+
+.desforum{	
+	text-align:center;
+	color:white;
+	font-size: 1rem;
+	font-family: helvetica;
+} 
+
+.desforum{	
+	
+	color:white;
+	font-size: 1.3rem;
+	font-family: helvetica;
+	padding: 5rem 0 0 0;
+} 
+
+.pikaimg{
+	padding: 50px 0 50px 0;
+	
 }
 
+.modulehome2{	
+	margin: -8rem 22.5rem 20rem 22.5rem;
+}
+
+/*Add Post on Forum*/
+.addpost{
+	margin: 0 6rem 0 6rem;
+}
+
+.addpost{
+	margin: 0 6rem 0 6rem;
+}
+
+.tags{
+	padding: 0 4rem 0 0;
+	display: inline-block;
+}
+
+.addatag{
+	margin: 3rem 0 1rem 0;
+	font-family: helvetica;
+}
+
+.addcontent{
+	margin: -2rem 0 1rem 0;
+	font-family: helvetica;
+}
+.posttext{
+	margin: 0 0 3rem 0
+}
+.subbuttons{
+	display:inline-block;
+	margin: 0 9rem 5rem 9rem;
+}
+
+/* View Posts on Forum*/
+.addmodule{
+	display: inline-block;
+	margin: 3rem 1rem 3rem 1rem;
+}
+
+/*post*/
+.posttitles{
+	margin: 0 200px 0 200px;
+}
+.posttitle1{
+	font-family: helvetica;
+	font-size:50px;
+	margin:0 200px 0 300px;
+	
+}
+.contentsection{
+	font-family: helvetica;
+	font-size:20px;
+	
+}
+
+.postbuttons{
+	display:inline-block;
+	margin: 0 5rem 5rem 5rem;
+}

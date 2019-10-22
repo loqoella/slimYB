@@ -27,8 +27,7 @@
 	    <div class="navbar-nav">
 	      <a class="nav-item nav-link" href="/slimYB/admin"><img src="${pageContext.request.contextPath}/images/admin/picon3.jpg" style="width: 2.5rem;">&nbsp;Home <span class="sr-only">(current)</span></a>
 	      <a class="nav-item nav-link" href="/slimYB/userprofile"><img src="${pageContext.request.contextPath}/images/admin/picon3.jpg" style="width: 2.5rem;">&nbsp;User Profile</a>
-	      <a class="nav-item nav-link" href="/slimYB/forum"><img src="${pageContext.request.contextPath}/images/admin/picon3.jpg" style="width: 2.5rem;">&nbsp;Forum</a>
-	     
+	      <a class="nav-item nav-link" href="/slimYB/forum"><img src="${pageContext.request.contextPath}/images/admin/picon3.jpg" style="width: 2.5rem;">&nbsp;Forum</a>	     
 	     
 	    </div>
 	  </div>
