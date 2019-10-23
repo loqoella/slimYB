@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application home page.
  */
 @Controller
+@RequestMapping("/goal")
 public class ProgressController {
 
     private static final Logger logger = LoggerFactory.getLogger(ProgressController.class);
