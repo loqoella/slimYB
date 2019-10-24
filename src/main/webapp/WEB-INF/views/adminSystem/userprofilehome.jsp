@@ -6,17 +6,34 @@
    
 </div>
 
+<script type="text/javascript">
+
+function search(){
+	for(i=0;i<100;i++){
+		if(document.getElementById("name"+i)!=null){
+			if((document.getElementById("name"+i).innerText).includes(document.getElementById("searchText").value)){
+				
+			}else{
+				document.getElementById("num"+i).hidden="true";
+			}
+		}
+	}
+}
+</script>
+
  
 <div id="custom-search-input">
     <div class="input-group">
-        <input type="text" class="search-query form-control" placeholder="Search User" />
+        <input id="searchText" type="text" class="search-query form-control" placeholder="Search User by Name" />
         <div>&ensp;&ensp;&ensp;&ensp;</div>
-            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" >
+            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="search()">
                 Search
             </button >
        
     </div>
 </div>
+
+
 
 
     
@@ -29,7 +46,7 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>ID</th>
+                    <th>User Name</th>
                     <th>EMAIL</th>
                     <th>PASSWORD</th>
                     <th>CHECK</th>
@@ -37,9 +54,9 @@
             </thead>
             <tbody>
                 <c:forEach items="${users}" var="user" varStatus="tagStatus">
-                	 <tr>
+                	 <tr id="num${tagStatus.index}">
         				<td><c:out value="${user.getId()}"> </c:out></td>
-        				<td><c:out value="${user.getUsername()}"> </c:out></td>
+        				<td id="name${tagStatus.index}"><c:out value="${user.getUsername()}"> </c:out></td>
         				<td><c:out value="${user.getEmail()}"> </c:out></td>
         				<td><c:out value="${user.getPassword()}"> </c:out></td>
         				<td><a href="/slimYB/profiledata?id=${user.getId()}"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
