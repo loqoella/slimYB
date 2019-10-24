@@ -9,7 +9,7 @@
 <!--Title -->
 <div class ="titlemes">
     <h1 class="display-4"><strong> User&ensp;&ensp;Profile </strong></h1>
-    <p class="lead"> The User you choose has been deleted from the database!</p>
+    <p class="lead"> The User you choose has been deleted from the database</p>
    
 </div>
 
