@@ -48,4 +48,17 @@ public class ForumManager implements Serializable {
 		Forum f =(Forum) this.sessionFactory.getCurrentSession().get(Forum.class,id);
 		return f;
 	}
+	
+	public void deleteForum(int id) {
+		Session currentSession =this.sessionFactory.getCurrentSession();
+		Forum fo = (Forum)currentSession.get(Forum.class,id);
+		currentSession.delete(fo);
+	}
+
+
+
+	public void updateForum(Forum nf) {
+		Session currentSession =this.sessionFactory.getCurrentSession();
+		currentSession.merge(nf);
+	}	
 }

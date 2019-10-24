@@ -21,10 +21,10 @@
     </div>
     
     <div class="postbuttons">
-    	<a href="#"><button type="button" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">EDIT</button></a>
+    	<a href="/slimYB/post/editForum?id=${forum.getId()}"><button type="button" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">EDIT</button></a>
 	</div>
 	<div class="postbuttons">
-		<a href="#"><button type="button" class="btn btn-danger" style="width:10rem; font-size:20px;color:white;">DELETE</button></a>
+		<a href="/slimYB/post/deleteForum?id=${forum.getId()}"><button type="button" class="btn btn-danger" style="width:10rem; font-size:20px;color:white;">DELETE</button></a>
 		
 	</div>
 </div>
