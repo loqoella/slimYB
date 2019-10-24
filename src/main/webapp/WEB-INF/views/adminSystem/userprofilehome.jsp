@@ -8,14 +8,14 @@
 
  
 <div id="custom-search-input">
-    <div class="input-group">
-        <input type="text" class="search-query form-control" placeholder="Search User" />
+    <form class="input-group">
+        <input id="searchRowName" type="text" class="search-query form-control" placeholder="Search User" />
         <div>&ensp;&ensp;&ensp;&ensp;</div>
             <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" >
                 Search
             </button >
        
-    </div>
+    </form>
 </div>
 
 
@@ -50,6 +50,25 @@
         </table>
     </div>
 </div>
+<!--  
+<script>
+function searchRow(){
+	var searchRowName = $("#searchRowName").val();
+	if(searchRowName == $(this).attr("id")||searchRowName == $(this).attr("username")||searchRowName == $(this).attr("email"){
+		$("tr td").show();
+	}
+	else{
+		$("tr td").hide();
+
+    }
+ 
+    $('#searchRowName').bind('input propertychange', function() {
+ 
+    	searchRow();
+   
+	}
+}
+</script>-->
 <div class="endblock2">
 	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </div>
