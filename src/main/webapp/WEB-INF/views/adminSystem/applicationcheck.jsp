@@ -10,7 +10,7 @@
 
 <div class="posttitles">
 	<h3 class="posttitle1"><c:out value="${application.getTitle()}"> </c:out></h3>
-	<h4>Tag: #<c:out value="${application.getTag()}"> </c:out></h4>
+	<h4>Tag: <c:out value="${application.getTag()}"> </c:out></h4>
 
 
     <div class="contentsection">
