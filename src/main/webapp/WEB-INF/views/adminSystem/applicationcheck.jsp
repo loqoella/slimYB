@@ -19,10 +19,10 @@
     </div>
     
     <div class="postbuttons">
-    	<a href="#"><button type="button" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">APPROVE</button></a>
+    	<a href="/slimYB/applicationcheck/approveApplication?id=${application.getId()}"><button type="button" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">APPROVE</button></a>
 	</div>
 	<div class="postbuttons">
-		<a href="#"><button type="button" class="btn btn-danger" style="width:10rem; font-size:20px;color:white;">DECLINE</button></a>
+		<a href="/slimYB/applicationcheck/declineApplication?id=${application.getId()}"><button type="button" class="btn btn-danger" style="width:10rem; font-size:20px;color:white;">DECLINE</button></a>
 		
 	</div>
 </div>

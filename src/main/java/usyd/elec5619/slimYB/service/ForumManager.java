@@ -11,7 +11,7 @@ import org.hibernate.classic.Session;
 
 import usyd.elec5619.slimYB.domain.Forum;
 
-@Service(value="applicationManager")
+@Service(value="forumManager")
 @Transactional
 public class ForumManager implements Serializable {
 	
@@ -37,4 +37,9 @@ public class ForumManager implements Serializable {
 		System.out.print(m);
 		return m;
 	}	
+	
+	public void addForum(Forum fo)throws Exception{
+		Session currentSession = this.sessionFactory.getCurrentSession();
+		currentSession.save(fo);
+	}
 }

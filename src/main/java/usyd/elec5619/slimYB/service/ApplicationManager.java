@@ -10,6 +10,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.classic.Session;
 
 import usyd.elec5619.slimYB.domain.Application;
+import usyd.elec5619.slimYB.domain.User;
 
 @Service(value="applicationManager")
 @Transactional
@@ -35,5 +36,11 @@ public class ApplicationManager implements Serializable {
 		Application m =(Application) this.sessionFactory.getCurrentSession().get(Application.class,id);
 		System.out.print(m);
 		return m;
+	}	
+	
+	public void deleteApplication(int id) {
+		Session currentSession =this.sessionFactory.getCurrentSession();
+		Application app = (Application)currentSession.get(Application.class,id);
+		currentSession.delete(app);
 	}	
 }
