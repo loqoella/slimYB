@@ -11,7 +11,7 @@
     <form class="input-group">
         <input id="searchRowName" type="text" class="search-query form-control" placeholder="Search User" />
         <div>&ensp;&ensp;&ensp;&ensp;</div>
-            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" >
+            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="searchRow()">
                 Search
             </button >
        
