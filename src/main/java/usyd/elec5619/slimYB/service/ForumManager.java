@@ -10,6 +10,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.classic.Session;
 
 import usyd.elec5619.slimYB.domain.Forum;
+import usyd.elec5619.slimYB.domain.User;
 
 @Service(value="forumManager")
 @Transactional
@@ -23,14 +24,6 @@ public class ForumManager implements Serializable {
 	}
 
 	
-
-	public List<Forum> getAllApplications() throws Exception {
-		
-		
-		List<Forum> list =this.sessionFactory.getCurrentSession().createQuery("from Application").list();
-		return list;
-	}
-	
 	
 	public Forum getApplicationById(int id)throws Exception {
 		Forum m =(Forum) this.sessionFactory.getCurrentSession().get(Forum.class,id);
@@ -42,4 +35,30 @@ public class ForumManager implements Serializable {
 		Session currentSession = this.sessionFactory.getCurrentSession();
 		currentSession.save(fo);
 	}
+	
+	public List<Forum> getAllForums(){
+	
+		List<Forum> forums =this.sessionFactory.getCurrentSession().createQuery("from Forum").list();
+		return forums;
+	}
+
+
+
+	public Forum getForumById(int id) {
+		Forum f =(Forum) this.sessionFactory.getCurrentSession().get(Forum.class,id);
+		return f;
+	}
+	
+	public void deleteForum(int id) {
+		Session currentSession =this.sessionFactory.getCurrentSession();
+		Forum fo = (Forum)currentSession.get(Forum.class,id);
+		currentSession.delete(fo);
+	}
+
+
+
+	public void updateForum(Forum nf) {
+		Session currentSession =this.sessionFactory.getCurrentSession();
+		currentSession.merge(nf);
+	}	
 }

@@ -27,7 +27,7 @@ public class Forum implements Serializable {
 	@Column(name="User")
 	private String user;
 	
-	@Column(name="Content")
+	@Column(name="Content",length=2655)
 	private String content;
 	
 	public int getId() {
@@ -44,7 +44,7 @@ public class Forum implements Serializable {
 
 
 	public void setUser(String user) {
-		this.title = user;
+		this.user = user;
 	}
 
 	public String getTitle() {
@@ -87,6 +87,7 @@ public class Forum implements Serializable {
 		buffer.append("Tag: " + tag + ";");
 		buffer.append("Title: " + title + ";");	
 		buffer.append("Content: " + content + ";");		
+		buffer.append("User: " + user + ";");	
 		return buffer.toString();
 	}
 

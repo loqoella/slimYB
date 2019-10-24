@@ -10,6 +10,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.classic.Session;
 
 import usyd.elec5619.slimYB.domain.Application;
+import usyd.elec5619.slimYB.domain.Forum;
 import usyd.elec5619.slimYB.domain.User;
 
 @Service(value="applicationManager")
@@ -43,4 +44,9 @@ public class ApplicationManager implements Serializable {
 		Application app = (Application)currentSession.get(Application.class,id);
 		currentSession.delete(app);
 	}	
+	
+	public void addApplication(Application app)throws Exception{
+		Session currentSession = this.sessionFactory.getCurrentSession();
+		currentSession.save(app);
+	}
 }

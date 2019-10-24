@@ -20,81 +20,30 @@
     </div>
 </div>
 
-<div class="addmodule">
-	<div class="card" style="width:20rem; float: left;">
-	  <img src="${pageContext.request.contextPath}/images/admin/user.jpg" style="height: 10rem;" class="card-img-top" alt="...">
-	  <div class="card-body">
-	    <h5 class="postcard-title">Title</h5>
-	    <p class="postcard-tag">Tag:</p>
-	    <p class="postcard-text">The user account and recorded profile data will be shown, and Administrator can check or delete the profile.</p>
-	    
-	    <div align="center"><a href="/slimYB/post" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">Enter</a></div>
-	  </div>
-	</div>
-</div>
+<style>
+.line-limit-length {
 
-<div class="addmodule">
-	<div class="card" style="width:20rem; float: left;">
-	  <img src="${pageContext.request.contextPath}/images/admin/user.jpg" style="height: 10rem;" class="card-img-top" alt="...">
-	  <div class="card-body">
-	    <h5 class="postcard-title">Title</h5>
-	    <p class="postcard-tag">Tag:</p>
-	    <p class="postcard-text">The user account and recorded profile data will be shown, and Administrator can check or delete the profile.</p>
-	    
-	    <div align="center"><a href="/slimYB/post" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">Enter</a></div>
-	  </div>
-	</div>
-</div>
+	overflow: hidden;
 
-<div class="addmodule">
-	<div class="card" style="width:20rem; float: left;">
-	  <img src="${pageContext.request.contextPath}/images/admin/user.jpg" style="height: 10rem;" class="card-img-top" alt="...">
-	  <div class="card-body">
-	    <h5 class="postcard-title">Title</h5>
-	    <p class="postcard-tag">Tag:</p>
-	    <p class="postcard-text">The user account and recorded profile data will be shown, and Administrator can check or delete the profile.</p>
-	    
-	    <div align="center"><a href="/slimYB/post" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">Enter</a></div>
-	  </div>
-	</div>
-</div>
+	text-overflow: ellipsis;
 
-<div class="addmodule">
-	<div class="card" style="width:20rem; float: left;">
-	  <img src="${pageContext.request.contextPath}/images/admin/user.jpg" style="height: 10rem;" class="card-img-top" alt="...">
-	  <div class="card-body">
-	    <h5 class="postcard-title">Title</h5>
-	    <p class="postcard-tag">Tag:</p>
-	    <p class="postcard-text">The user account and recorded profile data will be shown, and Administrator can check or delete the profile.</p>
-	    
-	    <div align="center"><a href="/slimYB/post" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">Enter</a></div>
-	  </div>
-	</div>
-</div>
+	white-space: nowrap; 
 
-<div class="addmodule">
-	<div class="card" style="width:20rem; float: left;">
-	  <img src="${pageContext.request.contextPath}/images/admin/user.jpg" style="height: 10rem;" class="card-img-top" alt="...">
-	  <div class="card-body">
-	    <h5 class="postcard-title">Title</h5>
-	    <p class="postcard-tag">Tag:</p>
-	    <p class="postcard-text">The user account and recorded profile data will be shown, and Administrator can check or delete the profile.</p>
-	    
-	    <div align="center"><a href="/slimYB/post" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">Enter</a></div>
-	  </div>
-	</div>
-</div>
+}
+</style>
 
+  <c:forEach items="${forums}" var="forum" varStatus="tagStatus">
 <div class="addmodule">
 	<div class="card" style="width:20rem; float: left;">
 	  <img src="${pageContext.request.contextPath}/images/admin/user.jpg" style="height: 10rem;" class="card-img-top" alt="...">
 	  <div class="card-body">
-	    <h5 class="postcard-title">Title</h5>
-	    <p class="postcard-tag">Tag:</p>
-	    <p class="postcard-text">The user account and recorded profile data will be shown, and Administrator can check or delete the profile.</p>
+	    <h5 class="postcard-title"><c:out value="${forum.getTitle()}"> </c:out></h5>
+	    <p class="postcard-tag">Tag:#<c:out value="${forum.getTag()}"> </c:out></p>
+	    <p class="postcard-text line-limit-length"><c:out value="${forum.getContent()}"> </c:out></p>
 	    
-	    <div align="center"><a href="/slimYB/post" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">Enter</a></div>
+	    <div align="center"><a href="/slimYB/post?id=${forum.getId()}" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">Enter</a></div>
 	  </div>
 	</div>
 </div>
+</c:forEach>
 
