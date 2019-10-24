@@ -50,7 +50,7 @@
 	<script>
 	imageFunction();
 	function imageFunction(){
-		var i = document.getElementById("tagofpost");
+		var i = document.getElementById("tagofpost").innerText;
 		if (i =="#Food"){			
 			document.getElementById("changedimage").src="${pageContext.request.contextPath}/images/admin/h1.jpg";
 			document.getElementById("tagofpost").id="newTago";
