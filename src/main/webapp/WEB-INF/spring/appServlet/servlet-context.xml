@@ -28,6 +28,8 @@
 	</beans:bean>
 	<beans:bean id="applicationManager" class="usyd.elec5619.slimYB.service.ApplicationManager">
 	</beans:bean>
+	<beans:bean id="forumManager" class="usyd.elec5619.slimYB.service.ForumManager">
+	</beans:bean>
 	
 	
 </beans:beans>
