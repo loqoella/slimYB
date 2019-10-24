@@ -27,7 +27,7 @@ public class Application implements Serializable {
 	@Column(name="User")
 	private String user;
 	
-	@Column(name="Content")
+	@Column(name="Content",length=2655)
 	private String content;
 	
 	
@@ -41,7 +41,7 @@ public class Application implements Serializable {
 
 
 	public void setUser(String user) {
-		this.title = user;
+		this.user = user;
 	}
 
 	public String getTitle() {

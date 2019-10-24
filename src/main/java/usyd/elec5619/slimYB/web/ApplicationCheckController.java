@@ -68,7 +68,7 @@ public class ApplicationCheckController {
 		fo.setUser(app.getUser());			//convert the application to object Forum, with same formatting.
 		fo.setContent(app.getContent());
 		fo.setTitle(app.getTitle());
-		System.out.print(fo);
+		
 		
 		applicationManager.deleteApplication(id);//delete this application
 		forumManager.addForum(fo);				//add new forum to database

@@ -27,7 +27,7 @@ public class Forum implements Serializable {
 	@Column(name="User")
 	private String user;
 	
-	@Column(name="Content")
+	@Column(name="Content",length=2655)
 	private String content;
 	
 	public int getId() {

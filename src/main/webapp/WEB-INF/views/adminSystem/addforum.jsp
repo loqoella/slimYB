@@ -8,37 +8,13 @@
    
 </div>
 
-<div class="addpost">
-	<h3 class="addatag">Choose a Tag</h3>
+<form class="addpost" id="form">
+	<h3 class="addatag">Input a Tag</h3>
+	<input name="tag" type="text" class="form-control" id="title-tag" placeholder="eg.#Health">
 	
-	<!-- 	<div class="tags">          
-	    <img src="{% static 'images/icons/baby1.png' %}" width="30">#Health<input type="checkbox" name="weekdays" value="mon" />
-	    </div>
-		<div class="tags">
-	       <img src="{% static 'images/icons/baby2.png' %}" width="20">#Fitness<input type="checkbox" name="weekdays" value="tue" />
-	    </div>
-		<div class="tags">
-	       <img src="{% static 'images/icons/baby3.png' %}" width="30">#Products<input type="checkbox" name="weekdays" value="wed" />
-	    </div>
-		<div class="tags">
-	       <img src="{% static 'images/icons/baby4.png' %}" width="30">#Food<input type="checkbox" name="weekdays" value="thu" />
-	    </div> -->
-
-	<div class="tags">
-		<button type="button" class="btn btn-outline-warning my-2 my-sm-0">#Health</button>
-	</div>
-	<div class="tags">
-		<button type="button" class="btn btn-outline-warning my-2 my-sm-0">#Fitness</button>
-	</div>
-	<div class="tags">
-		<button type="button" class="btn btn-outline-warning my-2 my-sm-0">#Products</button>
-	</div>
-	<div class="tags">
-		<button type="button" class="btn btn-outline-warning my-2 my-sm-0">#Food</button>
-	</div>
 	<div class="posttitle">
 		<h3 class="addatag">Add Title</h3>
-        <input type="text" class="form-control" id="title-title">
+        <input name="title" type="text" class="form-control" id="title-title">
     </div>
     <!--  
     <div class="addimage">
@@ -52,26 +28,28 @@
     </div> -->
     <div class="posttext">
     	<h3 class="addcontent">Add Content</h3>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+        <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
     </div>
     <div class="subbuttons">
-		<button onclick="myFunction()" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">SHARE</button>
+		<button type="submit" onclick="share()" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">SHARE</button>
 		<script>
-		function myFunction() {
+		function share() {
 		  alert("Congratulations! Your post has been shared to the forum.");
+		  document.getElementById("form").action="/slimYB/addforum/postForum";
 		}
 		</script>
 	</div>
 	<div class="subbuttons">
 		
-		<button onclick="myFunction()" class="btn btn-danger" style="width:10rem; font-size:20px;color:white;">CANCEL</button>
+		<button  onclick="myFunction()" class="btn btn-danger" style="width:10rem; font-size:20px;color:white;">CANCEL</button>
 		<script>
 		function myFunction() {
 		  alert("You have cancelled successfully.");
+		  document.getElementById("form").action="/slimYB/forum";
 		}
 		</script>	
 	</div>
 
-</div>
+</form>
 
 <%@ include file="/WEB-INF/views/footer.jsp" %>
