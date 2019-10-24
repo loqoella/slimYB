@@ -9,15 +9,15 @@
 </div>
 
 <div class="posttitles">
-	<h3 class="posttitle1">Title</h3>
-	<h4>Tag: #</h4>
+	<h3 class="posttitle1"><c:out value="${forum.getTitle()}"> </c:out></h3>
+	<h4>Tag: #<c:out value="${forum.getTag()}"> </c:out></h4>
 
 	<div class="imagesection">
 		<img src="${pageContext.request.contextPath}/images/admin/f1.jpg" style="width:30rem;">
 	</div>
 
     <div class="contentsection">
-    	<p>Content</p>
+    	<p><c:out value="${forum.getContent()}"> </c:out></p>
     </div>
     
     <div class="postbuttons">
