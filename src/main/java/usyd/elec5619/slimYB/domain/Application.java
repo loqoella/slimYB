@@ -29,6 +29,8 @@ public class Application implements Serializable {
 	
 	@Column(name="Content")
 	private String content;
+	
+	
 	public int getId() {
 		return id;
 	}
