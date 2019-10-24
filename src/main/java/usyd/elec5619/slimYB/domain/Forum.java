@@ -18,7 +18,7 @@ public class Forum implements Serializable {
 	@Column(name="Id")
 	private int id;
 	
-	@Column(name="Title")
+	@Column(name="Title",length=265)
 	private String title;
 	
 	@Column(name="Tag")
@@ -27,7 +27,7 @@ public class Forum implements Serializable {
 	@Column(name="User")
 	private String user;
 	
-	@Column(name="Content",length=2655)
+	@Column(name="Content",length=10000)
 	private String content;
 	
 	public int getId() {
@@ -48,6 +48,7 @@ public class Forum implements Serializable {
 	}
 
 	public String getTitle() {
+		
 		return title;
 	}
 

@@ -9,7 +9,7 @@
 <!--Title -->
 <div class ="titlemes">
     <h1 class="display-4"><strong> Update&ensp;&ensp;Forum </strong></h1>
-    <p class="lead"> The Forum you choose has been updated in the database!</p>
+    <p class="lead"> The post you choose has been updated in the Forum!</p>
    
 </div>
 

@@ -9,7 +9,7 @@
 <!--Title -->
 <div class ="titlemes">
     <h1 class="display-4"><strong> Delete&ensp;&ensp;Forum </strong></h1>
-    <p class="lead"> The Forum you choose has been deleted from the database!</p>
+    <p class="lead"> The post you choose has been deleted from the forum!</p>
    
 </div>
 
