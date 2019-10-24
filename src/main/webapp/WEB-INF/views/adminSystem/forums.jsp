@@ -40,7 +40,7 @@
 	  <img id="changedimage" style="height: 10rem;" class="card-img-top" alt="...">
 	  
 	  <div class="card-body">
-	    <h5 class="postcard-title"><c:out value="${forum.getTitle()}"> </c:out></h5>
+	    <h5 class="postcard-title line-limit-length"><c:out value="${forum.getTitle()}"> </c:out></h5>
 	    <p class="postcard-tag" id="tagofpost"><c:out value="${forum.getTag()}"> </c:out></p>
 	    <p class="postcard-text line-limit-length"><c:out value="${forum.getContent()}"> </c:out></p>
 	    
@@ -52,7 +52,7 @@
 	function imageFunction(){
 		var i = document.getElementById("tagofpost").innerText;
 		if (i =="#Food"){			
-			document.getElementById("changedimage").src="${pageContext.request.contextPath}/images/admin/h1.jpg";
+			document.getElementById("changedimage").src="${pageContext.request.contextPath}/images/admin/food1.jpg";
 			document.getElementById("tagofpost").id="newTago";
 			document.getElementById("changedimage").id="changed";
 			
@@ -71,6 +71,12 @@
 		}
 		else if (i =="#Product"){			
 			document.getElementById("changedimage").src="${pageContext.request.contextPath}/images/admin/p1.jpg";
+			document.getElementById("tagofpost").id="newTago";
+			document.getElementById("changedimage").id="changed";
+			
+		}
+		else if (i =="#Lose Weight"){			
+			document.getElementById("changedimage").src="${pageContext.request.contextPath}/images/admin/lose1.jpg";
 			document.getElementById("tagofpost").id="newTago";
 			document.getElementById("changedimage").id="changed";
 			

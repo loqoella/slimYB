@@ -1,20 +1,15 @@
 <%@ include file="/WEB-INF/views/adminSystem/headerAdmin.jsp" %>
 
 
-<!--Title -->
-<div class ="titlemes">
-    <h1 class="display-4"><strong> Hello,&ensp;&ensp;Administrator!  </strong></h1>
-    <p class="lead"> Add a new post to the forum:</p>
-   
-</div>
-
 <div class="posttitles">
+
+	<div class="imagesection">
+		<img id="iii" style="width:50rem;">
+	</div>
 	<h3 class="posttitle1"><c:out value="${forum.getTitle()}"> </c:out></h3>
 	<h4 class="posttag1" id="postTag">Tag: <c:out value="${forum.getTag()}"> </c:out></h4>
 
-	<div class="imagesection">
-		<img id="iii" style="width:30rem;">
-	</div>
+	
 
     <div class="contentsection">
     	<p><c:out value="${forum.getContent()}"> </c:out></p>
@@ -30,7 +25,7 @@
 	<script>
 	bigImageFunction();
 	function bigImageFunction(){
-		var i = document.getElementById("postTag");
+		var i = document.getElementById("postTag").innerText;
 		if (i =="Tag: #Food"){			
 			document.getElementById("iii").src="${pageContext.request.contextPath}/images/admin/h1.jpg";
 			document.getElementById("postTag").id="newPostTag";
