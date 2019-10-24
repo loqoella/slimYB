@@ -10,9 +10,9 @@ import org.hibernate.classic.Session;
 
 import usyd.elec5619.slimYB.domain.User;
 
-@Service(value="userManager")
+@Service(value="loginManager")
 @Transactional
-public class UserManager implements Serializable {
+public class LoginManager implements Serializable {
 	
 	private SessionFactory sessionFactory;
 	
@@ -24,10 +24,7 @@ public class UserManager implements Serializable {
 	public void testAddUser() {
 		Session currentSession = this.sessionFactory.getCurrentSession();
 		User u = new User();
-		u.setEmail("testUser");
-		u.setPassword("testPassword");
-		currentSession.save(u);
 		
-		System.out.print("new user added!");
+		
 	}
 }

@@ -22,8 +22,8 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	//@Resource(name="userManager")
-	//private UserManager userManager;
+	@Resource(name="userManager")
+	private UserManager userManager;
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
@@ -31,15 +31,9 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("now", formattedDate );
 		model.addAttribute("title", "Homepage");
 		
-		//userManager.testAddUser();
+		userManager.testAddUser();
 		
 		return "home";
 	}
