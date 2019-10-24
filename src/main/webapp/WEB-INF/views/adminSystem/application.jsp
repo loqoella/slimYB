@@ -33,67 +33,24 @@
                 <tr>
                     <th>#</th>
                     <th>User</th>
+                    <th>Title</th>
                     <th>Tag</th>
                     <th>CHECK</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                	<th>1</th>
-                    <td>123@gmail.com</td>
-                    <td>Health</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td>1e23@gmail.com</td>
-                    <td>Health</td>    
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                                   
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td>123@gmail.com</td>
-                    <td>Health</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                <tr>
-                    <th>4</th>
-                    <td>123@gmail.com</td>
-                    <td>Fitness</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                <tr>
-                    <th>5</th>
-                    <td>123@gmail.com</td>
-                    <td>Fitness</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                <tr>
-                    <th>6</th>
-                    <td>123@gmail.com</td>
-                    <td>Health</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                <tr>
-                    <th>7</th>
-                    <td>123@gmail.com</td>
-                    <td>Food</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                <tr>
-                    <th>8</th>
-                    <td>123@gmail.com</td>
-                    <td>Clothes</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                <tr>
-                    <th>9</th>
-                    <td>123@gmail.com</td>
-                    <td>Food</td>
-                    <td><a href="/slimYB/profiledata"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">check</button> </a></td>
-                </tr>
-                
+                 
+                <c:forEach items="${applications}" var="application" varStatus="tagStatus">
+                	 <tr>  
+                	 	<td><c:out value="${application.getId()}"> </c:out></td> 
+                	 	<td><c:out value="${application.getUser()}"> </c:out></td> 					
+        				<td><c:out value="${application.getTitle()}"> </c:out></td>
+        				<td><c:out value="${application.getTag()}"> </c:out></td>	
+        				
+        				<td><a href="/slimYB/applicationcheck?id=${application.getId()}"><button type="button" class="btn btn-outline-warning my-2 my-sm-0">Check</button> </a></td>
+   					 </tr>
+                </c:forEach>
+
             </tbody>
         </table>
     </div>

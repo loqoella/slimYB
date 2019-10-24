@@ -4,6 +4,8 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.annotation.Resource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -11,19 +13,20 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import usyd.elec5619.slimYB.domain.Application;
+import usyd.elec5619.slimYB.service.ApplicationManager;
+
 @Controller
 @RequestMapping("/application")
 public class ApplicationController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	/**
-	 * administrator home page
-	 * @param model - jsp context
-	 * @return
-	 */
+	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	@Resource(name="applicationManager")
+	private ApplicationManager applicationManaegr;
+
 	@RequestMapping(value = "/application", method = RequestMethod.GET)
-	public String home(Model model) {
+	public String home(Model model) throws Exception{
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
@@ -32,9 +35,10 @@ public class ApplicationController {
 		
 		model.addAttribute("now", formattedDate );
 		model.addAttribute("title", "User Application");
-		
+		model.addAttribute("applications",applicationManaegr.getAllApplications()) ;
 		
 		return "adminSystem/application";
 	}
+	
 	
 }

@@ -40,6 +40,7 @@
 		<h3 class="addatag">Add Title</h3>
         <input type="text" class="form-control" id="title-title">
     </div>
+    <!--  
     <div class="addimage">
     	<h3 class="addatag">Add Image</h3>
     	<div class="input-group mb-3">
@@ -48,7 +49,7 @@
     			<label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02"> </label>
   			</div>
 		</div>
-    </div>
+    </div> -->
     <div class="posttext">
     	<h3 class="addcontent">Add Content</h3>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>

@@ -2,7 +2,6 @@ package usyd.elec5619.slimYB.web;
 
 import java.text.DateFormat;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
 import javax.annotation.Resource;
@@ -13,22 +12,29 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import usyd.elec5619.slimYB.domain.User;
 import usyd.elec5619.slimYB.service.UserManager;
 
-
+/**
+ * Handles requests for the application marketplace page.
+ */
 @Controller
-@RequestMapping("/userprofile")
-public class ProfileController {
+@RequestMapping("/deleteUser")
+public class DeleteUserController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
+	/**
+	 * administrator home page
+	 * @param model - jsp context
+	 * @return
+	 */
 	@Resource(name="userManager")
 	private UserManager userManager;
 	
-	@RequestMapping(value = "/userprofile", method = RequestMethod.GET)
-	public String home(Model model) throws Exception {
+	@RequestMapping(value = "/deleteUser", method = RequestMethod.GET)
+	public String home(Model model,@RequestParam("id")int id) throws Exception {
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
@@ -36,13 +42,10 @@ public class ProfileController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("now", formattedDate );
-		model.addAttribute("title", "User Profile");
-	
-		model.addAttribute("users",userManager.getAllUsers()) ;
+		model.addAttribute("title", "Deleted");
+		userManager.deleteUser(id);
 		
-		
-		return "adminSystem/userprofilehome";
+		return "adminSystem/deleteUser";
 	}
-	
 	
 }

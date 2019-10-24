@@ -121,11 +121,11 @@
 }
 
 .addcontent{
-	margin: -2rem 0 1rem 0;
+	margin: 0rem 0 1rem 0;
 	font-family: helvetica;
 }
 .posttext{
-	margin: 0 0 3rem 0
+	margin: 2rem 0 3rem 0
 }
 .subbuttons{
 	display:inline-block;

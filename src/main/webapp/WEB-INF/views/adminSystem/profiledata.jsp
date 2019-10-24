@@ -18,19 +18,19 @@
 	<h2 class=subtitle>Information</h2><br>
 	<div class="info">
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/name2.jpg" style="width: 3rem;">&nbsp;&nbsp;Username:&nbsp;&nbsp;<c:out value="${user.getUsername()}"> </c:out></font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/name2.jpg" style="width: 3rem;">&nbsp;&nbsp;Username:&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${user.getUsername()}"> </c:out></font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/email1.jpg" style="width: 3rem;">&nbsp;&nbsp;Email:&nbsp;&nbsp;<c:out value="${user.getEmail()}"> </c:out></font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/email1.jpg" style="width: 3rem;">&nbsp;&nbsp;Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${user.getEmail()}"> </c:out></font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/birth.jpg" style="width: 3rem;">&nbsp;&nbsp;Birthday:</font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/birth.jpg" style="width: 3rem;">&nbsp;&nbsp;Birthday:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/flower1.jpg" style="width: 3rem;">&nbsp;&nbsp;Age:</font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/flower1.jpg" style="width: 3rem;">&nbsp;&nbsp;Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/gender1.jpg" style="width: 3rem;">&nbsp;&nbsp;Gender:</font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/gender1.jpg" style="width: 3rem;">&nbsp;&nbsp;Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br><br>
 		</div>
 	</div>
 </div>
@@ -39,29 +39,29 @@
 	<h2 class=subtitle>Physical Data</h2><br>
 	<div class="info">
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/height1.jpg" style="width: 3rem;">&nbsp;&nbsp;Height:</font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/height1.jpg" style="width: 3rem;">&nbsp;&nbsp;Height:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/weight2.jpg" style="width: 3rem;">&nbsp;&nbsp;Weight:</font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/weight2.jpg" style="width: 3rem;">&nbsp;&nbsp;Weight:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/bust.jpg" style="width: 3rem;">&nbsp;&nbsp;Bust:</font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/bust.jpg" style="width: 3rem;">&nbsp;&nbsp;Bust:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/waist.jpg" style="width: 3rem;">&nbsp;&nbsp;Waist:</font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/waist.jpg" style="width: 3rem;">&nbsp;&nbsp;Waist:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/hips1.jpg" style="width: 3rem;">&nbsp;&nbsp;Hips:</font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/hips1.jpg" style="width: 3rem;">&nbsp;&nbsp;Hips:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/BMI.jpg" style="width: 3rem;">&nbsp;&nbsp;BMI:</font><br><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/BMI.jpg" style="width: 3rem;">&nbsp;&nbsp;BMI:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br><br><br>
 		</div>
 	</div>
 	
 </div><br><br>
 
 <div class="profilebutton">
-	<a href="/slimYB/profiledata"><button type="button" class="btn btn-warning">Delete Profile</button></a>
+	<a href="/slimYB/deleteUser?id=${user.getId()}"><button type="button" class="btn btn-warning">Delete Profile</button></a>
 </div>
 
 <div class="endblock2">

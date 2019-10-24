@@ -46,11 +46,10 @@ public class UserManager implements Serializable {
 		System.out.print(q);
 		return q;
 	}
-
-
-
 	
-
-	
-	
+	public void deleteUser(int id) {
+		Session currentSession =this.sessionFactory.getCurrentSession();
+		User user = (User)currentSession.get(User.class,id);
+		currentSession.delete(user);
+	}	
 }
