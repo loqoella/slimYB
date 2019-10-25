@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import usyd.elec5619.slimYB.service.UserManager;
+import usyd.elec5619.slimYB.service.ProfileManager;
 
 @Controller
 @RequestMapping("/profiledata")
@@ -30,6 +31,10 @@ public class DataprofileController {
 	@Resource(name="userManager")
 	private UserManager userManager;
 	
+	@Resource(name="profileManager")
+	private ProfileManager profileManager;
+	
+	
 	
 	@RequestMapping(value = "/profiledata", method = RequestMethod.GET)
 	public String home(Model model,@RequestParam("id") int id) throws Exception {
@@ -42,12 +47,13 @@ public class DataprofileController {
 		model.addAttribute("now", formattedDate );
 		model.addAttribute("title", "Profiledata");
 		model.addAttribute("user",userManager.getUserById(id));
+		model.addAttribute("profile",profileManager.getProfileById(id));
 		
 		
 		
 		return "adminSystem/profiledata";
 	}
 	
-	
+
 	
 }
