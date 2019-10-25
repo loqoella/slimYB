@@ -17,6 +17,8 @@ import usyd.elec5619.slimYB.domain.User;
 public class ForumManager implements Serializable {
 	
 	private SessionFactory sessionFactory;
+	private List<Forum> forums;
+	//private List<Forum> forums;
 	
 	@Autowired
 	public void setSessionFactory(SessionFactory sf) {
@@ -43,7 +45,6 @@ public class ForumManager implements Serializable {
 	}
 
 
-
 	public Forum getForumById(int id) {
 		Forum f =(Forum) this.sessionFactory.getCurrentSession().get(Forum.class,id);
 		return f;
@@ -60,5 +61,16 @@ public class ForumManager implements Serializable {
 	public void updateForum(Forum nf) {
 		Session currentSession =this.sessionFactory.getCurrentSession();
 		currentSession.merge(nf);
-	}	
+	}
+
+
+
+	public void setForums(List<Forum> forums) {
+		this.forums=forums;
+}
+
+
+
+
+
 }
