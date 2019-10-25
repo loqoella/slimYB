@@ -175,4 +175,26 @@
 	
 }
 
+/*edit post*/
+.editTitle{
+	margin: 20px 200px 0 200px;
+}
 
+.editTag{
+	margin: 20px 200px 0 200px;
+}
+
+.editContent{
+	margin:  20px 200px 0 200px;
+}
+
+.editbuttons{
+	margin:  20px 0 0 400px;
+}
+
+/*Check Application*/
+.checkTag{
+	text-align: center;
+	font-family: helvetica;
+	
+}

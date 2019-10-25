@@ -35,9 +35,9 @@
   <div class="card-body">
     <h5 class="card-title">Forum</h5>
     <p class="card-text">Administrators are able to manage the forum including:</p>
-    <p class="card-text"><a href="/slimYB/profiledata"><img src="${pageContext.request.contextPath}/images/admin/star2.jpg" style="width: 2rem;"><font color="#8373ce">&nbsp;Share Post on Forum</font></a></p>
-    <p class="card-text"><a href="/slimYB/profiledata"><img src="${pageContext.request.contextPath}/images/admin/star2.jpg" style="width: 2rem;"><font color="#8373ce">&nbsp;Check Existing Posts</font></a></p>
-    <p class="card-text"><a href="/slimYB/profiledata"><img src="${pageContext.request.contextPath}/images/admin/star2.jpg" style="width: 2rem;"><font color="#8373ce">&nbsp;Audit User Application</font></a></p>
+    <p class="card-text"><a href="/slimYB/addforum"><img src="${pageContext.request.contextPath}/images/admin/star2.jpg" style="width: 2rem;"><font color="#8373ce">&nbsp;Share Post on Forum</font></a></p>
+    <p class="card-text"><a href="/slimYB/forums"><img src="${pageContext.request.contextPath}/images/admin/star2.jpg" style="width: 2rem;"><font color="#8373ce">&nbsp;Check Existing Posts</font></a></p>
+    <p class="card-text"><a href="/slimYB/application"><img src="${pageContext.request.contextPath}/images/admin/star2.jpg" style="width: 2rem;"><font color="#8373ce">&nbsp;Audit User Application</font></a></p>
     <div align="center"><a href="/slimYB/forum" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">Enter</a></div>
   </div>
 </div>

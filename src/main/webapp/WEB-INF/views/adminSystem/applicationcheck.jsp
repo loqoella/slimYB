@@ -4,17 +4,20 @@
 <!--Title -->
 <div class ="titlemes">
     <h1 class="display-4"><strong> Hello,&ensp;&ensp;Administrator!  </strong></h1>
-    <p class="lead"> Add a new post to the forum:</p>
+    <p class="lead"> Audit the post to send to the forum:</p>
    
 </div>
 
-<div class="posttitles">
-	<h3 class="posttitle1"><c:out value="${application.getTitle()}"> </c:out></h3>
-	<h4>Tag: <c:out value="${application.getTag()}"> </c:out></h4>
 
+
+<div class="posttitles">
+	
+	<h3 class="posttitle1"><c:out value="${application.getTitle()}"> </c:out></h3>
+
+	<h4 class="checkTag"><c:out value="${application.getTag()}"> </c:out></h4>	
 
     <div class="contentsection">
-    	<p>Content:<c:out value="${application.getContent()}"> </c:out></p>
+    	<p><c:out value="${application.getContent()}"> </c:out></p>
     </div>
     
     <div class="postbuttons">
