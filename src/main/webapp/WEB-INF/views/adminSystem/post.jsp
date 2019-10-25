@@ -50,6 +50,12 @@
 			document.getElementById("iii").id="newImage";
 			
 		}
+		else if (i =="Tag: #Lose Weight"){			
+			document.getElementById("iii").src="${pageContext.request.contextPath}/images/admin/lose1.jpg";
+			document.getElementById("postTag").id="newPostTag";
+			document.getElementById("iii").id="newImage";
+			
+		}
 		else {			
 			document.getElementById("iii").src="${pageContext.request.contextPath}/images/admin/blog2.jpg";
 			document.getElementById("postTag").id="newPostTag";

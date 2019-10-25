@@ -107,3 +107,4 @@ function searchPost(){
 </div>
 </c:forEach>
 
+<%@ include file="/WEB-INF/views/footer.jsp" %>
