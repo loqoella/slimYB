@@ -34,7 +34,7 @@
 		<button type="submit" onclick="share()" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">SHARE</button>
 		<script>
 		function share() {
-		  alert("Congratulations! Your post has been shared to the forum.");
+		  alert("Congratulations! Your post is waiting for the audit.");
 		  document.getElementById("form").action="/slimYB/addforum/postForum";
 		}
 		</script>

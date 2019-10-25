@@ -27,7 +27,7 @@
 			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/birth.jpg" style="width: 3rem;">&nbsp;&nbsp;Birthday:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getBirthday()}"> </c:out></font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/flower1.jpg" style="width: 3rem;">&nbsp;&nbsp;Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getAge()}"> </c:out></font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/flower1.jpg" style="width: 3rem;">&nbsp;&nbsp;Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getAge()}"> </c:out></font><br><br>
 		</div>
 		<div class="detailedinfo">
 			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/gender1.jpg" style="width: 3rem;">&nbsp;&nbsp;Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getGender()}"> </c:out></font><br><br>
@@ -39,19 +39,19 @@
 	<h2 class=subtitle>Physical Data</h2><br>
 	<div class="info">
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/height1.jpg" style="width: 3rem;">&nbsp;&nbsp;Height:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getHeight()}"> </c:out></font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/height1.jpg" style="width: 3rem;">&nbsp;&nbsp;Height:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getHeight()}"> </c:out>&nbsp;CM</font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/weight2.jpg" style="width: 3rem;">&nbsp;&nbsp;Weight:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getWeight()}"> </c:out></font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/weight2.jpg" style="width: 3rem;">&nbsp;&nbsp;Weight:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getWeight()}"> </c:out>&nbsp;KG</font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/bust.jpg" style="width: 3rem;">&nbsp;&nbsp;Bust:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getBust()}"> </c:out></font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/bust.jpg" style="width: 3rem;">&nbsp;&nbsp;Bust:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getBust()}"> </c:out>&nbsp;CM</font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/waist.jpg" style="width: 3rem;">&nbsp;&nbsp;Waist:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getWaist()}"> </c:out></font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/waist.jpg" style="width: 3rem;">&nbsp;&nbsp;Waist:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getWaist()}"> </c:out>&nbsp;CM</font><br><br>
 		</div>
 		<div class="detailedinfo">
-			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/hips1.jpg" style="width: 3rem;">&nbsp;&nbsp;Hips:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getHips()}"> </c:out></font><br><br>
+			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/hips1.jpg" style="width: 3rem;">&nbsp;&nbsp;Hips:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getHips()}"> </c:out>&nbsp;CM</font><br><br>
 		</div>
 		<div class="detailedinfo">
 			<font size="4"><img src="${pageContext.request.contextPath}/images/admin/BMI.jpg" style="width: 3rem;">&nbsp;&nbsp;BMI:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<c:out value="${profile.getBMI()}"> </c:out></font><br><br><br>

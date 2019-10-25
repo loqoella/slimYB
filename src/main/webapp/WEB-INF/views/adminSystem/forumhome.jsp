@@ -42,8 +42,8 @@
 	<div class="card" style="width: 25rem; float: left;">
 	  <img src="${pageContext.request.contextPath}/images/admin/b1.jpg" style="height: 15rem;" class="card-img-top" alt="...">
 	  <div class="card-img-overlay">
-	    <a href="/slimYB/application" class="linkforum"><h3 class="textforum">User Application</h3></a>
-	    <p class="desforum">Check the users' application of posts and audit the posts</p>
+	    <a href="/slimYB/application" class="linkforum"><h3 class="textforum">Audit Post</h3></a>
+	    <p class="desforum">Check the users' or administrator's application of posts</p>
 	  </div>
 	</div>
 </div>
