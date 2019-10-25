@@ -16,7 +16,7 @@ public class User implements Serializable {
 	@Id
 	@GeneratedValue
 	@Column(name="Id")
-	private int id;
+	private long id;
 	
 	@Column(name="Username")
 	private String username;
@@ -27,7 +27,7 @@ public class User implements Serializable {
 	@Column(name="Email")
 	private String Email;
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 //

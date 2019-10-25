@@ -37,17 +37,18 @@ public class DataprofileController {
 	
 	
 	@RequestMapping(value = "/profiledata", method = RequestMethod.GET)
-	public String home(Model model,@RequestParam("id") int id) throws Exception {
+	public String home(Model model,@RequestParam("id") long id) throws Exception {
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
 		
 		String formattedDate = dateFormat.format(date);
+		int pro=(int)id;
 		
 		model.addAttribute("now", formattedDate );
 		model.addAttribute("title", "Profiledata");
 		model.addAttribute("user",userManager.getUserById(id));
-		model.addAttribute("profile",profileManager.getProfileById(id));
+		model.addAttribute("profile",profileManager.getProfileById(pro));
 		
 		
 		

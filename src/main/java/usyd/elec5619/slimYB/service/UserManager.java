@@ -41,13 +41,13 @@ public class UserManager implements Serializable {
 	}
 	
 	
-	public User getUserById(int id)throws Exception {
+	public User getUserById(long id)throws Exception {
 		User q =(User) this.sessionFactory.getCurrentSession().get(User.class,id);
 		System.out.print(q);
 		return q;
 	}
 	
-	public void deleteUser(int id) {
+	public void deleteUser(long id) {
 		Session currentSession =this.sessionFactory.getCurrentSession();
 		User user = (User)currentSession.get(User.class,id);
 		currentSession.delete(user);

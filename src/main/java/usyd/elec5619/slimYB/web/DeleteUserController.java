@@ -34,7 +34,7 @@ public class DeleteUserController {
 	private UserManager userManager;
 	
 	@RequestMapping(value = "/deleteUser", method = RequestMethod.GET)
-	public String home(Model model,@RequestParam("id")int id) throws Exception {
+	public String home(Model model,@RequestParam("id")long id) throws Exception {
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
