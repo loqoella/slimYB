@@ -4,7 +4,7 @@
 <!--Title -->
 <div class ="titlemes">
     <h1 class="display-4"><strong> Hello,&ensp;&ensp;Administrator!  </strong></h1>
-    <p class="lead"> Add a new post to the forum:</p>
+    <p class="lead"> Edit the post in the forum:</p>
    
 </div>
 <form action="/slimYB/post/updateForum">
