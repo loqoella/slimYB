@@ -30,10 +30,10 @@ public class User implements Serializable {
 	public long getId() {
 		return id;
 	}
-//
-//	public void setId(long id) {
-//		this.id = id;
-//	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public String getUsername() {
 		return username;
@@ -57,6 +57,10 @@ public class User implements Serializable {
 	
 	public String getEmail() {
 		return Email;
+	}
+	
+	public void setEmail(String em) {
+		this.Email=em;
 	}
 	
 	
