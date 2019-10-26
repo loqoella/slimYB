@@ -1,26 +1,29 @@
 package usyd.elec5619.slimYB.domain;
 
+
+import org.junit.Test;
+
 import junit.framework.TestCase;
 
 public class ProfileTest extends TestCase{
 
-	private Profile profile;
+	private Profile profilep;
 	
 	protected void setUp() throws Exception{
-		profile = new Profile();		
+		profilep = new Profile();		
 	}
 	
 	public void testSetAndGetUsername() {
 		String testUsername="aUsername";
-		assertNull(profile.getUsername());
-		profile.setUsername(testUsername);
-		assertEquals(testUsername, profile.getUsername());		
+		assertNull(profilep.getUsername());
+		profilep.setUsername(testUsername);
+		assertEquals(testUsername, profilep.getUsername());		
 	}
 	
 	public void testSetAndGetGender() {
 		String testGender="aGender";
-		assertNull(profile.getEmail());
-		profile.setGender(testGender);
-		assertEquals(testGender, profile.getGender());		
+		assertNull(profilep.getEmail());
+		profilep.setGender(testGender);
+		assertEquals(testGender, profilep.getGender());		
 	}
 }

@@ -10,6 +10,7 @@ public class ForumManagerTest extends TestCase{
 	private ForumManager forumManager;
 	
 	private List<Forum> forums;
+	private static int FORUM_COUNT=2;
 	
 	private static int id1=10;
 	private static String POST1_Title="Lose weight is good for health";
@@ -47,6 +48,26 @@ public class ForumManagerTest extends TestCase{
 	}
 	public void testGetForumsWithNoForums() {
 		forumManager=new ForumManager();
-		assertNull(forumManager.getAllForums());		
+		assertNull(forumManager.getForums());		
+	}
+	
+	public void testGetForums() {
+		List <Forum> forums = forumManager.getForums();
+		assertNotNull(forums);
+		assertEquals(FORUM_COUNT, forumManager.getForums().size());
+		
+		Forum forum = forums.get(0);
+		assertEquals(id1, forum.getId());
+		assertEquals(POST1_Title, forum.getTitle());
+		assertEquals(POST1_TAG, forum.getTag());
+		assertEquals(USER1, forum.getUser());
+		assertEquals(POST1_CONTENT, forum.getContent());
+		
+		forum = forums.get(1);
+		assertEquals(id2, forum.getId());
+		assertEquals(POST2_Title, forum.getTitle());
+		assertEquals(POST2_TAG, forum.getTag());
+		assertEquals(USER2, forum.getUser());
+		assertEquals(POST2_CONTENT, forum.getContent());
 	}
 }

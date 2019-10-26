@@ -63,14 +63,14 @@ public class ForumManager implements Serializable {
 		currentSession.merge(nf);
 	}
 
-
+	public List<Forum> getForums() {
+		
+		return forums;
+	}
 
 	public void setForums(List<Forum> forums) {
 		this.forums=forums;
 }
-
-
-
 
 
 }

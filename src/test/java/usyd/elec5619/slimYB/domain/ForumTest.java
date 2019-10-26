@@ -4,23 +4,23 @@ import junit.framework.TestCase;
 
 public class ForumTest extends TestCase{
 
-	private Forum forum;
+	private Forum forumf;
 	
 	protected void setUp() throws Exception{
-		forum = new Forum();		
+		forumf = new Forum();		
 	}
 	
 	public void testSetAndGetTitle() {
 		String testTitle="aTitle";
-		assertNull(forum.getTitle());
-		forum.setTitle(testTitle);
-		assertEquals(testTitle, forum.getTitle());		
+		assertNull(forumf.getTitle());
+		forumf.setTitle(testTitle);
+		assertEquals(testTitle, forumf.getTitle());		
 	}
 	
 	public void testSetAndGetTag() {
 		String testTag="aTag";
-		assertNull(forum.getTag());
-		forum.setTag(testTag);
-		assertEquals(testTag, forum.getTag());		
+		assertNull(forumf.getTag());
+		forumf.setTag(testTag);
+		assertEquals(testTag, forumf.getTag());		
 	}
 }
