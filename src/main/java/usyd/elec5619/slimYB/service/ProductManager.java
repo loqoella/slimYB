@@ -70,7 +70,7 @@ public class ProductManager implements Serializable {
 
 	public List<Product> getProductListFromCart(long userId) {
 		Session session = sessionFactory.getCurrentSession();
-		String hql = "SELECT c.product FROM Cart c WHERE c.userId = :userId";
+		String hql = "SELECT c.productId FROM Cart c WHERE c.userId.id = :userId";
 		Query query = session.createQuery(hql);
 		query.setParameter("userId", userId);
 		return query.list();
@@ -78,7 +78,7 @@ public class ProductManager implements Serializable {
 
 	public List<Product> getProductListBySellerId(long sellerId) {
 		Session session = sessionFactory.getCurrentSession();
-		String hql = "FROM Product WHERE userId = :userId";
+		String hql = "FROM Product p WHERE p.userId.id = :userId";
 		Query query = session.createQuery(hql);
 		query.setParameter("userId", sellerId);
 		return query.list();

@@ -1,7 +1,7 @@
 <%@ include file="/WEB-INF/views/header.jsp" %>
 <%@ include file="/WEB-INF/views/marketplace/marketplaceHeader.jsp" %>
 
-<%! int totalPrice = 0; %>
+<% int totalPrice = 0; %>
 
 <div class="container mb-5">
     <div class="table-responsive">
@@ -27,7 +27,7 @@
                    <td></td>
                    <td></td>
                    <td><strong>Total</strong></td>
-                   <td class="text-right"><strong>$ <% totalPrice %></strong></td>
+                   <td class="text-right"><strong>$ <%= totalPrice %></strong></td>
                 </tr>
             </tbody>
         </table>

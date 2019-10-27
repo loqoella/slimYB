@@ -30,4 +30,9 @@ public class UserManager implements Serializable {
 		
 		System.out.print("new user added!");
 	}
+
+	public User getUserById (long userId) {
+		Session session = sessionFactory.getCurrentSession();
+		return (User) session.get(User.class, userId);
+	}
 }

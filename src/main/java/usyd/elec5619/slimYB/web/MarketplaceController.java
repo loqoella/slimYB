@@ -182,7 +182,9 @@ public class MarketplaceController {
 			HttpServletRequest request,
 			Product product) {
 
+		product.setUserId(userManager.getUserById(getCurrentUserId()));
 		String pathRoot = request.getSession().getServletContext().getRealPath("");
+		productManager.createNewProduct(product, imgs, pathRoot);
 
 		return "marketplace/success";
 	}
