@@ -26,7 +26,8 @@ public class User implements Serializable {
 	
 	@Column(name="Email")
 	private String Email;
-
+	
+	
 	public long getId() {
 		return id;
 	}
@@ -34,7 +35,7 @@ public class User implements Serializable {
 	public void setId(long id) {
 		this.id = id;
 	}
-
+	
 	public String getUsername() {
 		return username;
 	}

@@ -74,6 +74,12 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
+	
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.jpeg</url-pattern>
+	</servlet-mapping>
+	<!-- <mvc:resources location="/static/" mapping="/static/**" /> -->
 	 <servlet-mapping>
    		 <servlet-name>default</servlet-name>
    		 <url-pattern>*.gif</url-pattern>
