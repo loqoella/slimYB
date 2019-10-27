@@ -29,8 +29,7 @@
     
     <div class="editbuttons" >
     	<button type="submit" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">CONFIRM</button></a>
-	</div>
-	
+	</div>	
 </div>
 </form>
 
