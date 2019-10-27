@@ -25,10 +25,19 @@ import usyd.elec5619.slimYB.domain.User;
 public class ProductManager implements Serializable {
 	
 	private SessionFactory sessionFactory;
+	private Product product;
 	
 	@Autowired
 	public void setSessionFactory(SessionFactory sf) {
 		this.sessionFactory = sf;
+	}
+	
+	public void setTestProduct(Product p) {
+		this.product = p;
+	}
+	
+	public Product getTestProduct(long id) {
+		return this.product;
 	}
 	
 	public Product getProductById(long productId) {
