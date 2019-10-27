@@ -15,26 +15,27 @@ import usyd.elec5619.slimYB.domain.User;
 @Service(value="profileManager")
 @Transactional
 public class ProfileManager implements Serializable {
-	
+
 	private SessionFactory sessionFactory;
-	
+
 	@Autowired
 	public void setSessionFactory(SessionFactory sf) {
 		this.sessionFactory = sf;
 	}
 
-
-	
-	
-	public Profile getProfileById(int id)throws Exception {
-		Profile q =(Profile) this.sessionFactory.getCurrentSession().get(Profile.class,id);
-		
+	public Profile getProfileByGender(String gender) {
+		Profile q = (Profile) this.sessionFactory.getCurrentSession().get(Profile.class, gender);
 		return q;
 	}
-	
+
+	public Profile getProfileById(int id)throws Exception {
+		Profile q =(Profile) this.sessionFactory.getCurrentSession().get(Profile.class, id);
+		return q;
+	}
+
 	public void deleteProfile(int id) {
 		Session currentSession =this.sessionFactory.getCurrentSession();
 		Profile profile = (Profile)currentSession.get(Profile.class,id);
 		currentSession.delete(profile);
-	}	
+	}
 }

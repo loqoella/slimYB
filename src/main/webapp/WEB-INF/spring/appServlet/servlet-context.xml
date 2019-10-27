@@ -8,7 +8,7 @@
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
-	
+
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 
@@ -21,10 +21,10 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-	
+
 	<context:component-scan base-package="usyd.elec5619.slimYB.web" />
-	
-	    <!-- 文件上传配置 -->
+
+		<!-- file upload -->
     <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <beans:property name="maxUploadSize" value="20971500"/>
     </beans:bean>
@@ -37,9 +37,9 @@
 	</beans:bean>
 	<beans:bean id="profileManager" class="usyd.elec5619.slimYB.service.ProfileManager">
 	</beans:bean>
-	
-	
+	<beans:bean id="friendManager" class="usyd.elec5619.slimYB.service.FriendManager">
+	</beans:bean>
+
 	<beans:bean id="diaryManager" class="usyd.elec5619.slimYB.service.DiaryManager">
 	</beans:bean>
-	
 </beans:beans>

@@ -26,9 +26,9 @@ import usyd.elec5619.slimYB.service.ForumManager;
 @Controller
 @RequestMapping("/forum")
 public class ForumController {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
+
 	/**
 	 * administrator home page
 	 * @param model - jsp context
@@ -39,18 +39,19 @@ public class ForumController {
 	
 	@RequestMapping(value = "/forum", method = RequestMethod.GET)
 	public String home(Model model) {
-		
+
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
-		
+
 		String formattedDate = dateFormat.format(date);
-		
+
 		model.addAttribute("now", formattedDate );
 		model.addAttribute("title", "Forum");
-		
-		
+
+
 		return "adminSystem/forumhome";
 	}
+
 	
 	@RequestMapping(value = "/view/{id}", method = RequestMethod.GET)
     @ResponseBody
@@ -63,5 +64,16 @@ public class ForumController {
 			
     }
 
-	
+
+//	@RequestMapping(value = "/view", method = RequestMethod.GET)
+//    @ResponseBody
+//    public List<Forum> view(){
+//
+//        System.out.println("view username:");
+//
+//        return forumManager.getAllForums();
+//    }
+
+
+
 }

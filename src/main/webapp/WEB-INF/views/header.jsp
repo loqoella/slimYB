@@ -33,7 +33,7 @@
 	      <a class="nav-item nav-link" href="/slimYB/goal">Goal</a>
 	      <a class="nav-item nav-link" href="/slimYB/self-test">Self-test</a>
 	      <a class="nav-item nav-link" href="/slimYB/friends">Friends</a>
-	      <a class="nav-item nav-link" href="/slimYB/life-recording">Life-Recording</a>
+	      <a class="nav-item nav-link" href="/slimYB/life-recording/">Life-Recording</a>
 	      <a class="nav-item nav-link" href="/slimYB/marketplace">Marketplace</a>
 	      <a class="nav-item nav-link" href="/slimYB/admin">Administrator</a>
 	    </div>

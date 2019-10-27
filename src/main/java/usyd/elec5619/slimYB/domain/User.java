@@ -1,6 +1,7 @@
 package usyd.elec5619.slimYB.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,18 +13,18 @@ import javax.persistence.GeneratedValue;
 @Entity
 @Table(name="User")
 public class User implements Serializable {
-	
+
 	@Id
 	@GeneratedValue
 	@Column(name="Id")
 	private long id;
-	
+
 	@Column(name="Username")
 	private String username;
-	
+
 	@Column(name="Password")
 	private String password;
-	
+
 	@Column(name="Email")
 	private String Email;
 	
@@ -51,20 +52,20 @@ public class User implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	public User getUser() {
 		return this;
 	}
-	
+
 	public String getEmail() {
 		return Email;
 	}
-	
+
 	public void setEmail(String em) {
 		this.Email=em;
 	}
-	
-	
+
+
 	public String toString() {
 		StringBuffer buffer = new StringBuffer();
 		buffer.append("Id: " + id + ";");
