@@ -15,31 +15,31 @@ import usyd.elec5619.slimYB.domain.User;
 @Service(value="forumManager")
 @Transactional
 public class ForumManager implements Serializable {
-	
+
 	private SessionFactory sessionFactory;
 	private List<Forum> forums;
 	//private List<Forum> forums;
-	
+
 	@Autowired
 	public void setSessionFactory(SessionFactory sf) {
 		this.sessionFactory = sf;
 	}
 
-	
-	
+
+
 	public Forum getApplicationById(int id)throws Exception {
 		Forum m =(Forum) this.sessionFactory.getCurrentSession().get(Forum.class,id);
 		System.out.print(m);
 		return m;
-	}	
-	
+	}
+
 	public void addForum(Forum fo)throws Exception{
 		Session currentSession = this.sessionFactory.getCurrentSession();
 		currentSession.save(fo);
 	}
-	
+
 	public List<Forum> getAllForums(){
-	
+
 		List<Forum> forums =this.sessionFactory.getCurrentSession().createQuery("from Forum").list();
 		return forums;
 	}
@@ -49,7 +49,7 @@ public class ForumManager implements Serializable {
 		Forum f =(Forum) this.sessionFactory.getCurrentSession().get(Forum.class,id);
 		return f;
 	}
-	
+
 	public void deleteForum(int id) {
 		Session currentSession =this.sessionFactory.getCurrentSession();
 		Forum fo = (Forum)currentSession.get(Forum.class,id);
@@ -63,14 +63,14 @@ public class ForumManager implements Serializable {
 		currentSession.merge(nf);
 	}
 
+	public List<Forum> getForums() {
 
+		return forums;
+	}
 
 	public void setForums(List<Forum> forums) {
 		this.forums=forums;
 }
-
-
-
 
 
 }

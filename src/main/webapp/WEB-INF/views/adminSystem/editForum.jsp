@@ -4,8 +4,8 @@
 <!--Title -->
 <div class ="titlemes">
     <h1 class="display-4"><strong> Hello,&ensp;&ensp;Administrator!  </strong></h1>
-    <p class="lead"> Add a new post to the forum:</p>
-   
+    <p class="lead"> Edit the post in the forum:</p>
+
 </div>
 <form action="/slimYB/post/updateForum">
 
@@ -22,15 +22,14 @@
 	</div>
 
 	<div class="editContent">
-    	<h4>Content:</h4> 
+    	<h4>Content:</h4>
     	<TextArea rows="8" cols="70" name="newContent"><c:out value="${forum.getContent()}"> </c:out></TextArea>
     </div>
     </br></br>
-    
+
     <div class="editbuttons" >
     	<button type="submit" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">CONFIRM</button></a>
 	</div>
-	
 </div>
 </form>
 
