@@ -201,7 +201,7 @@ public class MarketplaceController {
 		} catch (Exception e) {
 		}
 		String pathRoot = request.getSession().getServletContext().getRealPath("");
-		productManager.createNewProduct(product, imgs, pathRoot);
+		productManager.updateOrCreateNewProduct(product, imgs, pathRoot);
 
 		return "marketplace/success";
 	}

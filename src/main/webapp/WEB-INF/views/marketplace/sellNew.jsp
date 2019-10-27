@@ -6,7 +6,7 @@
 </span>
 
 <div>
-	<form method="post" action="/slimYB/marketplace/sellNew">
+	<form method="post" action="/slimYB/marketplace/sellNew" enctype="multipart/form-data">
 		<div class="form-row">
 			<div class="form-group col-md-6">
 			  <label for="itemName">Item Name</label>
@@ -19,7 +19,7 @@
 		</div>
 		<div class="form-group">
 		    <label for="itemDescription">Item description</label>
-		    <textarea name="description" class="form-control" id="itemDescription" rows="10"> ${product != null  ? "value=".concat(product.description) : ""} </textarea>
+		    <textarea name="description" class="form-control" id="itemDescription" rows="10"> ${product != null  ? product.description : ""} </textarea>
 	  	</div>
 
 			<div class="container mb-2">
@@ -30,18 +30,10 @@
 			</div>
 	  	<div class="container mb-4">
   			<div class="row">
-				<div class="card text-center col-md-3 imgContainer">
-				  <div class="imagePreview"></div>
-				  <div class="card-body">
-					<div class="row">
-						<label class="btn btn-primary btn-block mb-0">Upload<input type="file" name="file" class="uploadFile" style="..."></label>
-						<button class="btn btn-danger btn-block del">Delete</button>
-					</div>
-				  </div>
-				</div>
    				<div id="last-placeholder"></div>
 		 	</div>
 		</div>
+		<input type="hidden" name="id" value="${product.id}"/>
 	 	<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
 	</form>
 </div>

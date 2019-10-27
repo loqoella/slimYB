@@ -58,6 +58,10 @@ public class Product implements Serializable {
 		return id;
 	}
 
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	public User getUserId() {
 		return userId;
 	}

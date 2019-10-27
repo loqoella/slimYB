@@ -17,7 +17,7 @@
                 <tbody>
                     <c:forEach var="product" items="${cartItemList}">
                         <tr>
-                           <td><img src="${product.imagePath.split("%")[0]}" /> </td>
+                           <td><img src="${product.imagePath.split("%")[0]}" style="max-width:200px;max-height:200px;width:auto;height:auto;"/> </td>
                            <td class="align-middle">${product.productName}</td>
                            <td class="text-right align-middle price">$ ${product.price}</td>
                            <td class="text-right align-middle"><a href="#" onclick="sendDeleteRequest(this, ${product.id})" class="btn btn-danger oi oi-x"> </a> </td>

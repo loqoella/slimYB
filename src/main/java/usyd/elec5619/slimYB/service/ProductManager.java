@@ -85,10 +85,9 @@ public class ProductManager implements Serializable {
 		return query.list();
 	}
 
-	public void createNewProduct(Product product, MultipartFile[] imgs, String pathRoot) {
+	public void updateOrCreateNewProduct(Product product, MultipartFile[] imgs, String pathRoot) {
 		System.out.println("new product created");
 		Session session = sessionFactory.getCurrentSession();
-		session.save(product);
 
 		String imagePathString = "";
 
@@ -97,15 +96,17 @@ public class ProductManager implements Serializable {
 				String uuid = UUID.randomUUID().toString().replaceAll("-", "");
 				String contentType = mf.getContentType();
 				String suffix = contentType.substring(contentType.indexOf("/") + 1);
-				String path = "/static/images/" + uuid + "." + suffix;
+				String path = "/static/img/" + uuid + "." + suffix;
 				try {
 					mf.transferTo(new File(pathRoot + path));
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				imagePathString = imagePathString + "%" + path;
+				imagePathString = "/slimYB" + path + "%" + imagePathString;
 			}
 		}
+		product.setImagePath(imagePathString);
+		session.saveOrUpdate(product);
 	}
 
 	public List<Product> getProductListByOrder(Order order) {

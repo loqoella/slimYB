@@ -12,7 +12,7 @@
   <div class="carousel-inner">
     <c:forEach var="imageLink" items="${product.imagePath.split('%')}">
       <div class="carousel-item active">
-        <img src="imageLink" class="d-block w-100" alt="...">
+        <img src="${imageLink}" class="d-block w-100" alt="...">
       </div>
     </c:forEach>
   </div>
