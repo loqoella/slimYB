@@ -12,7 +12,6 @@ import javax.persistence.GeneratedValue;
 @Entity
 @Table(name="Profile")
 public class Profile implements Serializable {
-
 	@Id
 	@GeneratedValue
 	@Column(name="Id")
@@ -73,7 +72,6 @@ public class Profile implements Serializable {
 		return Email;
 	}
 
-
 	public String getBirthday() {
 		return Birthday;
 	}
@@ -109,7 +107,8 @@ public class Profile implements Serializable {
 	public double getWeight() {
 		return Weight;
 	}
-
+	
+	
 	public void setWeight(double weight) {
 		Weight = weight;
 	}
@@ -145,11 +144,14 @@ public class Profile implements Serializable {
 	public void setBMI(double bMI) {
 		BMI = bMI;
 	}
-
 	public String toString() {
 		StringBuffer buffer = new StringBuffer();
 		buffer.append("Id: " + id + ";");
 		buffer.append("Username: " + username + ";");
 		return buffer.toString();
+	}
+
+	public void setEmail(String email) {
+		Email = email;
 	}
 }

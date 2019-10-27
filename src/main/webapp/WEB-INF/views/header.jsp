@@ -31,14 +31,18 @@
 	      <a class="nav-item nav-link" href="/slimYB/">Home <span class="sr-only">(current)</span></a>
 	      <a class="nav-item nav-link" href="/slimYB/profile">Profile</a>
 	      <a class="nav-item nav-link" href="/slimYB/goal">Goal</a>
-	      <a class="nav-item nav-link" href="/slimYB/self-test">Self-test</a>
 	      <a class="nav-item nav-link" href="/slimYB/friends">Friends</a>
 	      <a class="nav-item nav-link" href="/slimYB/life-recording/">Life-Recording</a>
 	      <a class="nav-item nav-link" href="/slimYB/marketplace">Marketplace</a>
 	      <a class="nav-item nav-link" href="/slimYB/admin">Administrator</a>
 	    </div>
 	  </div>
-	  <a href="#" class="btn btn-outline-light my-2 my-sm-0" role="button">Log in</a>
+	  <c:if test="${ !sessionScope.currUser.prop.equals('') }">
+	  	<a href="/slimYB/login" class="btn btn-outline-light my-2 my-sm-0" role="button">${sessionScope.user.email}Log in</a>
+	  </c:if>
+	  <c:if test="${ sessionScope.currUser.equals('') }">
+	  	<a href="/slimYB/login" class="btn btn-outline-light my-2 my-sm-0" role="button">Hello</a>
+	  </c:if>
 	</nav>
 	</header>
 	<div class="container mt-2 mb-4">

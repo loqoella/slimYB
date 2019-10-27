@@ -22,6 +22,29 @@ public class ProfileManager implements Serializable {
 	public void setSessionFactory(SessionFactory sf) {
 		this.sessionFactory = sf;
 	}
+	
+public Profile getProfileByEmail(String Email)throws Exception {
+		
+		List<Profile> list = this.sessionFactory.getCurrentSession().createQuery("FROM Profile p WHERE p.Email = " + "'" + Email + "'").list();
+		System.out.print(list.size());
+		return list.get(0);	
+	}
+	
+	public void addProfile(Profile p)throws Exception{
+		Session currentSession = this.sessionFactory.getCurrentSession();
+		currentSession.save(p);
+	}
+	
+	public void deleteProfile(Profile p)throws Exception{
+		Session currentSession = this.sessionFactory.getCurrentSession();
+		currentSession.delete(p);
+	}
+	
+	public void updateProfile(Profile p) throws Exception{
+		Session currentSession = this.sessionFactory.getCurrentSession();
+		currentSession.update(p);
+	}
+		
 
 	public Profile getProfileByGender(String gender) {
 		Profile q = (Profile) this.sessionFactory.getCurrentSession().get(Profile.class, gender);

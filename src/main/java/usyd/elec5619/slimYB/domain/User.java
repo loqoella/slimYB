@@ -13,22 +13,21 @@ import javax.persistence.GeneratedValue;
 @Entity
 @Table(name="User")
 public class User implements Serializable {
-
+	
 	@Id
 	@GeneratedValue
 	@Column(name="Id")
 	private long id;
-
+	
 	@Column(name="Username")
 	private String username;
-
+	
 	@Column(name="Password")
 	private String password;
 
 	@Column(name="Email")
 	private String Email;
-	
-	
+
 	public long getId() {
 		return id;
 	}
@@ -36,7 +35,7 @@ public class User implements Serializable {
 	public void setId(long id) {
 		this.id = id;
 	}
-	
+
 	public String getUsername() {
 		return username;
 	}
@@ -52,7 +51,7 @@ public class User implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+	
 	public User getUser() {
 		return this;
 	}
@@ -61,15 +60,13 @@ public class User implements Serializable {
 		return Email;
 	}
 
-	public void setEmail(String em) {
-		this.Email=em;
+	public void setEmail(String email) {
+		Email = email;
 	}
-
 
 	public String toString() {
 		StringBuffer buffer = new StringBuffer();
-		buffer.append("Id: " + id + ";");
-		buffer.append("Username: " + username + ";");
+		buffer.append("Email: " + Email + ";");
 		buffer.append("Password: " + password + ";");
 		return buffer.toString();
 	}
