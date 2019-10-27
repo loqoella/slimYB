@@ -12,12 +12,12 @@ import javax.persistence.GeneratedValue;
 @Entity
 @Table(name="User")
 public class User implements Serializable {
-	
+
 	@Id
 	@GeneratedValue
 	@Column(name="Id")
 	private long id;
-	
+
 	@Column(name="Username")
 	private String username;
 	

@@ -38,9 +38,7 @@ public class HomeController {
 		
 		model.addAttribute("now", formattedDate );
 		model.addAttribute("title", "Homepage");
-		
-		userManager.testAddUser();
-		
+
 		return "home";
 	}
 	

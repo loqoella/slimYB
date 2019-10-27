@@ -5,6 +5,17 @@
     background-position: 80%;
 }
 
+.input-goal-img {
+    background: url("https://cdn.hipwallpaper.com/i/13/22/itcJLO.jpg");
+    background-size: cover;
+    background-position: center;
+    background-position: 70%;
+}
+
+#set-modal-d{
+    max-width: 60%;
+}
+
 #label_input {
     margin-top: 5%;
 }
@@ -14,5 +25,9 @@
 }
 
 #upload-button {
+     color: white;
+ }
+
+#set-goal-button {
     color: white;
 }

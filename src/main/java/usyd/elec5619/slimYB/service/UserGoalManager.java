@@ -7,13 +7,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import usyd.elec5619.slimYB.domain.ProgressRecord;
 import usyd.elec5619.slimYB.domain.User;
+import usyd.elec5619.slimYB.domain.UserGoal;
 
 import java.io.Serializable;
 import java.util.List;
 
-@Service(value = "progressRecordManager")
+@Service(value = "userGoalManager")
 @Transactional
-public class ProgressRecordManager implements Serializable {
+public class UserGoalManager implements Serializable {
 
     private SessionFactory sessionFactory;
 
@@ -22,22 +23,22 @@ public class ProgressRecordManager implements Serializable {
         this.sessionFactory = sf;
     }
 
-    public void addNewRecord(ProgressRecord record) throws Exception {
+    public void addNewGoal(UserGoal goal) throws Exception {
         Session currentSession = this.sessionFactory.getCurrentSession();
-        currentSession.saveOrUpdate(record);
+        currentSession.saveOrUpdate(goal);
     }
 
-    public List<ProgressRecord> getAllRecord() {
+    public List<UserGoal> getAllGoal() {
         Session currentSession = this.sessionFactory.getCurrentSession();
-        List<ProgressRecord> list = currentSession.createQuery("FROM ProgressRecord").list();
+        List<UserGoal> list = currentSession.createQuery("FROM UserGoal").list();
         return list;
     }
 
-
-    public List<ProgressRecord> searchExistingRecord(long userID, String date) {
+    public List<UserGoal> searchExistingGoal(long userID) {
         Session currentSession = this.sessionFactory.getCurrentSession();
-        List<ProgressRecord> list = currentSession.createQuery(
-                "FROM ProgressRecord R WHERE " + "R.user_id.id = " + "'" + userID + "'" + " AND " + "R.date = " + "'" + date + "'").list();
+        List<UserGoal> list = currentSession.createQuery(
+                "FROM UserGoal G WHERE " + "G.user_id.id = " + "'" + userID + "'").list();
         return list;
     }
+
 }

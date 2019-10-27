@@ -23,6 +23,7 @@
           rel="stylesheet">
 
     <!-- Custom styles for this template-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
     <link href="/slimYB/static/sb-admin-2.min.css" rel="stylesheet">
     <link href="/slimYB/static/update-progress.css" rel="stylesheet">
 
@@ -376,10 +377,86 @@
                 <!-- Page Heading -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-4 text-gray-800">Progress Dashboard</h1>
-                    <a data-toggle="modal" data-target=".bd-example-modal-lg"
-                       class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="upload-button"><i
+                    <a data-toggle="modal" data-target="#edit-modal"
+                       class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" id="upload-button"><i
                             class="fas fa-pencil-alt text-white"></i> Update Progress</a>
+                    <a data-toggle="modal" data-target="#set-modal"
+                       class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="upload-button"><i
+                            class="fas fa-pencil-alt text-white"></i> Set Your Goal!</a>
                 </div>
+
+                <div class="modal fade bd-example-modal-lg" id="set-modal" tabindex="-1" role="dialog"
+                     aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl" id="set-modal-d">
+                        <div class="modal-content">
+                            <!-- <div class="container"> -->
+                            <!-- <div class="card o-hidden border-0 shadow-lg my-5"> -->
+                            <div class="card-body p-0">
+                                <!-- Nested Row within Card Body -->
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        <div class="p-5">
+                                            <div class="text-center">
+                                                <h1 class="h4 text-gray-900 mb-4">Set Your Goal Now!</h1>
+                                                <h1 class="h6 text-gray-900 mb-4" id="label_input">Body Statistics</h1>
+                                            </div>
+                                            <form class="user" action="/slimYB/goal/setGoal" method="post">
+                                                <div class="form-group row">
+                                                    <div class="col-sm-12 mb-3 mb-sm-0">
+                                                        <input type="number"
+                                                               class="form-control form-control-user"
+                                                               name="goal_days"
+                                                               placeholder="Duration (days)">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-12 mb-3 mb-sm-0">
+                                                        <input type="number" step="0.1"
+                                                               class="form-control form-control-user"
+                                                               name="goal_weight"
+                                                               placeholder="Goal Weight">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-12 mb-3 mb-sm-0">
+                                                        <input type="number" step="0.1"
+                                                               class="form-control form-control-user"
+                                                               placeholder="Goal Thigh Girth" name="goal_thigh_girth">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-12">
+                                                        <input type="number" step="0.1"
+                                                               class="form-control form-control-user"
+                                                               placeholder="Goal Waist Girth" name="goal_waist_girth">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-12">
+                                                        <input type="number" step="0.1"
+                                                               class="form-control form-control-user"
+                                                               placeholder="Goal Hip Girth" name="goal_hip_girth">
+                                                    </div>
+                                                </div>
+                                                <Button class="btn btn-primary btn-user btn-block"
+                                                        id="log-on-button" type="submit">
+                                                    Set Goal!
+                                                </Button>
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 d-none d-lg-block input-goal-img"></div>
+
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                            <!-- </div> -->
+
+                        </div>
+                    </div>
+                </div>
+
 
                 <div class="modal fade bd-example-modal-lg" id="edit-modal" tabindex="-1" role="dialog"
                      aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -395,27 +472,31 @@
                                         <div class="p-5">
                                             <div class="text-center">
                                                 <h1 class="h4 text-gray-900 mb-4">Record Now for Today!</h1>
-                                                <h1 class="h6 text-gray-900 mb-4" id="label_input">Body Stastics</h1>
+                                                <h1 class="h6 text-gray-900 mb-4" id="label_input">Body Statistics</h1>
                                             </div>
                                             <form class="user" action="/slimYB/goal/addRecord" method="post">
                                                 <div class="form-group row">
                                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                                        <input type="number" class="form-control form-control-user"
+                                                        <input type="number" step="0.1"
+                                                               class="form-control form-control-user"
                                                                name="current_weight"
                                                                placeholder="Weight">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-sm-4 mb-3 mb-sm-0">
-                                                        <input type="number" class="form-control form-control-user"
+                                                        <input type="number" step="0.1"
+                                                               class="form-control form-control-user"
                                                                placeholder="Thigh Girth" name="current_thigh_girth">
                                                     </div>
                                                     <div class="col-sm-4">
-                                                        <input type="number" class="form-control form-control-user"
+                                                        <input type="number" step="0.1"
+                                                               class="form-control form-control-user"
                                                                placeholder="Waist Girth" name="current_waist_girth">
                                                     </div>
                                                     <div class="col-sm-4">
-                                                        <input type="number" class="form-control form-control-user"
+                                                        <input type="number" step="0.1"
+                                                               class="form-control form-control-user"
                                                                placeholder="Hip Girth" name="current_hip_girth">
                                                     </div>
                                                 </div>
@@ -427,11 +508,13 @@
 
                                                 <div class="form-group row">
                                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                                        <input type="number" class="form-control form-control-user"
+                                                        <input type="number" step="0.1"
+                                                               class="form-control form-control-user"
                                                                placeholder="Walking Steps" name="current_walking_steps">
                                                     </div>
                                                     <div class="col-sm-6">
-                                                        <input type="number" class="form-control form-control-user"
+                                                        <input type="number" step="0.1"
+                                                               class="form-control form-control-user"
                                                                placeholder="Running Distance"
                                                                name="current_running_distance">
                                                     </div>
@@ -443,16 +526,19 @@
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-sm-4 mb-3 mb-sm-0">
-                                                        <input type="number" class="form-control form-control-user"
+                                                        <input type="number" step="0.1"
+                                                               class="form-control form-control-user"
                                                                placeholder="Protein" name="current_intake_protein">
                                                     </div>
                                                     <div class="col-sm-4">
-                                                        <input type="number" class="form-control form-control-user"
+                                                        <input type="number" step="0.1"
+                                                               class="form-control form-control-user"
                                                                placeholder="Carbohydrate"
                                                                name="current_intake_carbohydrate">
                                                     </div>
                                                     <div class="col-sm-4">
-                                                        <input type="number" class="form-control form-control-user"
+                                                        <input type="number" step="0.1"
+                                                               class="form-control form-control-user"
                                                                placeholder="Fat" name="current_intake_fat">
                                                     </div>
                                                 </div>
@@ -482,8 +568,10 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Goal
+                                            Weight
                                         </div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">70 kg</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="card-goal">${goalWeight} kg
+                                        </div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -499,10 +587,10 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Time
-                                            Remaining
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Today is
                                         </div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">21 days</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="card-day">
+                                            Day ${numberOfRecords}</div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -523,15 +611,24 @@
                                         </div>
                                         <div class="row no-gutters align-items-center">
                                             <div class="col-auto">
-                                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
+                                                     id="card-progress">50%
+                                                </div>
                                             </div>
                                             <div class="col">
                                                 <div class="progress progress-sm mr-2">
                                                     <div class="progress-bar bg-info" role="progressbar"
+                                                         id="card-progress-bar"
                                                          style="width: 50%" aria-valuenow="50"
                                                          aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
+                                            <script>
+                                                let w = ${currentWeight} / ${goalWeight};
+                                                let p = w * 100;
+                                                document.getElementById("card-progress").innerHTML = p + " %";
+                                                document.getElementById("card-progress-bar").style = "aria-valuenow= " + "'" + p + "'";
+                                            </script>
                                         </div>
                                     </div>
                                     <div class="col-auto">
@@ -551,7 +648,10 @@
                                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Steps
                                             Today
                                         </div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">12198 steps</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"
+                                             id="card-steps">${currentSteps} steps
+                                        </div>
+
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -573,7 +673,9 @@
                                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Current
                                             Weight
                                         </div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">56 kg</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"
+                                             id="card-weight">${currentWeight} kg
+                                        </div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -592,7 +694,9 @@
                                         <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Current /
                                             Goal Thigh Girth
                                         </div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">54.55 / 51 cm</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"
+                                             id="card-thigh">${currentThigh} out of ${goalThigh} cm
+                                        </div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -611,7 +715,9 @@
                                         <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Current /
                                             Goal Waist Girth
                                         </div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">64.09 / 60 cm</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"
+                                             id="card-waist">${currentWaist} out of ${goalWaist} cm
+                                        </div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -631,7 +737,9 @@
                                         <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Current /
                                             Goal Hip Girth
                                         </div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800">89.82 / 87 cm</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="card-hip">${currentHip} out of ${goalHip}
+                                            cm
+                                        </div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -715,6 +823,8 @@
                             </div>
                         </div>
                     </div>
+
+
                 </div>
                 <!-- /.container-fluid -->
 
@@ -752,11 +862,31 @@
     <!-- Custom scripts for all pages-->
     <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/sb-admin-2.min.js"></script>
     <script type="text/javascript" src="https://kit.fontawesome.com/45c008b6a4.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+
+    <script type="text/javascript  src=" https:
+    //cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript"
+            src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 
 </body>
 
 </html>
 
+<script>
+    $(document).ready(function () {
+        $('#dataTable').DataTable();
+    });
+
+</script>
 <script>
     // Set new default font family and font color to mimic Bootstrap's default styling
     Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
@@ -916,6 +1046,9 @@
             cutoutPercentage: 80,
         },
     });
+</script>
+
+<script>
 
 
 </script>

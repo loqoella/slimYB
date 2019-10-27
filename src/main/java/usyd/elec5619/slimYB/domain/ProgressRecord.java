@@ -11,6 +11,10 @@ public class ProgressRecord implements Serializable {
     @Column(name = "Id")
     private long id;
 
+    @ManyToOne
+    @JoinColumn(name = "User_ID")
+    private User user_id;
+
     @Column(name = "Date")
     private String date;
 
@@ -133,5 +137,13 @@ public class ProgressRecord implements Serializable {
     @Override
     public String toString() {
         return super.toString();
+    }
+
+    public User getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(User user_id) {
+        this.user_id = user_id;
     }
 }
