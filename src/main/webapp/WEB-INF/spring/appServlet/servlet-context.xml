@@ -24,6 +24,11 @@
 
 	<context:component-scan base-package="usyd.elec5619.slimYB.web" />
 
+		<!-- file upload -->
+    <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <beans:property name="maxUploadSize" value="20971500"/>
+    </beans:bean>
+
 	<beans:bean id="userManager" class="usyd.elec5619.slimYB.service.UserManager">
 	</beans:bean>
 	<beans:bean id="applicationManager" class="usyd.elec5619.slimYB.service.ApplicationManager">
@@ -35,6 +40,6 @@
 	<beans:bean id="friendManager" class="usyd.elec5619.slimYB.service.FriendManager">
 	</beans:bean>
 
-
-
+	<beans:bean id="diaryManager" class="usyd.elec5619.slimYB.service.DiaryManager">
+	</beans:bean>
 </beans:beans>

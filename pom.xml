@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>usyd.elec5619</groupId>
 	<artifactId>slimYB</artifactId>
@@ -94,6 +94,11 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+		        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
 			<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -101,6 +106,28 @@
 			<version>${org.aspectj-version}</version>
 		</dependency>	
 		
+		<!-- json -->
+        <!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-core-asl -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.8.11</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-mapper-asl -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.8.11</version>
+		</dependency>
+
+
+		<!-- 文件上传 -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -243,6 +270,28 @@
                     <mainClass>org.test.int1.Main</mainClass>
                 </configuration>
             </plugin>
+
+			<!--jetty调试配置-->
+                <plugin>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-maven-plugin</artifactId>
+                    <version>9.4.11.v20180605</version>
+                    <configuration>
+                        <systemProperties>
+                            <systemProperty><!-- 开启调试模式 -->
+                                <name>DEBUG</name>
+                                <value>TRUE</value>
+                            </systemProperty>
+                        </systemProperties>
+                        <httpConnector>
+                            <host>0.0.0.0</host>
+                            <port>8083</port>
+                        </httpConnector>
+                        <reload>automatic</reload>
+                        <scanIntervalSeconds>2</scanIntervalSeconds><!-- 2秒检测一次变化 -->
+                    </configuration>
+                </plugin>
+
         </plugins>
     </build>
 </project>
