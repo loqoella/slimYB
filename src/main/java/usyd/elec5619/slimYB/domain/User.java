@@ -1,4 +1,4 @@
-spackage usyd.elec5619.slimYB.domain;
+package usyd.elec5619.slimYB.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;

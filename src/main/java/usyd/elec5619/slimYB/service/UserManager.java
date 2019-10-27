@@ -52,7 +52,7 @@ public class UserManager implements Serializable {
 		System.out.print(list.size());
 		if (list.size() !=0);
 			return list.get(0);
-
+	}
 
 	public List<User> getAllUsers() throws Exception {
 
