@@ -47,7 +47,7 @@ private static final Logger logger = LoggerFactory.getLogger(LoginController.cla
 		if(password_validation.equals(userPwd)) {
 			request.getSession(true).setAttribute("currUser", user);			
 			if(email.equals("admin"))
-				return "admin";
+				return "adminSystem/adminHome";
 			return "redirect:/";
 		}
 		else {

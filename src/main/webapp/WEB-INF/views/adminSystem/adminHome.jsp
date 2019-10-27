@@ -24,7 +24,7 @@
     <p class="card-text">For security and privacy reasons, the administrator is not allowed to see users' chatting records or diaries.</p>
     <p>&nbsp;</p>
     
-    <div align="center"><a href="/slimYB/userprofile" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">Enter</a></div>
+    <div align="center"><a href="/slimYB/profile/userprofile" class="btn btn-warning" style="width:10rem; font-size:20px;color:white;">Enter</a></div>
   </div>
 </div>
 <div style="float:left;">
