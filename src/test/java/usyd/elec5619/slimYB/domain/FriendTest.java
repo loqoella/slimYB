@@ -12,7 +12,7 @@ public class FriendTest extends TestCase{
 		friend = new Friend();
 	}
 	
-	public void testDeleteFriend() {
+	public void testSetFriend () {
 		String tag = "Test_setFriends";
 		friend.setFriends(tag);
 		assertEquals(this.friend.getFriends(), tag);
