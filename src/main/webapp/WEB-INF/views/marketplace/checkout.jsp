@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/views/marketplace/marketplaceHeader.jsp" %>
 
 <div>
-	<form>
+	<form action="/slimYB/marketplace/checkout" method="post">
 		<div class="form-row">
 			<div class="form-group col-md-6">
 			  <label for="inputName">Name</label>

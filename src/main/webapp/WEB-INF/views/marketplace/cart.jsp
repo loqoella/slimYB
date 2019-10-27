@@ -1,7 +1,7 @@
 <%@ include file="/WEB-INF/views/header.jsp" %>
 <%@ include file="/WEB-INF/views/marketplace/marketplaceHeader.jsp" %>
 
-<% int totalPrice = 0; %>
+<c:set var="totalPrice" scope="page" value="0"></c:set>
 
 <div class="container mb-5">
     <div class="table-responsive">
@@ -17,17 +17,18 @@
                 <tbody>
                     <c:forEach var="product" items="${cartItemList}">
                         <tr>
-                           <td><img src="${product.imagePath.split("%")[0]}" /> </td> <%--TODO--%>
+                           <td><img src="${product.imagePath.split("%")[0]}" /> </td>
                            <td class="align-middle">${product.productName}</td>
                            <td class="text-right align-middle">$ ${product.price}</td>
                            <td class="text-right align-middle"><a href="#" onclick="sendDeleteRequest(this, ${product.id})" class="btn btn-danger oi oi-x"> </a> </td>
                         </tr>
+                        <c:set var="totalPrice" scope="page" value="${totalPrice + product.price}"></c:set>
                     </c:forEach>
                 <tr>
                    <td></td>
                    <td></td>
                    <td><strong>Total</strong></td>
-                   <td class="text-right"><strong>$ <%= totalPrice %></strong></td>
+                   <td class="text-right"><strong>$ ${totalPrice} </strong></td>
                 </tr>
             </tbody>
         </table>

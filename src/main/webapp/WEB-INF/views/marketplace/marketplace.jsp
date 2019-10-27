@@ -21,7 +21,7 @@
 			<span class="oi oi-cart"></span>
 		  	Cart 
 			<c:if test="${cartNum != -1}">
-		  		<span class="badge badge-light ml-1">${cartNum}</span>
+		  		<span id="cartNum" class="badge badge-light ml-1">${cartNum}</span>
 		  	</c:if>
 		</a>
 	</span>
@@ -43,7 +43,7 @@
 					</svg>
 					<div class="card-body">
 						<div class="container row justify-content-between mx-0 px-0">
-							<a href="#"><h5 class="card-title">${product.productName}</h5></a>
+							<a href="/slimYB/marketplace/item?id=${product.id}"><h5 class="card-title">${product.productName}</h5></a>
 							<h5 class="card-title">AU$26.00</h5>
 						</div>
 						<p class="card-text">${product.description}</p>
@@ -77,5 +77,6 @@
 		var url = "/slimYB/marketplace/cart/add?item=" + productId;
 		http.open("PUT", url);
 		http.send();
+		$("#cartNum").html(function(i, val) { return +val+1 });
 	}
 </script>

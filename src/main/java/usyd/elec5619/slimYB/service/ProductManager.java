@@ -16,6 +16,7 @@ import org.hibernate.classic.Session;
 
 import org.springframework.web.multipart.MultipartFile;
 import usyd.elec5619.slimYB.domain.Cart;
+import usyd.elec5619.slimYB.domain.Order;
 import usyd.elec5619.slimYB.domain.Product;
 import usyd.elec5619.slimYB.domain.User;
 
@@ -85,22 +86,33 @@ public class ProductManager implements Serializable {
 	}
 
 	public void createNewProduct(Product product, MultipartFile[] imgs, String pathRoot) {
+		System.out.println("new product created");
 		Session session = sessionFactory.getCurrentSession();
 		session.save(product);
 
 		String imagePathString = "";
 
-		for (MultipartFile mf : imgs) {
-			String uuid = UUID.randomUUID().toString().replaceAll("-", "");
-			String contentType = mf.getContentType();
-			String suffix = contentType.substring(contentType.indexOf("/") + 1);
-			String path = "/static/images/" + uuid + "." + suffix;
-			try {
-				mf.transferTo(new File(pathRoot + path));
-			} catch (IOException e) {
-				e.printStackTrace();
+		if (imgs != null) {
+			for (MultipartFile mf : imgs) {
+				String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+				String contentType = mf.getContentType();
+				String suffix = contentType.substring(contentType.indexOf("/") + 1);
+				String path = "/static/images/" + uuid + "." + suffix;
+				try {
+					mf.transferTo(new File(pathRoot + path));
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				imagePathString = imagePathString + "%" + path;
 			}
-			imagePathString = imagePathString + "%" + path;
 		}
+	}
+
+	public List<Product> getProductListByOrder(Order order) {
+		Session session = sessionFactory.getCurrentSession();
+		String hql = "SELECT o.productId FROM OrderItem o WHERE o.orderId.id = :orderId";
+		Query query = session.createQuery(hql);
+		query.setParameter("orderId", order.getId());
+		return query.list();
 	}
 }

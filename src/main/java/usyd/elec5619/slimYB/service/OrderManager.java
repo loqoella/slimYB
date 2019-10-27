@@ -3,6 +3,7 @@ package usyd.elec5619.slimYB.service;
 import java.io.Serializable;
 import java.util.List;
 
+import org.hibernate.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,5 +56,14 @@ public class OrderManager implements Serializable {
 
 		session.save(delivery);
 		cartManager.clearCart(userid);
+	}
+
+	public List<Order> getOrderListByUserId(long userId) {
+		Session session = sessionFactory.getCurrentSession();
+
+		String hql = "FROM Order o WHERE o.buyerId.id=:buyerId";
+		Query query = session.createQuery(hql);
+		query.setParameter("buyerId", userId);
+		return query.list();
 	}
 }

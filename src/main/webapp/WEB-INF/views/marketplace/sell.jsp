@@ -11,9 +11,9 @@
       <div class="col-md-10">
         <div class="card-body">
           <a href="/slimYB/marketplace/item?id=${product.id}"> <h5 class="card-title">${product.productName}</h5> </a>
-          <p class="card-text">${product.description.substring(0, Math.min(product.description.length(), 100))}</p>
+          <p class="card-text">${product.description.substring(0, (product.description.length() > 100 ? 100 : product.description.length()))}</p>
           <p class="card-text"><small class="text-muted">Time uploaded: ${product.lastUpdateTime.toLocaleString()}</small></p>
-          <a href="#" class="btn btn-outline-secondary">Edit</a> <%--TODO--%>
+          <a href="/slimYB/marketplace/sellNew?itemId=${product.id}" class="btn btn-outline-secondary">Edit</a> <%--TODO--%>
         </div>
       </div>
     </div>

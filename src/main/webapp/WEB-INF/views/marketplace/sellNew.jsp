@@ -6,42 +6,43 @@
 </span>
 
 <div>
-	<form>
+	<form method="post" action="/slimYB/marketplace/sellNew">
 		<div class="form-row">
 			<div class="form-group col-md-6">
 			  <label for="itemName">Item Name</label>
-			  <input type="text" class="form-control" id="itemName">
+			  <input name="productName" type="text" class="form-control" id="itemName" ${product != null  ? "value=".concat(product.productName) : ""}>
 			</div>
 			<div class="form-group col-md-6">
 			  <label for="itemPrice">Price</label>
-			  <input type="text" class="form-control" id="itemPrice">
+			  <input name="price" type="text" class="form-control" id="itemPrice" ${product != null  ? "value=".concat(product.price) : ""}>
 			</div>
 		</div>
 		<div class="form-group">
 		    <label for="itemDescription">Item description</label>
-		    <textarea class="form-control" id="itemDescription" rows="10"></textarea>
+		    <textarea name="description" class="form-control" id="itemDescription" rows="10"> ${product != null  ? "value=".concat(product.description) : ""} </textarea>
 	  	</div>
-	  	<div class="container mb-2">
-	  		<div class="row justify-content-left">
-		  		<span class="mr-2 align-middle"><h3 class="mg-2">Images</h3></span>
-		  		<button type="button" class="btn btn-outline-secondary align-middle imgAdd">Add Image</button>
-	  		</div>
-  		</div>
+
+			<div class="container mb-2">
+				<div class="row justify-content-left">
+					<span class="mr-2 align-middle"><h3 class="mg-2">Images</h3></span>
+					<button type="button" class="btn btn-outline-secondary align-middle imgAdd">Add Image</button>
+				</div>
+			</div>
 	  	<div class="container mb-4">
   			<div class="row">
-   				<div class="card text-center col-md-3 imgContainer">
+				<div class="card text-center col-md-3 imgContainer">
 				  <div class="imagePreview"></div>
 				  <div class="card-body">
-				  	<div class="row">
-				    	<label class="btn btn-primary btn-block mb-0">Upload<input type="file" name="file" class="uploadFile" style="width:0px;height:0px;overflow:hidden;"></label>
-				    	<button class="btn btn-danger btn-block del">Delete</button>
-				    </div>
+					<div class="row">
+						<label class="btn btn-primary btn-block mb-0">Upload<input type="file" name="file" class="uploadFile"></label>
+						<button class="btn btn-danger btn-block del">Delete</button>
+					</div>
 				  </div>
 				</div>
    				<div id="last-placeholder"></div>
 		 	</div>
 		</div>
-	 	<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+	 	<button type="submit" class="btn btn-primary btn-lg btn-block">Subit</button>
 	</form>
 </div>
 <%@ include file="/WEB-INF/views/footer.jsp" %>

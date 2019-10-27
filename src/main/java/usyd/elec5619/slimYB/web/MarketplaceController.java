@@ -1,9 +1,7 @@
 package usyd.elec5619.slimYB.web;
 
 import java.text.DateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +21,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MultipartFile;
 import usyd.elec5619.slimYB.domain.Cart;
 import usyd.elec5619.slimYB.domain.Delivery;
+import usyd.elec5619.slimYB.domain.Order;
 import usyd.elec5619.slimYB.domain.Product;
 import usyd.elec5619.slimYB.service.CartManager;
 import usyd.elec5619.slimYB.service.ItemCommentManager;
@@ -57,7 +56,7 @@ public class MarketplaceController {
 	private ProductManager productManager;
 	
 	private long getCurrentUserId() {
-		return -1;
+		return 99999;
 	}
 	
 	private long getCartNumber() {
@@ -100,13 +99,13 @@ public class MarketplaceController {
 		return "marketplace/cart";
 	}
 
-	@RequestMapping(value = "/cart/add", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/cart/add", method = RequestMethod.PUT)
 	@ResponseStatus(value = HttpStatus.OK)
 	public void addCartItem(@RequestParam(value = "item") long productId) {
 		cartManager.addItem(getCurrentUserId(), productId);
 	}
 
-	@RequestMapping(value = "/cart/delete", method = RequestMethod.PUT)
+	@RequestMapping(value = "/cart/delete", method = RequestMethod.DELETE)
 	@ResponseStatus(value = HttpStatus.OK)
 	public void deleteCartItem(@RequestParam(value="item") long cartItemId) {
 		Cart cartItem = cartManager.getCartItemById(cartItemId);
@@ -167,10 +166,19 @@ public class MarketplaceController {
 	}
 	
 	@RequestMapping(value = "/sellNew")
-	public String sellNew(Model model) {
-		
-		model.addAttribute("title", "Marketplace - sell");
-		model.addAttribute("subtitle", "SELL YOUR ITEM");
+	public String sellNew(
+			Model model,
+			@RequestParam(value = "itemId", required = false, defaultValue = "-1") long itemId) {
+		System.out.println("sellNew method called");
+		if (itemId == -1) {
+			model.addAttribute("title", "Marketplace - sell");
+			model.addAttribute("subtitle", "SELL YOUR ITEM");
+			model.addAttribute("product", null);
+		} else {
+			model.addAttribute("title", "Marketplace - sell");
+			model.addAttribute("subtitle", "SELL YOUR ITEM");
+			model.addAttribute("product", productManager.getProductById(itemId));
+		}
 		
 		return "marketplace/sellNew";
 	}
@@ -178,11 +186,14 @@ public class MarketplaceController {
 	@RequestMapping(value = "/sellNew", method = RequestMethod.POST)
 	public String sellNewPost(
 			Model model,
-			@RequestParam("file") MultipartFile[] imgs,
+			@RequestParam(value = "file", required = false) MultipartFile[] imgs,
 			HttpServletRequest request,
 			Product product) {
+		System.out.println("price:" + product.getPrice());
+		System.out.println("description: " + product.getDescription());
 		try {
 			product.setUserId(userManager.getUserById(getCurrentUserId()));
+			product.setLastUpdateTime(new Date());
 		} catch (Exception e) {
 		}
 		String pathRoot = request.getSession().getServletContext().getRealPath("");
@@ -196,16 +207,42 @@ public class MarketplaceController {
 		
 		model.addAttribute("title", "Marketplace - orders");
 		model.addAttribute("subtitle", "YOUR ORDERS");
+		List<Order> orderList = orderManager.getOrderListByUserId(getCurrentUserId());
+		model.addAttribute("orderList", orderList);
+		ArrayList<List<Product>> productList = new ArrayList<List<Product>>();
+		for (Order o : orderList) {
+			productList.add(productManager.getProductListByOrder(o));
+		}
+		model.addAttribute("productList", productList);
 		
 		return "marketplace/orders";
 	}
 	
 	@RequestMapping(value = "/comment")
-	public String comment(Model model) {
-		
+	public String comment(
+			Model model,
+			@RequestParam("itemId") long itemId) {
+
+		Product product = productManager.getProductById(itemId);
+
 		model.addAttribute("title", "Marketplace - comment");
-		model.addAttribute("subtitle", "COMMENT - ITEM NAME");
+		model.addAttribute("subtitle", "COMMENT - " + product.getProductName());
 		
 		return "marketplace/comment";
+	}
+
+	@RequestMapping(value = "/comment", method = RequestMethod.POST)
+	public String commentPost(
+			Model model,
+			@RequestParam("itemId") long itemId,
+			@RequestParam("commentDetail") String comment) {
+
+		Product product = productManager.getProductById(itemId);
+
+		model.addAttribute("title", "Marketplace - comment");
+		model.addAttribute("subtitle", "COMMENT - " + product.getProductName());
+		itemCommentManager.addComment(itemId, getCurrentUserId(), comment);
+
+		return "marketplace/success";
 	}
 }
