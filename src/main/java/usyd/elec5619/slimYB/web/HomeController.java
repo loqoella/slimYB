@@ -43,9 +43,6 @@ public class HomeController {
 		// //test
 		// model.addAttribute("title", "Homepage");
 		
-		// userManager.testAddUser();
-		
 		return "home";
 	}
-	
 }
