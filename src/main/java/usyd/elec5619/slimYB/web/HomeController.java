@@ -14,10 +14,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import usyd.elec5619.slimYB.service.UserManager;
 
+import usyd.elec5619.slimYB.service.UserManager;
+
 /**
  * Handles requests for the application home page.
  */
 @Controller
+@RequestMapping(value = "/")
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -31,17 +34,15 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
+		// Date date = new Date();
+		// DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
 		
-		String formattedDate = dateFormat.format(date);
+		// String formattedDate = dateFormat.format(date);
 		
-		model.addAttribute("now", formattedDate );
-		model.addAttribute("title", "Homepage");
-		
-		userManager.testAddUser();
+		// model.addAttribute("now", formattedDate );
+		// //test
+		// model.addAttribute("title", "Homepage");
 		
 		return "home";
 	}
-	
 }

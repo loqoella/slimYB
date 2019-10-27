@@ -181,8 +181,10 @@ public class MarketplaceController {
 			@RequestParam("file") MultipartFile[] imgs,
 			HttpServletRequest request,
 			Product product) {
-
-		product.setUserId(userManager.getUserById(getCurrentUserId()));
+		try {
+			product.setUserId(userManager.getUserById(getCurrentUserId()));
+		} catch (Exception e) {
+		}
 		String pathRoot = request.getSession().getServletContext().getRealPath("");
 		productManager.createNewProduct(product, imgs, pathRoot);
 

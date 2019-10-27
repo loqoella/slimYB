@@ -8,21 +8,27 @@
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
-	
+
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
+	<resources location="/image/" mapping="/image/**" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-	
+
 	<context:component-scan base-package="usyd.elec5619.slimYB.web" />
-	
+
+		<!-- file upload -->
+    <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <beans:property name="maxUploadSize" value="20971500"/>
+    </beans:bean>
+
 	<beans:bean id="userManager" class="usyd.elec5619.slimYB.service.UserManager">
 	</beans:bean>
 	
@@ -36,5 +42,17 @@
 	</beans:bean>
 	
 	<beans:bean id="productManager" class="usyd.elec5619.slimYB.service.ProductManager">
+	</beans:bean>
+
+	<beans:bean id="applicationManager" class="usyd.elec5619.slimYB.service.ApplicationManager">
+	</beans:bean>
+	<beans:bean id="forumManager" class="usyd.elec5619.slimYB.service.ForumManager">
+	</beans:bean>
+	<beans:bean id="profileManager" class="usyd.elec5619.slimYB.service.ProfileManager">
+	</beans:bean>
+	<beans:bean id="friendManager" class="usyd.elec5619.slimYB.service.FriendManager">
+	</beans:bean>
+
+	<beans:bean id="diaryManager" class="usyd.elec5619.slimYB.service.DiaryManager">
 	</beans:bean>
 </beans:beans>
