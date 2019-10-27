@@ -23,4 +23,11 @@ public class ForumTest extends TestCase{
 		forumf.setTag(testTag);
 		assertEquals(testTag, forumf.getTag());		
 	}
+	
+	public void testSetAndGetContent() {
+		String testContent="aContent";
+		assertNull(forumf.getContent());
+		forumf.setContent(testContent);
+		assertEquals(testContent, forumf.getContent());		
+	}
 }

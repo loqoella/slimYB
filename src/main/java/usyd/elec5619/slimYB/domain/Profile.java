@@ -109,7 +109,8 @@ public class Profile implements Serializable {
 	public double getWeight() {
 		return Weight;
 	}
-
+	
+	
 	public void setWeight(double weight) {
 		Weight = weight;
 	}
