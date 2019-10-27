@@ -27,7 +27,7 @@ public class UserManager implements Serializable {
 		User u = new User();
 		u.setUsername("testUser");
 		u.setPassword("testPassword");
-		u.setDiaryBookId(1);
+		
 		currentSession.save(u);
 		
 		

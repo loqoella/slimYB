@@ -1,5 +1,6 @@
 package usyd.elec5619.slimYB.web;
 
+import java.io.IOException;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
@@ -15,7 +16,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 
 import usyd.elec5619.slimYB.domain.Forum;
 import usyd.elec5619.slimYB.service.ForumManager;
@@ -52,14 +52,16 @@ public class ForumController {
 		return "adminSystem/forumhome";
 	}
 	
-//	@RequestMapping(value = "/view", method = RequestMethod.GET)
-//    @ResponseBody
-//    public List<Forum> view(){
-//
-//        System.out.println("view username:");
-//
-//        return forumManager.getAllForums();
-//    }
+	@RequestMapping(value = "/view/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public Forum jsonView(@PathVariable int id){
+		
+			
+        System.out.println("succ");
+        
+        return forumManager.getForumById(id);
+			
+    }
 
 	
 }
