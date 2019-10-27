@@ -26,9 +26,6 @@ public class User implements Serializable {
 	
 	@Column(name="Email")
 	private String Email;
-
-	@Column (name="DiaryBookID")
-	private long DiaryBookID;
 	
 	
 	public long getId() {
@@ -38,16 +35,6 @@ public class User implements Serializable {
 	public void setId(long id) {
 		this.id = id;
 	}
-
-	public long getDiaryBookId() {
-		return DiaryBookID;
-	}
-	
-	
-	public void setDiaryBookId(long DiaryBookID) {
-		this.DiaryBookID = DiaryBookID;
-	}
-	
 	
 	public String getUsername() {
 		return username;
@@ -83,7 +70,6 @@ public class User implements Serializable {
 		buffer.append("Id: " + id + ";");
 		buffer.append("Username: " + username + ";");
 		buffer.append("Password: " + password + ";");
-		buffer.append("DiaryBookID: " + DiaryBookID + ";");
 		return buffer.toString();
 	}
 }
