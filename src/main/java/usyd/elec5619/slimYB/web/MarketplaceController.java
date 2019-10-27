@@ -64,7 +64,7 @@ public class MarketplaceController {
 		if (currentUser != -1)
 			return cartManager.getCartItemsCount(getCurrentUserId());
 		else
-			return -1;
+			return 0;
 	}
 	
 	@RequestMapping(value = "", method = RequestMethod.GET)
@@ -79,7 +79,7 @@ public class MarketplaceController {
 			model.addAttribute("productList", productManager.getProductListSortedByTime(0, PRODUCT_PAGE_LIMIT));
 			model.addAttribute("productCount", productManager.getProductCount());
 		} else {
-			model.addAttribute("productList", productManager.getProductListByName(keyword, (currentPage - 1) * 12, PRODUCT_PAGE_LIMIT));
+			model.addAttribute("productList", productManager.getProductListByName(keyword, (currentPage - 112) * 12, PRODUCT_PAGE_LIMIT));
 			model.addAttribute("productCount", productManager.getProductCountByName(keyword));
 		}
 		model.addAttribute("currentPage", currentPage);
@@ -107,10 +107,9 @@ public class MarketplaceController {
 
 	@RequestMapping(value = "/cart/delete", method = RequestMethod.DELETE)
 	@ResponseStatus(value = HttpStatus.OK)
-	public void deleteCartItem(@RequestParam(value="item") long cartItemId) {
-		Cart cartItem = cartManager.getCartItemById(cartItemId);
-		if (cartItem.getUserId().getId() == getCurrentUserId())
-			cartManager.removeItemFromCart(cartItemId);
+	public void deleteCartItem(@RequestParam(value="item") long productId) {
+		Cart cartItem = cartManager.getCartItemByProduct(getCurrentUserId(), productId);
+		cartManager.removeItemFromCart(cartItem.getId());
 	}
 	
 	@RequestMapping(value = "/item")
@@ -120,6 +119,7 @@ public class MarketplaceController {
 
 		Product product = productManager.getProductById(itemId);
 
+		model.addAttribute("cartNum", getCartNumber());
 		model.addAttribute("title", "Marketplace - item");
 		model.addAttribute("subtitle", product.getProductName());
 		model.addAttribute("subsubtitle", "Price: $ " + product.getPrice());
@@ -131,7 +131,8 @@ public class MarketplaceController {
 	
 	@RequestMapping(value = "/checkout")
 	public String checkout(Model model) {
-		
+
+		model.addAttribute("cartNum", getCartNumber());
 		model.addAttribute("title", "Checkout");
 		model.addAttribute("subtitle", "CHECKOUT");
 		
@@ -149,7 +150,8 @@ public class MarketplaceController {
 	
 	@RequestMapping(value = "/success")
 	public String success(Model model) {
-		
+
+		model.addAttribute("cartNum", getCartNumber());
 		model.addAttribute("title", "success");
 		
 		return "marketplace/success";
@@ -157,7 +159,8 @@ public class MarketplaceController {
 	
 	@RequestMapping(value = "/sell")
 	public String sell(Model model) {
-		
+
+		model.addAttribute("cartNum", getCartNumber());
 		model.addAttribute("title", "Marketplace - sell");
 		model.addAttribute("subtitle", "SELLING ITEMS");
 		model.addAttribute("productList", productManager.getProductListBySellerId(getCurrentUserId()));
@@ -170,6 +173,7 @@ public class MarketplaceController {
 			Model model,
 			@RequestParam(value = "itemId", required = false, defaultValue = "-1") long itemId) {
 		System.out.println("sellNew method called");
+		model.addAttribute("cartNum", getCartNumber());
 		if (itemId == -1) {
 			model.addAttribute("title", "Marketplace - sell");
 			model.addAttribute("subtitle", "SELL YOUR ITEM");
@@ -204,7 +208,8 @@ public class MarketplaceController {
 	
 	@RequestMapping(value = "/orders")
 	public String orders(Model model) {
-		
+
+		model.addAttribute("cartNum", getCartNumber());
 		model.addAttribute("title", "Marketplace - orders");
 		model.addAttribute("subtitle", "YOUR ORDERS");
 		List<Order> orderList = orderManager.getOrderListByUserId(getCurrentUserId());
@@ -223,11 +228,13 @@ public class MarketplaceController {
 			Model model,
 			@RequestParam("itemId") long itemId) {
 
+		model.addAttribute("cartNum", getCartNumber());
 		Product product = productManager.getProductById(itemId);
 
 		model.addAttribute("title", "Marketplace - comment");
 		model.addAttribute("subtitle", "COMMENT - " + product.getProductName());
-		
+		model.addAttribute("product", product);
+
 		return "marketplace/comment";
 	}
 
@@ -241,6 +248,7 @@ public class MarketplaceController {
 
 		model.addAttribute("title", "Marketplace - comment");
 		model.addAttribute("subtitle", "COMMENT - " + product.getProductName());
+		model.addAttribute("product", product);
 		itemCommentManager.addComment(itemId, getCurrentUserId(), comment);
 
 		return "marketplace/success";

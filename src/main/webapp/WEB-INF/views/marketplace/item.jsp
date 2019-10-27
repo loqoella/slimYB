@@ -3,6 +3,8 @@
 
 <h4>Seller: ${product.userId.username}</h4>
 <button class="btn btn-primary" onclick="sendAddItemToCartRequest(this, ${product.id})">Add to Cart</button>
+<br>
+<br>
 <h1>Item description</h1>
 <p class="mb-4">${ product.description }</p>
 
@@ -35,10 +37,11 @@
 
 <%@ include file="/WEB-INF/views/footer.jsp" %>
 <script>
-  function sendAddItemToCartRequest(element, productId) {
-    var http = new XMLHttpRequest();
-    var url = "/slimYB/marketplace/cart/add?item=" + productId;
-    http.open("PUT", url);
-    http.send();
-  }
+    function sendAddItemToCartRequest(element, productId) {
+        var http = new XMLHttpRequest();
+        var url = "/slimYB/marketplace/cart/add?item=" + productId;
+        http.open("PUT", url);
+        http.send();
+        $("#cartNum").html(function(i, val) { return +val+1 });
+    }
 </script>

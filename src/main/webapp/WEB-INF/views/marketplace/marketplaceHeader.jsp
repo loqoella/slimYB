@@ -13,10 +13,8 @@
 		</a>
 		<a href="/slimYB/marketplace/cart" class="btn btn-info">
 			<span class="oi oi-cart"></span>
-			Cart 
-			<c:if test="${cartNum != -1}">
-		  		<span class="badge badge-light ml-1">${cartNum}</span>
-		  	</c:if>
+			Cart
+			<span id="cartNum" class="badge badge-light ml-1">${cartNum}</span>
 		</a>
 	</span>
 </div>

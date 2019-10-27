@@ -19,7 +19,7 @@
                         <tr>
                            <td><img src="${product.imagePath.split("%")[0]}" /> </td>
                            <td class="align-middle">${product.productName}</td>
-                           <td class="text-right align-middle">$ ${product.price}</td>
+                           <td class="text-right align-middle price">$ ${product.price}</td>
                            <td class="text-right align-middle"><a href="#" onclick="sendDeleteRequest(this, ${product.id})" class="btn btn-danger oi oi-x"> </a> </td>
                         </tr>
                         <c:set var="totalPrice" scope="page" value="${totalPrice + product.price}"></c:set>
@@ -28,7 +28,7 @@
                    <td></td>
                    <td></td>
                    <td><strong>Total</strong></td>
-                   <td class="text-right"><strong>$ ${totalPrice} </strong></td>
+                   <td class="text-right"><strong id="totalPrice">$ ${totalPrice} </strong></td>
                 </tr>
             </tbody>
         </table>
@@ -54,5 +54,6 @@
         http.send();
 
         element.parentElement.parentElement.remove();
+        $("#cartNum").html(function(i, val) { return +val-1 });
     }
 </script>

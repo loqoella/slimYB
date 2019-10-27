@@ -3,6 +3,7 @@ package usyd.elec5619.slimYB.service;
 import java.io.Serializable;
 import java.util.List;
 
+import org.hibernate.Query;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,16 @@ public class CartManager implements Serializable {
 		Session session = sessionFactory.getCurrentSession();
 		String hql = "SELECT count(*) FROM Cart WHERE userid = :userid";
 		return ((Number)session.createQuery(hql).setParameter("userid", userId).uniqueResult()).longValue();
+	}
+
+	public Cart getCartItemByProduct(long userId, long productId) {
+		Session session = sessionFactory.getCurrentSession();
+		String hql = "FROM Cart WHERE userId.id = :userId AND productId.id=:product";
+		Query query = session.createQuery(hql);
+		query.setParameter("userId", userId);
+		query.setParameter("product", productId);
+		query.setMaxResults(1);
+		return (Cart) query.uniqueResult();
 	}
 
 	public void removeItemFromCart(long cartItemId) {

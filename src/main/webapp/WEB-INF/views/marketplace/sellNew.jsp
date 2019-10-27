@@ -34,7 +34,7 @@
 				  <div class="imagePreview"></div>
 				  <div class="card-body">
 					<div class="row">
-						<label class="btn btn-primary btn-block mb-0">Upload<input type="file" name="file" class="uploadFile"></label>
+						<label class="btn btn-primary btn-block mb-0">Upload<input type="file" name="file" class="uploadFile" style="..."></label>
 						<button class="btn btn-danger btn-block del">Delete</button>
 					</div>
 				  </div>
@@ -42,7 +42,7 @@
    				<div id="last-placeholder"></div>
 		 	</div>
 		</div>
-	 	<button type="submit" class="btn btn-primary btn-lg btn-block">Subit</button>
+	 	<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
 	</form>
 </div>
 <%@ include file="/WEB-INF/views/footer.jsp" %>

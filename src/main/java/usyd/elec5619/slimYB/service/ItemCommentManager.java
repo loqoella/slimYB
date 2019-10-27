@@ -28,7 +28,7 @@ public class ItemCommentManager implements Serializable {
 
 	public List<ItemComment> getCommentListByProductId(long productId) {
 		Session session = sessionFactory.getCurrentSession();
-		String hql = "FROM ItemComment WHERE productId = :productId ORDER BY id DESC";
+		String hql = "FROM ItemComment WHERE productId.id = :productId ORDER BY id DESC";
 		return session.createQuery(hql).setParameter("productId", productId).list();
 	}
 
