@@ -13,21 +13,22 @@ public class UserTest extends TestCase{
 	public void testSetAndGetUsername() {
 		String testUsername="aUsername";
 		assertNull(user.getUsername());
-		profile.setUsername(testUsername);
+		user.setUsername(testUsername);
 		assertEquals(testUsername, user.getUsername());		
 	}
 	
 	public void testSetAndGetEmail() {
 		String testEmail="aEmail";
-		assertNull(user.getEmail));
-		profile.setEmail(testEmail);
+		assertNull(user.getUsername());
+		user.setEmail(testEmail);
 		assertEquals(testEmail, user.getEmail());		
 	}
 	
 	public void testSetAndGetPassword() {
 		String testPassword="aPassword";
-		assertNull(profile.getPassword());
-		profile.setPassword(testPassword);
-		assertEquals(testPassword, profile.getPassword());		
+		assertNull(user.getPassword());
+		user.setPassword(testPassword);
+		assertEquals(testPassword, user.getPassword());		
 	}
 }
+
