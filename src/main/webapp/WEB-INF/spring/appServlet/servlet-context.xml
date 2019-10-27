@@ -25,6 +25,8 @@
 	
 	<beans:bean id="userManager" class="usyd.elec5619.slimYB.service.UserManager">
 	</beans:bean>
+	<beans:bean id="progressRecordManager" class="usyd.elec5619.slimYB.service.ProgressRecordManager">
+	</beans:bean>
 	
 	
 </beans:beans>
