@@ -14,7 +14,7 @@
 					<div class="card">
 						<div class="row no-gutters">
 						  <div class="col-md-2">
-							<img src="${product.imagePath.spilt("%")[0]}" class="card-img" alt="...">
+							<img src="${product.imagePath.split("%")[0]}" class="card-img" alt="...">
 						  </div>
 						  <div class="col-md-10">
 							<div class="card-body">
