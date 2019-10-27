@@ -33,70 +33,44 @@
 			</dl>
 			<br/>
 			<div class="row">
-				<div class="col-md-6">
-					<div class="row">
-						<div class="col-md-3">
-							<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" class="img-thumbnail">
-						</div>
-						<div class="col-md-6">
-							<dl>
-								<dt>
-									Emma Jing
-								</dt>
-							</dl>
-							<div class="row">
-								<div class="col-md-5">
-									<p>
-										23
-									</p>
-								</div>
-								<div class="col-md-7">
-									<p>
-										Famale
-									</p>
+				
+				<c:forEach items="${friends}" var="friend" varStatus="tagStatus">
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-3">
+								<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" class="img-thumbnail">
+							</div>
+							<div class="col-md-6">
+								<dl>
+									<dt>
+										<%-- <c:set var="delete" value="${friend}" scope="session"/> --%>
+										<c:out value="${friend}"/>
+									</dt>
+								</dl>
+								<div class="row">
+									<div class="col-md-5">
+										<p>
+											23
+										</p>
+									</div>
+									<div class="col-md-7">
+										<p>
+											Famale
+										</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-3">
-							 
-							<button type="button" class="btn btn-danger align-items-center">
-								Delete
-							</button>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="row">
-						<div class="col-md-3">
-							<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" class="img-thumbnail">
-						</div>
-						<div class="col-md-6">
-							<dl>
-								<dt>
-									Rene Guo
-								</dt>
-							</dl>
-							<div class="row">
-								<div class="col-md-5">
-									<p>
-										22
-									</p>
+							<div class="col-md-3">
+								<div class="float-right">
+							 		<a href="/slimYB/friends/delete?id=${friend}" class="btn btn-danger align-items-center">
+							 			Delete
+							 		</a>
 								</div>
-								<div class="col-md-7">
-									<p>
-										Male
-									</p>
-								</div>
+								
 							</div>
 						</div>
-						<div class="col-md-3">
-							 
-							<button type="button" class="btn btn-danger">
-								Delete
-							</button>
-						</div>
 					</div>
-				</div>
+				</c:forEach>
 			</div>
 		</div>
 	</div>

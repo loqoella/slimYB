@@ -1,5 +1,7 @@
 <%@ include file="/WEB-INF/views/header.jsp" %>
 
+
+
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
@@ -31,32 +33,26 @@
 					</dl>
 				</div>
 				<div class="col-md-5">
-					<a class="btn btn-outline-success" href="/slimYB/friends/addfriend/">Change: search by username</a>
+					<a class="btn btn-outline-success" href="/slimYB/friends/addfriend/">Change: search by user name</a>
 				</div>
 			</div>
 			
 			<br/>
-			
-			<form class="jumbotron px-4 py-3">
-			
-				<h5> Age Range </h5>
-	    		<div class="form-inline align-items-center">
-	    			<div class="col-auto row">
-				    	<input type="email" class="form-control form-control-sm" id="priceRangeLow">
-			    	</div>
-			    	<div class="col-auto"><label>-</label></div>
-			    	<div class="col-auto row">
-				    	<input type="email" class="form-control form-control-sm" id="priceRangeLow">
-			    	</div>
-			  	</div>
-			  	
-			  	<br/>
+
+			<!-- <script type="text/javascript">
+				function search(){
+					if(document.getElementById("gender_male").checked) {
+						document.getElementById("gender_form").action = "/slimYB/friends/addfriendbygender";
+					}
+				}
+			</script> -->
+			<form class="jumbotron px-4 py-3" id="gender_form" action="/slimYB/friends/addfriendbygender?gender" method="GET">
 			  	
 			  	<h5> Gender </h5>
 	    		<div class="form-inline align-items-center">
 				
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="gender" id="gender_male" value="gender_male" checked>
+						<input class="form-check-input" type="radio" name="gender" id="gender_male" value="male" checked>
 						<label class="form-check-label" for="gender_male">
 						    Male
 						</label>
@@ -65,113 +61,52 @@
 			    	<div class="col-auto"><label>|</label></div>
 			    	
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="gender" id="gender_female" value="gender_female">
+						<input class="form-check-input" type="radio" name="gender" id="gender_female" value="female">
 						<label class="form-check-label" for="gender_female">
 						    Female
 						</label>
 					</div>
 			    	
 			  	</div>
-			    
-				<button type="search" class="btn btn-primary mt-4">Search</button>
+				<button class="btn btn-primary mt-4" type="submit">
+                	Search
+           		</button>
+				<!-- <a type="search" class="btn btn-primary mt-4" href="/slimYB/friends/addfriendbygender?gender=male">Search</a> -->
+				<!-- <a type="search" class="btn btn-primary mt-4" onclick="search()">Search</a> -->
 			</form>
-			
-			<div id="card-239657">
-				<div class="card">
-					<div class="card-header">
-					
-						<div class="float-left">
-						 		<a class="card-link" data-toggle="collapse" data-parent="#card-239657" href="#card-element-975867">Emma Jing</a>
-						</div>
-						
-						<div class="float-right">
-					 		<a id="modal-612657" href="#modal-container-612657" role="button" class="btn btn-outline-primary" data-toggle="modal">Add</a>
-						</div>
-						
-						<div class="modal fade" id="modal-container-612657" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title" id="myModalLabel">
-											Confirm to add friend
-										</h5> 
-										<button type="button" class="close" data-dismiss="modal">
-											<span aria-hidden="true">×</span>
-										</button>
+		
+	      	<c:choose>
+			    <c:when test="${isShow}">
+			    <c:out value="${users}">
+			    </c:out>
+			    	<c:forEach items="${users}" var="user" varStatus="tagStatus">
+						<div id="card-239657">
+							<div class="card">
+								<div class="card-header">
+								
+									<div class="float-left">
+									 	<a class="card-link" data-toggle="collapse" data-parent="#card-239657" href="#card-element-975867"><c:out value="${user.getId()}"/></a>
 									</div>
-									<div class="modal-body">
-										Are you sure to add this friend?
-									</div>
-									<div class="modal-footer">
-										 
-										<button type="button" class="btn btn-primary">
-											Confirm
-										</button> 
-										<button type="button" class="btn btn-secondary" data-dismiss="modal">
-											Cancel
-										</button>
+									
+									<div class="float-right">
+										<a href="/slimYB/friends/add?id=${user.getId()}" class="btn btn-outline-primary">
+									 			Add
+									 	</a>
+								 		<!-- <a id="modal-612657" href="#modal-container-612657" role="button" class="btn btn-outline-primary" data-toggle="modal">Add</a> -->
 									</div>
 								</div>
 							</div>
 						</div>
-						
-					</div>
-					
-					<div id="card-element-975867" class="collapse show">
-						<div class="card-body">
-							<div class="row">
-								<div class="col-md-3">
-									<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" class="img-thumbnail">
-								</div>
-								<div class="col-md-9">
-									<div class="row">
-										<div class="col-md-5">
-											<p>
-												22
-											</p>
-										</div>
-										<div class="col-md-7">
-											<p>
-												Male
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
+					</c:forEach>
+			   </c:when>    
+			   <c:otherwise>
+			   </c:otherwise>
+			</c:choose>
 			<br/>
 			
-			<nav>
-				<ul class="pagination">
-					<li class="page-item">
-						<a class="page-link" href="#">Previous</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">1</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">2</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">3</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">4</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">5</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">Next</a>
-					</li>
-				</ul>
-			</nav>
 		</div>
 	</div>
 </div>
+
 
 <%@ include file="/WEB-INF/views/footer.jsp" %>

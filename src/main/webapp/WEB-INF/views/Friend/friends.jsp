@@ -14,7 +14,7 @@
 				</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item">
-						<a href="/slimYB/friends/friendlist/"><img class="d-block w-100" alt="Carousel Bootstrap First" src="https://www.layoutit.com/img/sports-q-c-1600-500-1.jpg"></a>
+						<a href="/slimYB/friends/friendlist"><img class="d-block w-100" alt="Carousel Bootstrap First" src="https://www.layoutit.com/img/sports-q-c-1600-500-1.jpg"></a>
 						<br>
 						<div class="carousel-caption">
 							<h4>
@@ -38,7 +38,7 @@
 						</div>
 					</div>
 					<div class="carousel-item active">
-						<a href="/slimYB/friends/addfriend/"><img class="d-block w-100" alt="Carousel Bootstrap Third" src="https://www.layoutit.com/img/sports-q-c-1600-500-3.jpg"></a>
+						<a href="/slimYB/friends/addfriend"><img class="d-block w-100" alt="Carousel Bootstrap Third" src="https://www.layoutit.com/img/sports-q-c-1600-500-3.jpg"></a>
 						<br>
 						<div class="carousel-caption">
 							<h4>
@@ -64,7 +64,7 @@
 								All your friends are listed here! you can also manage your friends (e.g. delete a friend).
 							</p>
 							<p>
-								<a class="btn btn-primary float-right" href="/slimYB/friends/friendlist/">Action</a>
+								<a class="btn btn-primary float-right" href="/slimYB/friends/friendlist">Action</a>
 							</p>
 						</div>
 					</div>
@@ -98,7 +98,7 @@
 								You can add new friend by searching user name or searching by your interests.
 							</p>
 							<p>
-								 <a class="btn btn-primary float-right" href="/slimYB/friends/addfriend/">Action</a>
+								<a class="btn btn-primary float-right" href="/slimYB/friends/addfriend">Action</a>
 							</p>
 						</div>
 					</div>

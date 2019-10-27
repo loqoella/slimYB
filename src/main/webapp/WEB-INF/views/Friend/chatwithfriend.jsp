@@ -47,7 +47,7 @@
 						<li class="active">
 							<div class="d-flex bd-highlight">
 								<div class="img_cont">
-									<img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">
+									<img src="${pageContext.request.contextPath}/static/img/1.jpg" class="rounded-circle user_img">
 									<span class="online_icon"></span>
 								</div>
 								<div class="user_info">
@@ -59,7 +59,7 @@
 						<li>
 							<div class="d-flex bd-highlight">
 								<div class="img_cont">
-									<img src="https://2.bp.blogspot.com/-8ytYF7cfPkQ/WkPe1-rtrcI/AAAAAAAAGqU/FGfTDVgkcIwmOTtjLka51vineFBExJuSACLcBGAs/s320/31.jpg" class="rounded-circle user_img">
+                                    <img src="${pageContext.request.contextPath}/static/img/3.jpg" class="rounded-circle user_img">
 									<span class="online_icon offline"></span>
 								</div>
 								<div class="user_info">
@@ -71,7 +71,7 @@
 						<li>
 							<div class="d-flex bd-highlight">
 								<div class="img_cont">
-									<img src="https://i.pinimg.com/originals/ac/b9/90/acb990190ca1ddbb9b20db303375bb58.jpg" class="rounded-circle user_img">
+									<img src="${pageContext.request.contextPath}/static/img/1.jpg" class="rounded-circle user_img">
 									<span class="online_icon"></span>
 								</div>
 								<div class="user_info">
@@ -83,7 +83,7 @@
 						<li>
 							<div class="d-flex bd-highlight">
 								<div class="img_cont">
-									<img src="http://profilepicturesdp.com/wp-content/uploads/2018/07/sweet-girl-profile-pictures-9.jpg" class="rounded-circle user_img">
+									<img src="${pageContext.request.contextPath}/static/img/2.jpg" class="rounded-circle user_img">
 									<span class="online_icon offline"></span>
 								</div>
 								<div class="user_info">
@@ -95,7 +95,7 @@
 						<li>
 							<div class="d-flex bd-highlight">
 								<div class="img_cont">
-									<img src="https://static.turbosquid.com/Preview/001214/650/2V/boy-cartoon-3D-model_D.jpg" class="rounded-circle user_img">
+                                    <img src="${pageContext.request.contextPath}/static/img/3.jpg" class="rounded-circle user_img">
 									<span class="online_icon offline"></span>
 								</div>
 								<div class="user_info">
@@ -113,7 +113,7 @@
 						<div class="card-header msg_head">
 							<div class="d-flex bd-highlight">
 								<div class="img_cont">
-									<img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">
+                                    <img src="${pageContext.request.contextPath}/static/img/4.jpg" class="rounded-circle user_img">
 									<span class="online_icon"></span>
 								</div>
 								<div class="user_info">
@@ -138,7 +138,7 @@
 						<div class="card-body msg_card_body">
 							<div class="d-flex justify-content-start mb-4">
 								<div class="img_cont_msg">
-									<img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+                                    <img src="${pageContext.request.contextPath}/static/img/4.jpg" class="rounded-circle user_img">
 								</div>
 								<div class="msg_cotainer">
 									Hi, how are you samim?
@@ -156,7 +156,7 @@
 							</div>
 							<div class="d-flex justify-content-start mb-4">
 								<div class="img_cont_msg">
-									<img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+                                    <img src="${pageContext.request.contextPath}/static/img/4.jpg" class="rounded-circle user_img">
 								</div>
 								<div class="msg_cotainer">
 									I am good too, thank you for your chat template
@@ -174,7 +174,7 @@
 							</div>
 							<div class="d-flex justify-content-start mb-4">
 								<div class="img_cont_msg">
-									<img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+                                    <img src="${pageContext.request.contextPath}/static/img/4.jpg" class="rounded-circle user_img">
 								</div>
 								<div class="msg_cotainer">
 									I am looking for your next templates
@@ -192,7 +192,7 @@
 							</div>
 							<div class="d-flex justify-content-start mb-4">
 								<div class="img_cont_msg">
-									<img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+                                    <img src="${pageContext.request.contextPath}/static/img/4.jpg" class="rounded-circle user_img">
 								</div>
 								<div class="msg_cotainer">
 									Bye, see you
@@ -205,8 +205,9 @@
 								<div class="input-group-append">
 									<span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
 								</div>
-								<textarea name="" class="form-control type_msg" placeholder="Type your message..."></textarea>
-								<div class="input-group-append">
+								<textarea name="" class="form-control type_msg" id="msg" placeholder="Type your message..."></textarea>
+                                <input type="hidden" id="friendId" value="${friendId}"/>
+								<div class="input-group-append" id="sendMsg">
 									<span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
 								</div>
 							</div>
