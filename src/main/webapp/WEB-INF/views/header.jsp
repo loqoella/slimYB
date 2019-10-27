@@ -16,7 +16,7 @@
  	<link href="/slimYB/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
  	<!-- custom css -->
  	<link href="/slimYB/static/custom.css" rel="stylesheet">
- 	<title>${title}</title>
+ 	<title>${title}</title> 
 </head>
 <body class="d-flex flex-column h-100">
 	<header>
@@ -37,7 +37,12 @@
 	      <a class="nav-item nav-link" href="/slimYB/marketplace/">Marketplace</a>
 	    </div>
 	  </div>
-	  <a href="/slimYB/login" class="btn btn-outline-light my-2 my-sm-0" role="button">Log in</a>
+	  <c:if test="${ !sessionScope.currUser.prop.equals('') }">
+	  	<a href="/slimYB/login" class="btn btn-outline-light my-2 my-sm-0" role="button">${sessionScope.user.email}Log in</a>
+	  </c:if>
+	  <c:if test="${ sessionScope.currUser.equals('') }">
+	  	<a href="/slimYB/login" class="btn btn-outline-light my-2 my-sm-0" role="button">Hello</a>
+	  </c:if>
 	</nav>
 	</header>
 	<div class="container mt-2 mb-4">

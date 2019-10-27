@@ -5,8 +5,6 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import javax.persistence.GeneratedValue;
@@ -16,43 +14,54 @@ import javax.persistence.GeneratedValue;
 public class Profile implements Serializable {
 	
 	@Id
+	@GeneratedValue
 	@Column(name="Id")
-	private long id;
-	
-	@ManyToOne
-    @JoinColumn(name = "UserId")
-    private User user;
+	private int id;
 	
 	@Column(name="Username")
 	private String username;
 	
-	@Column(name="Gender")
-	private String gender;
+
+	
+	@Column(name="Email")
+	private String Email;
 	
 	@Column(name="Birthday")
-	private String birthday;
+	private String Birthday;
 	
 	@Column(name="Age")
-	private String age;
+	private int Age;
 	
-	@Column(name="Firstname")
-	private String firstname;
 	
-	@Column(name="Surname")
-	private String surname;
+	@Column(name="Gender")
+	private String Gender;
+	
+	@Column(name="Height")
+	private double Height;
+	
+	@Column(name="Weight")
+	private double Weight;
+	
+	@Column(name="Bust")
+	private double Bust;
+	
+	@Column(name="Waist")
+	private double Waist;
+	
+	@Column(name="Hips")
+	private double Hips;
+	
+	@Column(name="BMI")
+	private double BMI;
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public User getUser() {
-		return user;
-	}
+//	public void setId(long id) {
+//		this.id = id;
+//	}
 
-	public void setUser(User user) {
-		this.user = user;
-	}
-	
 	public String getUsername() {
 		return username;
 	}
@@ -61,64 +70,92 @@ public class Profile implements Serializable {
 		this.username = username;
 	}
 
-	public String getGender() {
-		return gender;
-	}
 
-	public void setGender(String gender) {
-		this.gender = gender;
+	public String getEmail() {
+		return Email;
 	}
+		
 
 	public String getBirthday() {
-		return birthday;
+		return Birthday;
 	}
 
 	public void setBirthday(String birthday) {
-		this.birthday = birthday;
+		Birthday = birthday;
 	}
 
-	public String getAge() {
-		return age;
+	public int getAge() {
+		return Age;
 	}
 
-	public void setAge(String age) {
-		this.age = age;
-	}
-	
-	public String getFirstname() {
-		return firstname;
+	public void setAge(int age) {
+		Age = age;
 	}
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public String getGender() {
+		return Gender;
 	}
 
-	public String getSurname() {
-		return surname;
+	public void setGender(String gender) {
+		Gender = gender;
 	}
 
-	public void setSurname(String surname) {
-		this.surname = surname;
+	public double getHeight() {
+		return Height;
+	}
+
+	public void setHeight(double height) {
+		Height = height;
+	}
+
+	public double getWeight() {
+		return Weight;
+	}
+
+	public void setWeight(double weight) {
+		Weight = weight;
+	}
+
+	public double getBust() {
+		return Bust;
+	}
+
+	public void setBust(double bust) {
+		Bust = bust;
+	}
+
+	public double getWaist() {
+		return Waist;
+	}
+
+	public void setWaist(double waist) {
+		Waist = waist;
+	}
+
+	public double getHips() {
+		return Hips;
+	}
+
+	public void setHips(double hips) {
+		Hips = hips;
+	}
+
+	public double getBMI() {
+		return BMI;
+	}
+
+	public void setBMI(double bMI) {
+		BMI = bMI;
 	}
 	
 	public String toString() {
 		StringBuffer buffer = new StringBuffer();
 		buffer.append("Id: " + id + ";");
 		buffer.append("Username: " + username + ";");
-		buffer.append("Gender: " + gender + ";");
-		buffer.append("Birthday: " + birthday + ";");
-		buffer.append("Age: " + age + ";");
-		buffer.append("Firstname: " + firstname + ";");
-		buffer.append("Durname: " + surname + ";");
 		return buffer.toString();
 	}
 
-	
-
-	
-
+	public void setEmail(String email) {
+		Email = email;
+	}
 }
-
-
-
-	

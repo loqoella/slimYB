@@ -21,9 +21,11 @@ public class LoginManager implements Serializable {
 		this.sessionFactory = sf;
 	}
 
-	public void testAddUser() {
+	public void login() {
 		Session currentSession = this.sessionFactory.getCurrentSession();
 		User u = new User();
+		
+		
 		
 		
 	}

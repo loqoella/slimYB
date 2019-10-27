@@ -15,25 +15,28 @@ public class User implements Serializable {
 	
 	@Id
 	@GeneratedValue
-	@Column(name="UserId")
+	@Column(name="Id")
 	private long id;
 	
-	@Column(name="Email")
-	private String email;
+	@Column(name="Username")
+	private String username;
 	
 	@Column(name="Password")
 	private String password;
+	
+	@Column(name="Email")
+	private String Email;
 
 	public long getId() {
 		return id;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -44,15 +47,24 @@ public class User implements Serializable {
 		this.password = password;
 	}
 	
+	public User getUser() {
+		return this;
+	}
+	
+	public String getEmail() {
+		return Email;
+	}
+	
+	public void setEmail(String email) {
+		Email = email;
+	}
+	
 	public String toString() {
 		StringBuffer buffer = new StringBuffer();
-		buffer.append("Id: " + id + ";");
-		buffer.append("Username: " + email + ";");
+		buffer.append("Email: " + Email + ";");
 		buffer.append("Password: " + password + ";");
 		return buffer.toString();
 	}
 
-
-
-
+	
 }

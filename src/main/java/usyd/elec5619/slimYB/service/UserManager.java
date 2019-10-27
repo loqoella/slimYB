@@ -1,12 +1,15 @@
 package usyd.elec5619.slimYB.service;
 
 import java.io.Serializable;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.hibernate.SessionFactory;
 import org.hibernate.classic.Session;
+import org.hibernate.Criteria;
+import org.hibernate.Query;
 
 import usyd.elec5619.slimYB.domain.User;
 
@@ -24,10 +27,23 @@ public class UserManager implements Serializable {
 	public void testAddUser() {
 		Session currentSession = this.sessionFactory.getCurrentSession();
 		User u = new User();
-		u.setEmail("testUser");
+		u.setUsername("testUser");
 		u.setPassword("testPassword");
 		currentSession.save(u);
 		
 		System.out.print("new user added!");
+	}		
+
+	public void addUser(User u)throws Exception{
+		Session currentSession = this.sessionFactory.getCurrentSession();
+		currentSession.save(u);
+	}
+	
+	public User getUserByEmail(String Email)throws Exception {
+		
+		List<User> list = this.sessionFactory.getCurrentSession().createQuery("FROM User u WHERE u.Email = " + "'" + Email + "'").list();
+		System.out.print(list.size());
+		return list.get(0);
+		
 	}
 }

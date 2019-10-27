@@ -3,7 +3,7 @@
 <div class="jumbotron">
     <h1 class="display-4" style="text-align:center;"> Create an account </h1>
     <br>
-	<form action='/slimYB/login'>
+	<form action='/slimYB/register/registerData'>
 		<nobr>
 			<a style="position:absolute;left: 23%;">FirstName :</a>
 			<input type="text" name="firstname" style="margin-left: 28%;color:#999999">
@@ -14,7 +14,7 @@
 		<br>
 		<nobr>
 			<a style="position:absolute;left: 23%;">UserName :</a>
-			<input type="text" name=username" style="margin-left: 28%;color:#999999">
+			<input type="text" name="username" style="margin-left: 28%;color:#999999">
 			<a style="position:absolute;left: 55%;">Email Address :</a>
 			<input type="text" name="email" size="30" style="margin-left: 23%;color:#999999;">
 		</nobr>
@@ -124,7 +124,7 @@
     			<option value="1959">1959</option>
 			</select>
 			<a style="position:absolute;left: 55%;">Age :</a>
-			<select style="margin-left: 24%;">
+			<select name="age" style="margin-left: 24%;">
 				<option value="-">-</option>
 				<option value="18">18</option>
 				<option value="19">19</option>
@@ -175,8 +175,8 @@
 		<br>
 		<nobr>
 			<a style="position:absolute;left: 23%;">Gender :</a>
-			<lable><input name="gender" type="radio" style="margin-left: 28%">Male</lable>
-			<lable><input name="gender" type="radio" style="margin-left: 5%">Female</lable>
+			<lable><input value="Male" name="gender" type="radio" style="margin-left: 28%">Male</lable>
+			<lable><input value="Female" name="gender" type="radio" style="margin-left: 5%">Female</lable>
 		</nobr>
 		<br>
 		<br>

@@ -26,5 +26,6 @@
 	<beans:bean id="userManager" class="usyd.elec5619.slimYB.service.UserManager">
 	</beans:bean>
 	
-	
+	<beans:bean id="profileManager" class="usyd.elec5619.slimYB.service.ProfileManager">
+	</beans:bean>
 </beans:beans>
