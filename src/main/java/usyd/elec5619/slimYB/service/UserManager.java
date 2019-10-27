@@ -66,13 +66,6 @@ public class UserManager implements Serializable {
 		return list;
 	}
 
-
-	public User getUserById(long id)throws Exception {
-		User q =(User) this.sessionFactory.getCurrentSession().get(User.class,id);
-		System.out.print(q);
-		return q;
-	}
-
 	public void deleteUser(long id) {
 		Session currentSession =this.sessionFactory.getCurrentSession();
 		User user = (User)currentSession.get(User.class,id);
@@ -82,15 +75,5 @@ public class UserManager implements Serializable {
         Session currentSession = this.sessionFactory.getCurrentSession();
         User currentUser = (User) currentSession.get(User.class, id);
         return currentUser;
-    }
-
-    public void testAddUser() {
-        Session currentSession = this.sessionFactory.getCurrentSession();
-        User u = new User();
-        u.setUsername("testUser");
-        u.setPassword("testPassword");
-        currentSession.save(u);
-
-        System.out.print("new user added!");
     }
 }
