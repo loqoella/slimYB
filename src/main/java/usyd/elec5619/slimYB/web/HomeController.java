@@ -33,11 +33,7 @@ public class HomeController {
 	public String home(Model model, HttpServletRequest request) {
 		
 		model.addAttribute("title", "Homepage");
-		System.out.println(request.getSession().getAttribute("currUser"));
-	
-		
-		userManager.testAddUser();
-		
+		System.out.println(request.getSession().getAttribute("currUser"));		
 		
 		return "home";
 	}

@@ -1,3 +1,4 @@
+<%@ page import="java.util.List" %>
 <%@ include file="/WEB-INF/views/header.jsp" %>
 
 <div class="jumbotron">
@@ -8,19 +9,19 @@
     <br>
     <br>
     <p class = "lead" style="position:absolute;left: 20%;" > Username : </p>
-    <p class = "lead" style="position:absolute;left: 30%;" > ${user.getUsername()} </p>
+    <p class = "lead" style="position:absolute;left: 30%;" > ${profile.getUsername()} </p>
     <p class = "lead" style="position:absolute;left: 60%;" > Email : </p>
-    <p class = "lead" style="position:absolute;left: 70%;" > ${user.getEmail()}</p>
+    <p class = "lead" style="position:absolute;left: 70%;" > ${profile.getEmail()}</p>
     <br>
     <br>
     <p class = "lead" style="position:absolute;left: 20%;" > Birthday : </p>
-    <p class = "lead" style="position:absolute;left: 30%;" > ${user.getBirthday()}</p>
+    <p class = "lead" style="position:absolute;left: 30%;" > ${profile.getBirthday()}</p>
     <p class = "lead" style="position:absolute;left: 60%;" > Age : </p>
-    <p class = "lead" style="position:absolute;left: 70%;" > ${user.getAge()}</p>
+    <p class = "lead" style="position:absolute;left: 70%;" > ${profile.getAge()}</p>
     <br>
     <br>
     <p class = "lead" style="position:absolute;left: 20%;" > Gender : </p>
-    <p class = "lead" style="position:absolute;left: 30%;" > ${user.getGender()} </p>
+    <p class = "lead" style="position:absolute;left: 30%;" > ${profile.getGender()} </p>
     <br>
     <br>
     <br>
@@ -29,31 +30,31 @@
     <br>
     <br>
     <p class = "lead" style="position:absolute;left: 20%;" > Height : </p>
-    <p class = "lead" style="position:absolute;left: 30%;" > ${user.getHeight()}</p>
+    <p class = "lead" style="position:absolute;left: 30%;" > ${profile.getHeight()}</p>
     <p class = "lead" style="position:absolute;left: 35%;" > cm </p>
     <p class = "lead" style="position:absolute;left: 60%;" > Weight : </p>
-    <p class = "lead" style="position:absolute;left: 70%;" > ${user.getWeight()} </p>
+    <p class = "lead" style="position:absolute;left: 70%;" > ${profile.getWeight()} </p>
     <p class = "lead" style="position:absolute;left: 75%;" > KG </p>
     <br>
     <br>
     <p class = "lead" style="position:absolute;left: 20%;" > Bust : </p>
-    <p class = "lead" style="position:absolute;left: 30%;" > ${user.getBust()} </p>
+    <p class = "lead" style="position:absolute;left: 30%;" > ${profile.getBust()} </p>
     <p class = "lead" style="position:absolute;left: 35%;" > cm </p>
     <p class = "lead" style="position:absolute;left: 60%;" > Waist : </p>
-    <p class = "lead" style="position:absolute;left: 70%;" > ${user.getWaist()} </p>
+    <p class = "lead" style="position:absolute;left: 70%;" > ${profile.getWaist()} </p>
     <p class = "lead" style="position:absolute;left: 75%;" > cm </p>
     <br>
     <br>
     <p class = "lead" style="position:absolute;left: 20%;" > Hips : </p>
-    <p class = "lead" style="position:absolute;left: 30%;" > ${user.getHips()} </p>
+    <p class = "lead" style="position:absolute;left: 30%;" > ${profile.getHips()} </p>
     <p class = "lead" style="position:absolute;left: 35%;" > cm </p>
     <p class = "lead" style="position:absolute;left: 60%;" > BMI : </p>
-    <p class = "lead" style="position:absolute;left: 70%;" > ${user.getBMI()} </p>
+    <p class = "lead" style="position:absolute;left: 70%;" > ${profile.getBMI()} </p>
     <br>
     <br>
     <br>
-    <a href="/slimYB/profile/profile-change??Email=${user.getEmail()}">
-    	<button type="button" style="position:absolute;left: 38%;font-size: 20px;width:300px" > Change Data </button>
+    <a href="/slimYB/profile/profile-change">
+    	<button type="button" style="position:absolute;left: 38%;font-size: 20px;width:300px" > Change Data </button> 
     </a>
     <br>
     <br>

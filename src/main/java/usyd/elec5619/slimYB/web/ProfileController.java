@@ -32,19 +32,34 @@ private static final Logger logger = LoggerFactory.getLogger(ProfileController.c
 
 	@RequestMapping(value = "/profile", method = RequestMethod.GET)
 	public String profile(Model model,HttpServletRequest request) throws Exception {
-		String email=request.getParameter("email-address");
-		//String pro = "12@gmail.com";
+		//String email=request.getParameter("email-address");
+		String email = "12@gmail.com";
 		model.addAttribute("title", "Profile");
-		model.addAttribute("profile",profileManager.getProfileByEmail(email));
+		model.addAttribute("profile", profileManager.getProfileByEmail(email));
 		return "profile";
-	}	
+	}		
 	
-	@RequestMapping(value = "/profile/profile-change", method = RequestMethod.GET)
-	public String profilechange(Model model,HttpServletRequest request,@RequestParam("Email") String Email) {
-		
+	@RequestMapping(value = "/profile-change", method = RequestMethod.GET)
+	public String profilechange(Model model,HttpServletRequest request) throws Exception {	
+		String e = "12@gmail.com";
 		model.addAttribute("title", "Profile-Change");
+		model.addAttribute("profile", profileManager.getProfileByEmail(e));
 		
-		String e = Email ;
+		return "profile-change";
+	}
+	
+	@RequestMapping(value = "/change", method = RequestMethod.POST)
+	public String change(Model model,HttpServletRequest request) throws Exception {
+		//String email=request.getParameter("email-address");
+		String e = "12@gmail.com";
+		model.addAttribute("title", "Profile-Change");
+		model.addAttribute("profile", profileManager.getProfileByEmail(e));
+		Profile profile_now = new Profile();
+		profile_now = profileManager.getProfileByEmail(e);
+		int age = profile_now.getAge();
+		String email = profile_now.getEmail();
+		String birthday = profile_now.getBirthday();
+		String gender = profile_now.getGender();		
 		
 		String username =request.getParameter("username");
 		double height=Double.valueOf(request.getParameter("height"));
@@ -52,11 +67,15 @@ private static final Logger logger = LoggerFactory.getLogger(ProfileController.c
 		double bust=Double.valueOf(request.getParameter("bust"));
 		double hips=Double.valueOf(request.getParameter("hips"));
 		double waist=Double.valueOf(request.getParameter("waist"));
-		double B = weight/(height*height);
+		double B = weight/(height/100)/(height/100);
 		BigDecimal bd = new BigDecimal(B);
 		double bMI  = bd.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
 		
 		Profile p = new Profile();
+		p.setAge(age);
+		p.setEmail(email);
+		p.setGender(gender);
+		p.setBirthday(birthday);
 		p.setUsername(username);
 		p.setBust(bust);
 		p.setBMI(bMI);
@@ -64,9 +83,11 @@ private static final Logger logger = LoggerFactory.getLogger(ProfileController.c
 		p.setHips(hips);
 		p.setWaist(waist);
 		p.setWeight(weight);
+	
+		profileManager.deleteProfile(profile_now);
+		profileManager.addProfile(p);
 		
-		profileManager.changeProfile(e,p);
-		
-		return "profile-change";
+		return "redirect:/profile";
 	}
+	
 }

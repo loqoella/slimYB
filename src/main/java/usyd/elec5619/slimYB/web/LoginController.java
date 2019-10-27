@@ -40,12 +40,14 @@ private static final Logger logger = LoggerFactory.getLogger(LoginController.cla
 		
 		String email=request.getParameter("email-address");
 		String userPwd=request.getParameter("password");
-		System.out.println(email  +  "========================");
 		User user = new User();
 		user = userManager.getUserByEmail(email);
+		
 		String password_validation = user.getPassword();
 		if(password_validation.equals(userPwd)) {
-			request.getSession(true).setAttribute("currUser", user);
+			request.getSession(true).setAttribute("currUser", user);			
+			if(email.equals("admin"))
+				return "admin";
 			return "redirect:/";
 		}
 		else {
