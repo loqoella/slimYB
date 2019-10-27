@@ -1,24 +1,27 @@
-import junit.framework.TestCase;
+package usyd.elec5619.slimYB.domain;
 
-class FriendTest extends TestCase{
+import junit.framework.TestCase;
+import org.junit.Test;
+
+public class FriendTest extends TestCase{
 	
 	private Friend friend;
 	
 	@Override
 	protected void setUp() throws Exception {
-		this.friend = new Friend();
+		friend = new Friend();
 	}
 	
-	public void testSetFriend() {
+	public void testDeleteFriend() {
 		String tag = "Test_setFriends";
-		this.friend.setFriends(tag);
+		friend.setFriends(tag);
 		assertEquals(this.friend.getFriends(), tag);
 	}
 	
 	public void testAddFriend() {
 		String tag = "Test_addFriends";
-		String now = this.friend.getFriends() + tag;
+		String now = friend.getFriends() +" "+ tag;
 		this.friend.addFriend(tag);
-		assertEquals(this.friend.getFriends(), tag);
+		assertEquals(this.friend.getFriends(), now);
 	}
 }

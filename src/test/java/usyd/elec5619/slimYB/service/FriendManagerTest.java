@@ -3,26 +3,27 @@ package usyd.elec5619.slimYB.service;
 import junit.framework.TestCase;
 import usyd.elec5619.slimYB.domain.Friend;
 
-class FriendManagerTest extends TestCase {
+public class FriendManagerTest extends TestCase {
 	private FriendManager fm;
 	private static int id = 1;
-
+	int friend = 2;
+	
 	@Override
 	protected void setUp() throws Exception {
 		this.fm = new FriendManager();
 	}
-
-	public void testAddFriend() {
+	
+	public void testDeleteFriend() throws Exception {
 		String[] now  = this.fm.getAllFriends(id);
-		int friend = 2;
-		this.fm.addFriend(id, friend);
-		assertEquals(now.length(), this.fm.getAllFriends(id).length() - 1);
-	}
-
-	pubic void testDeleteFriend() {
-		String[] now  = this.fm.getAllFriends(id);
-		int friend = 2;
+		//System.out.println(now);
 		this.fm.deleteFriend(id, friend);
-		assertEquals(now.length(), this.fm.getAllFriends(id).length() + 1);
+		assertEquals(now.length, this.fm.getAllFriends(id).length + 1);
 	}
+
+	public void testAddFriend() throws Exception {
+		String[] now = this.fm.getAllFriends(id);
+		this.fm.addFriend(id, friend);
+		assertEquals(now.length, this.fm.getAllFriends(id).length - 1);
+	}
+
 }
