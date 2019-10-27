@@ -14,7 +14,7 @@ import javax.persistence.TemporalType;
 import javax.persistence.GeneratedValue;
 
 @Entity
-@Table(name="ItemComment")
+@Table(name="Cart")
 public class Cart implements Serializable {
 	
 	@Id
@@ -29,6 +29,10 @@ public class Cart implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="ProductId")
 	private Product productId;
+
+	public long getId() {
+		return id;
+	}
 
 	public User getUserId() {
 		return userId;

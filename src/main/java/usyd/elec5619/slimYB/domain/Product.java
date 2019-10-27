@@ -54,6 +54,10 @@ public class Product implements Serializable {
 		lastUpdateTime = new Date();
     }
 
+    public long getId() {
+		return id;
+	}
+
 	public User getUserId() {
 		return userId;
 	}
@@ -84,5 +88,21 @@ public class Product implements Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public Date getLastUpdateTime() {
+		return lastUpdateTime;
+	}
+
+	public void setLastUpdateTime(Date lastUpdateTime) {
+		this.lastUpdateTime = lastUpdateTime;
 	}
 }

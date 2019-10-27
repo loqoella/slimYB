@@ -49,6 +49,10 @@ public class ItemComment implements Serializable {
 		commentTime = new Date();
     }
 
+	public long getId() {
+		return id;
+	}
+
 	public User getUserId() {
 		return userId;
 	}

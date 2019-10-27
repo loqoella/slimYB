@@ -1,21 +1,18 @@
 <%@ include file="/WEB-INF/views/header.jsp" %>
 <%@ include file="/WEB-INF/views/marketplace/marketplaceHeader.jsp" %>
 
-<h4>Seller: aaa</h4>
+<h4>Seller: ${product.userId.username}</h4>
+<button class="btn btn-primary" onclick="sendAddItemToCartRequest(this, ${product.id})">Add to Cart</button>
 <h1>Item description</h1>
-<p class="mb-4">test${ description }</p>
+<p class="mb-4">${ product.description }</p>
 
 <div id="carouselControls" class="carousel slide mb-4" data-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
+    <c:forEach var="imageLink" items="${product.imagePath.split('%')}">
+      <div class="carousel-item active">
+        <img src="imageLink" class="d-block w-100" alt="...">
+      </div>
+    </c:forEach>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -29,9 +26,19 @@
 
 <h1> User Comments</h1>
 
+<c:forEach var="comment" items="${commentList}">
 <div class="mb-3">
-	<h4>User1</h4>
-	<p>blablablablabla</p>
+	<h4>${comment.userId.username}</h4>
+	<p>${comment.comment}</p>
 </div>
+</c:forEach>
 
 <%@ include file="/WEB-INF/views/footer.jsp" %>
+<script>
+  function sendAddItemToCartRequest(element, productId) {
+    var http = new XMLHttpRequest();
+    var url = "/slimYB/marketplace/cart/add?item=" + productId;
+    http.open("PUT", url);
+    http.send();
+  }
+</script>

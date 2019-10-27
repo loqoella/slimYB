@@ -33,7 +33,7 @@
 				  <div class="imagePreview"></div>
 				  <div class="card-body">
 				  	<div class="row">
-				    	<label class="btn btn-primary btn-block mb-0">Upload<input type="file" class="uploadFile" style="width:0px;height:0px;overflow:hidden;"></label>
+				    	<label class="btn btn-primary btn-block mb-0">Upload<input type="file" name="file" class="uploadFile" style="width:0px;height:0px;overflow:hidden;"></label>
 				    	<button class="btn btn-danger btn-block del">Delete</button>
 				    </div>
 				  </div>
@@ -52,7 +52,7 @@
 				  <div class=\"imagePreview\"></div>
 				  <div class=\"card-body\">
 				  	<div class=\"row\">
-				    	<label class=\"btn btn-primary btn-block mb-0\">Upload<input type=\"file\" class=\"uploadFile\" style=\"width:0px;height:0px;overflow:hidden;\"></label>
+				    	<label class=\"btn btn-primary btn-block mb-0\">Upload<input type=\"file\" name=\"file\" class=\"uploadFile\" style=\"width:0px;height:0px;overflow:hidden;\"></label>
 				    	<button class=\"btn btn-danger btn-block del\">Delete</button>
 				    </div>
 				  </div>

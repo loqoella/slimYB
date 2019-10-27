@@ -16,7 +16,7 @@ import javax.persistence.TemporalType;
 import javax.persistence.GeneratedValue;
 
 @Entity
-@Table(name="Order")
+@Table(name="Orders")
 public class Order implements Serializable {
 	
 	@Id
@@ -55,6 +55,10 @@ public class Order implements Serializable {
     protected void onUpdate() {
 		lastUpdateTime = new Date();
     }
+
+    public long getId() {
+		return id;
+	}
 
 	public User getBuyerId() {
 		return buyerId;
