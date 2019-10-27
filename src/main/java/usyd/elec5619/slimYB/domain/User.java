@@ -23,7 +23,13 @@ public class User implements Serializable {
 	
 	@Column(name="Password")
 	private String password;
+	
+	
 
+	@Column (name="DiaryBookID")
+	private long DiaryBookID;
+	
+	
 	public long getId() {
 		return id;
 	}
@@ -32,6 +38,16 @@ public class User implements Serializable {
 //		this.id = id;
 //	}
 
+	public long getDiaryBookId() {
+		return DiaryBookID;
+	}
+	
+	
+	public void setDiaryBookId(long DiaryBookID) {
+		this.DiaryBookID = DiaryBookID;
+	}
+	
+	
 	public String getUsername() {
 		return username;
 	}
@@ -53,6 +69,7 @@ public class User implements Serializable {
 		buffer.append("Id: " + id + ";");
 		buffer.append("Username: " + username + ";");
 		buffer.append("Password: " + password + ";");
+		buffer.append("DiaryBookID: " + DiaryBookID + ";");
 		return buffer.toString();
 	}
 }
