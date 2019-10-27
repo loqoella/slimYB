@@ -570,7 +570,8 @@
                                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Goal
                                             Weight
                                         </div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="card-goal">${goalWeight} kg
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="card-goal">${goalWeight}
+                                            kg
                                         </div>
                                     </div>
                                     <div class="col-auto">
@@ -737,7 +738,8 @@
                                         <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Current /
                                             Goal Hip Girth
                                         </div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="card-hip">${currentHip} out of ${goalHip}
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800" id="card-hip">${currentHip}
+                                            out of ${goalHip}
                                             cm
                                         </div>
                                     </div>
@@ -835,7 +837,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2019</span>
+                        <span>Copyright &copy; SlimYB 2019</span>
                     </div>
                 </div>
             </footer>
@@ -852,31 +854,19 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-
-    <%--    <!-- Core plugin JavaScript-->--%>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <!-- Page level custom scripts -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
-    <%--    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/chart-area-demo.js"></script>--%>
-    <%--    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/chart-pie-demo.js"></script>--%>
-    <!-- Custom scripts for all pages-->
-    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/sb-admin-2.min.js"></script>
-    <script type="text/javascript" src="https://kit.fontawesome.com/45c008b6a4.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" charset="utf8"
-            src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
-
-    <script type="text/javascript  src=" https:
-    //cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript"
-            src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
+</div>
+<%--    <!-- Core plugin JavaScript-->--%>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!-- Page level custom scripts -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+<%--    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/chart-area-demo.js"></script>--%>
+<%--    <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/chart-pie-demo.js"></script>--%>
+<!-- Custom scripts for all pages-->
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/sb-admin-2.min.js"></script>
+<script type="text/javascript" src="https://kit.fontawesome.com/45c008b6a4.js" crossorigin="anonymous"></script>
+<script type="text/javascript"
+        src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 
 </html>
