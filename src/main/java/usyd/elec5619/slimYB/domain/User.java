@@ -1,6 +1,7 @@
-package usyd.elec5619.slimYB.domain;
+spackage usyd.elec5619.slimYB.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,7 +13,6 @@ import javax.persistence.GeneratedValue;
 @Entity
 @Table(name="User")
 public class User implements Serializable {
-	
 	@Id
 	@GeneratedValue
 	@Column(name="Id")
@@ -31,6 +31,10 @@ public class User implements Serializable {
 		return id;
 	}
 
+	public void setId(long id) {
+		this.id = id;
+	}
+	
 	public String getUsername() {
 		return username;
 	}

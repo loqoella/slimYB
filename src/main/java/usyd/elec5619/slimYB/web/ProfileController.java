@@ -90,4 +90,21 @@ private static final Logger logger = LoggerFactory.getLogger(ProfileController.c
 		return "redirect:/profile";
 	}
 	
+	@RequestMapping(value = "/userprofile", method = RequestMethod.GET)
+	public String home(Model model) throws Exception {
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("now", formattedDate );
+		model.addAttribute("title", "User Profile");
+	
+		model.addAttribute("users",userManager.getAllUsers()) ;
+		
+		
+		return "adminSystem/userprofilehome";
+	}
+	
 }

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+s<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page session="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -16,7 +16,7 @@
  	<link href="/slimYB/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
  	<!-- custom css -->
  	<link href="/slimYB/static/custom.css" rel="stylesheet">
- 	<title>${title}</title> 
+ 	<title>${title}</title>
 </head>
 <body class="d-flex flex-column h-100">
 	<header>
@@ -29,12 +29,13 @@
 	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 	    <div class="navbar-nav">
 	      <a class="nav-item nav-link" href="/slimYB/">Home <span class="sr-only">(current)</span></a>
-	      <a class="nav-item nav-link" href="/slimYB/profile/">Profile</a>
-	      <a class="nav-item nav-link" href="/slimYB/goal/">Goal</a>
-	      <a class="nav-item nav-link" href="/slimYB/self-test/">Self-test</a>
-	      <a class="nav-item nav-link" href="/slimYB/friends/">Friends</a>
+	      <a class="nav-item nav-link" href="/slimYB/profile">Profile</a>
+	      <a class="nav-item nav-link" href="/slimYB/goal">Goal</a>
+	      <a class="nav-item nav-link" href="/slimYB/self-test">Self-test</a>
+	      <a class="nav-item nav-link" href="/slimYB/friends">Friends</a>
 	      <a class="nav-item nav-link" href="/slimYB/life-recording/">Life-Recording</a>
-	      <a class="nav-item nav-link" href="/slimYB/marketplace/">Marketplace</a>
+	      <a class="nav-item nav-link" href="/slimYB/marketplace">Marketplace</a>
+	      <a class="nav-item nav-link" href="/slimYB/admin">Administrator</a>
 	    </div>
 	  </div>
 	  <c:if test="${ !sessionScope.currUser.prop.equals('') }">
