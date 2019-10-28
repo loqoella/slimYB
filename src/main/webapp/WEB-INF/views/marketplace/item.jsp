@@ -39,8 +39,8 @@
 <script>
     function sendAddItemToCartRequest(element, productId) {
         var http = new XMLHttpRequest();
-        var url = "/slimYB/marketplace/cart/add?item=" + productId;
-        http.open("PUT", url);
+        var url = "/slimYB/marketplace/cart?item=" + productId;
+        http.open("POST", url);
         http.send();
         $("#cartNum").html(function(i, val) { return +val+1 });
     }

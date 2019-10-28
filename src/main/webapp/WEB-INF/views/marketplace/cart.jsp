@@ -49,7 +49,7 @@
 <script>
     function sendDeleteRequest(element, itemId) {
         var http = new XMLHttpRequest();
-        var url = "/slimYB/marketplace/cart/delete?item=" + itemId;
+        var url = "/slimYB/marketplace/cart/" + itemId;
         http.open("DELETE", url);
         http.send();
 

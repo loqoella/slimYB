@@ -17,7 +17,7 @@
 						  </div>
 						  <div class="col-md-10">
 							<div class="card-body">
-								<a href="#"> <h5 class="card-title">${product.productName}</h5> </a>
+								<a href="/slimYB/marketplace/item/${product.id}"> <h5 class="card-title">${product.productName}</h5> </a>
 								<p class="card-text">${product.description.substring(0, (product.description.length() > 100 ? 100 : product.description.length()))}</p>
 								<p class="card-text"><small class="text-muted">Price: ${product.price} </small></p>
 								<a href="/slimYB/marketplace/comment?itemId=${product.id}" class="btn btn-outline-secondary">Comment</a>

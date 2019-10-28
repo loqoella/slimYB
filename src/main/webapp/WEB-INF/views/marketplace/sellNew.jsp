@@ -6,7 +6,7 @@
 </span>
 
 <div>
-	<form method="post" action="/slimYB/marketplace/sellNew" enctype="multipart/form-data">
+	<form method="post" action="/slimYB/marketplace/item" enctype="multipart/form-data">
 		<div class="form-row">
 			<div class="form-group col-md-6">
 			  <label for="itemName">Item Name</label>
