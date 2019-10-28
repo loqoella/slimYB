@@ -15,7 +15,7 @@
  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
  	<link href="/slimYB/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
  	<!-- custom css -->
- 	<link href="/slimYB/static/custom.css?v=aaaa" rel="stylesheet">
+ 	<link href="/slimYB/static/custom.css" rel="stylesheet">
  	<title>${title}</title>
 </head>
 <body class="d-flex flex-column h-100">

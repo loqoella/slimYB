@@ -100,9 +100,9 @@ public class MarketplaceController {
 		return "marketplace/cart";
 	}
 
-	@RequestMapping(value = "/cart/{item}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/cart", method = RequestMethod.POST)
 	@ResponseStatus(value = HttpStatus.OK)
-	public void addCartItem(@PathVariable(value = "item") long productId) {
+	public void addCartItem(@RequestParam(value = "item") long productId) {
 		cartManager.addItem(getCurrentUserId(), productId);
 	}
 
