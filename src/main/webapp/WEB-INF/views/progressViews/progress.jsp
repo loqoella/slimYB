@@ -875,7 +875,15 @@
     $(document).ready(function () {
         $('#dataTable').DataTable();
     });
-
+</script>
+<script>
+    type = "text/javascript" >
+        $(document).ready(function () {
+            var url = window.location;
+            $('.navbar-nav .nav-item.nav-link').filter(function () {
+                return url.toString().includes(this.href);
+            }).last().addClass('active');
+        });
 </script>
 <script>
     // Set new default font family and font color to mimic Bootstrap's default styling
@@ -883,8 +891,8 @@
     Chart.defaults.global.defaultFontColor = '#858796';
 
     function number_format(number, decimals, dec_point, thousands_sep) {
-        // *     example: number_format(1234.56, 2, ',', ' ');
-        // *     return: '1 234,56'
+// * example: number_format(1234.56, 2, ',', ' ');
+// * return: '1 234,56'
         number = (number + '').replace(',', '').replace(' ', '');
         var n = !isFinite(+number) ? 0 : +number,
             prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
@@ -895,7 +903,7 @@
                 var k = Math.pow(10, prec);
                 return '' + Math.round(n * k) / k;
             };
-        // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+// Fix for IE parseFloat(0.55).toFixed(0) = 0;
         s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
         if (s[0].length > 3) {
             s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
@@ -958,7 +966,7 @@
                     ticks: {
                         maxTicksLimit: 5,
                         padding: 10,
-                        // Include a dollar sign in the ticks
+// Include a dollar sign in the ticks
                         callback: function (value, index, values) {
                             return number_format(value) + " kg";
                         }
