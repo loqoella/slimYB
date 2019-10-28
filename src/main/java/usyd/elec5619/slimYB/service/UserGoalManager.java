@@ -17,6 +17,7 @@ import java.util.List;
 public class UserGoalManager implements Serializable {
 
     private SessionFactory sessionFactory;
+    private UserGoal userGoal;
 
     @Autowired
     public void setSessionFactory(SessionFactory sf) {
@@ -26,6 +27,13 @@ public class UserGoalManager implements Serializable {
     public void addNewGoal(UserGoal goal) throws Exception {
         Session currentSession = this.sessionFactory.getCurrentSession();
         currentSession.saveOrUpdate(goal);
+    }
+
+    public void addGoal(UserGoal goal) {
+        this.userGoal = goal;
+    }
+    public UserGoal getGoal(){
+        return this.userGoal;
     }
 
     public List<UserGoal> getAllGoal() {

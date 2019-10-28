@@ -575,7 +575,7 @@
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        <i class="fas fa-weight fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
                             </div>
@@ -594,7 +594,7 @@
                                             Day ${numberOfRecords}</div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
                             </div>
@@ -607,7 +607,7 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Current
+                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Current
                                             Progress
                                         </div>
                                         <div class="row no-gutters align-items-center">
@@ -655,7 +655,7 @@
 
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        <i class="fas fa-walking fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
                             </div>
@@ -679,7 +679,7 @@
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        <i class="fas fa-weight fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
                             </div>
@@ -700,7 +700,7 @@
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        <i class="fas fa-ruler-vertical fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
                             </div>
@@ -721,7 +721,7 @@
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        <i class="fas fa-ruler-vertical fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
                             </div>
@@ -744,7 +744,7 @@
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        <i class="fas fa-ruler-vertical fa-2x text-gray-300"></i>
                                     </div>
                                 </div>
                             </div>
