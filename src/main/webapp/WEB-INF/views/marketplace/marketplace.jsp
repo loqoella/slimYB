@@ -39,7 +39,7 @@
 					<img src="${product.imagePath.split("%")[0]}" width="100%" height="100%"/>
 					<div class="card-body">
 						<div class="container row justify-content-between mx-0 px-0">
-							<a href="/slimYB/marketplace/item?id=${product.id}"><h5 class="card-title">${product.productName}</h5></a>
+							<a href="/slimYB/marketplace/item/${product.id}"><h5 class="card-title">${product.productName}</h5></a>
 							<h5 class="card-title">AU$ ${product.price}</h5>
 						</div>
 						<p class="card-text">${product.description}</p>
@@ -70,7 +70,7 @@
 <script>
 	function sendAddItemToCartRequest(element, productId) {
 		var http = new XMLHttpRequest();
-		var url = "/slimYB/marketplace/cart/add?item=" + productId;
+		var url = "/slimYB/marketplace/cart/" + productId;
 		http.open("PUT", url);
 		http.send();
 		$("#cartNum").html(function(i, val) { return +val+1 });

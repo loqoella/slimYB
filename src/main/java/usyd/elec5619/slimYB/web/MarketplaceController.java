@@ -13,6 +13,7 @@ import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -99,23 +100,23 @@ public class MarketplaceController {
 		return "marketplace/cart";
 	}
 
-	@RequestMapping(value = "/cart/add", method = RequestMethod.PUT)
+	@RequestMapping(value = "/cart/{item}", method = RequestMethod.PUT)
 	@ResponseStatus(value = HttpStatus.OK)
-	public void addCartItem(@RequestParam(value = "item") long productId) {
+	public void addCartItem(@PathVariable(value = "item") long productId) {
 		cartManager.addItem(getCurrentUserId(), productId);
 	}
 
-	@RequestMapping(value = "/cart/delete", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/cart/{item}", method = RequestMethod.DELETE)
 	@ResponseStatus(value = HttpStatus.OK)
-	public void deleteCartItem(@RequestParam(value="item") long productId) {
+	public void deleteCartItem(@PathVariable(value="item") long productId) {
 		Cart cartItem = cartManager.getCartItemByProduct(getCurrentUserId(), productId);
 		cartManager.removeItemFromCart(cartItem.getId());
 	}
 	
-	@RequestMapping(value = "/item")
+	@RequestMapping(value = "/item/{id}")
 	public String item(
 			Model model,
-			@RequestParam(value = "id") long itemId) {
+			@PathVariable(value = "id") long itemId) {
 
 		Product product = productManager.getProductById(itemId);
 
@@ -187,7 +188,7 @@ public class MarketplaceController {
 		return "marketplace/sellNew";
 	}
 
-	@RequestMapping(value = "/sellNew", method = RequestMethod.POST)
+	@RequestMapping(value = "/item", method = RequestMethod.POST)
 	public String sellNewPost(
 			Model model,
 			@RequestParam(value = "file", required = false) MultipartFile[] imgs,
