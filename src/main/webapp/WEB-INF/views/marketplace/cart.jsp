@@ -19,7 +19,7 @@
                         <tr>
                            <td><img src="${product.imagePath.split("%")[0]}" style="max-width:200px;max-height:200px;width:auto;height:auto;"/> </td>
                            <td class="align-middle">${product.productName}</td>
-                           <td class="text-right align-middle price">$ ${product.price}</td>
+                            <td class="text-right align-middle price"><p style="display: inline">$ </p><pstyle="display: inline">${product.price}</p></td>
                            <td class="text-right align-middle"><a href="#" onclick="sendDeleteRequest(this, ${product.id})" class="btn btn-danger oi oi-x"> </a> </td>
                         </tr>
                         <c:set var="totalPrice" scope="page" value="${totalPrice + product.price}"></c:set>
@@ -28,7 +28,7 @@
                    <td></td>
                    <td></td>
                    <td><strong>Total</strong></td>
-                   <td class="text-right"><strong id="totalPrice">$ ${totalPrice} </strong></td>
+                   <td class="text-right">$ <strong id="totalPrice">${totalPrice} </strong></td>
                 </tr>
             </tbody>
         </table>
@@ -53,6 +53,11 @@
         http.open("DELETE", url);
         http.send();
 
+        $("#totalPrice").html(function(i, val) {
+            var origin = parseFloat(val);
+            var deletePrice = parseFloat(element.parentNode.previousElementSibling.lastChild.innerHTML);
+            return origin - deletePrice;
+        });
         element.parentElement.parentElement.remove();
         $("#cartNum").html(function(i, val) { return +val-1 });
     }

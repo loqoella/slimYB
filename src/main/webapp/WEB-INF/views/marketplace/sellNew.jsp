@@ -33,7 +33,9 @@
    				<div id="last-placeholder"></div>
 		 	</div>
 		</div>
-		<input type="hidden" name="id" value="${product.id}"/>
+		<c:if test="${product != null}">
+			<input type="hidden" name="id" value="${product.id}"/>
+		</c:if>
 	 	<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
 	</form>
 </div>

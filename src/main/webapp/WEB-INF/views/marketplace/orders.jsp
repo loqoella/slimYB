@@ -1,9 +1,8 @@
 <%@ include file="/WEB-INF/views/header.jsp" %>
 <%@ include file="/WEB-INF/views/marketplace/marketplaceHeader.jsp" %>
-
-<div class="card mb-2">
-	<c:forEach var="i" begin="0" end="${orderList.size()}">
-		<c:if test="${i < orderList.size()}">
+<c:forEach var="i" begin="0" end="${orderList.size()}">
+	<c:if test="${i < orderList.size()}">
+	<div class="card mb-5">
 		<div class="card-header text-muted">
 			<div>Order Number: ${orderList.get(i).id} </div>
 			<div class="align-self-end">Status: ${orderList.get(i).status}</div>
@@ -32,8 +31,8 @@
 		<div class="card-footer text-muted">
 			Total: $ ${orderList.get(i).totalPrice}
 		</div>
-		</c:if>
-	</c:forEach>
-</div>
+	</div>
+	</c:if>
+</c:forEach>
 
 <%@ include file="/WEB-INF/views/footer.jsp" %>

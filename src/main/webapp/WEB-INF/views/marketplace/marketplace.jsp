@@ -36,13 +36,11 @@
 		<c:forEach var="product" items="${productList}">
 			<div class="col-md-4">
 				<div class="card mb-4 shadow-sm">
-					<svg class="bd-placeholder-img card-img-top" width="100%" height="180"> //TODO
-						<rect width="100%" height="100%" fill="#868e96"></rect>
-					</svg>
+					<img src="${product.imagePath.split("%")[0]}" width="100%" height="100%"/>
 					<div class="card-body">
 						<div class="container row justify-content-between mx-0 px-0">
 							<a href="/slimYB/marketplace/item?id=${product.id}"><h5 class="card-title">${product.productName}</h5></a>
-							<h5 class="card-title">AU$26.00</h5>
+							<h5 class="card-title">AU$ ${product.price}</h5>
 						</div>
 						<p class="card-text">${product.description}</p>
 						<div class="d-flex justify-content-between">
@@ -60,7 +58,7 @@
       <a class="page-link" href="/slimYB/marketplace?page=${currentPage - 1}${(keyword.equals("")?"":"&keyword=")}${keyword}" ${currentPage == 0 ? "tabindex='-1'" : ""}}>Previous</a>
     </li>
     <c:forEach var="i" begin="0" end="${productCount / 12}">
-		<li class="page-item ${currentPage == i ? "active\" aria-current=\"page" : ""}"><a class="page-link" href="/slimYB/marketplace?page=${i}${(keyword.equals("")?"":"&keyword=")}${keyword}">${i + 1}</a></li> //TODO
+		<li class="page-item ${currentPage == i ? "active\" aria-current=\"page" : ""}"><a class="page-link" href="/slimYB/marketplace?page=${i}${(keyword.equals("")?"":"&keyword=")}${keyword}">${i + 1}</a></li>
 	</c:forEach>
     <li class="page-item ${currentPage == productCount / 12 ? "disabled" : ""}">
       <a class="page-link" href="/slimYB/marketplace?page=${currentPage + 1}${(keyword.equals("")?"":"&keyword=")}${keyword}" ${currentPage == productCount / 12  ? "tabindex='-1'" : ""}>Next</a>

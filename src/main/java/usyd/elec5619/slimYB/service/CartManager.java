@@ -67,7 +67,7 @@ public class CartManager implements Serializable {
 
 	public void clearCart(long userId) {
 		Session session = sessionFactory.getCurrentSession();
-		String hql = "DELETE from Cart WHERE Userid = :userId";
-		session.createQuery(hql).setParameter("userId", userId);
+		String hql = "DELETE from Cart WHERE userid = :userId";
+		session.createQuery(hql).setParameter("userId", userId).executeUpdate();
 	}
 }

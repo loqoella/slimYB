@@ -50,7 +50,7 @@
 		<div class="form-row">
 		  <div class="form-group col-md-6">
 		    <label for="inputCardNumber">Card Number</label>
-		    <input type="email" class="form-control" id="inputCardNumber">
+		    <input type="text" class="form-control" id="inputCardNumber">
 		  </div>
 		  <div class="form-group col-md-4">
 		    <label for="inputCardType">Card Type</label>
