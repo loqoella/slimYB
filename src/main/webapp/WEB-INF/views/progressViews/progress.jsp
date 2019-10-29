@@ -547,6 +547,12 @@
                                                     Log on Record!
                                                 </Button>
                                             </form>
+                                            <form action="/slimYB/goal/deleteRecord" method="post">
+                                                <Button class="btn btn-danger btn-user btn-block"
+                                                        id="delete-button" type="submit">
+                                                    DELETE RECORD
+                                                </Button>
+                                            </form>
 
                                         </div>
                                     </div>
@@ -1047,6 +1053,9 @@
 </script>
 
 <script>
-
-
+    if (${exist}) {
+        document.getElementById("delete-button").disabled = true;
+    } else {
+        document.getElementById("delete-button").disabled = false;
+    }
 </script>

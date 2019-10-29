@@ -27,6 +27,12 @@ public class ProgressRecordManager implements Serializable {
         currentSession.saveOrUpdate(record);
     }
 
+    public void deleteRecord() {
+        Session currentSession = this.sessionFactory.getCurrentSession();
+        int size = currentSession.createQuery("FROM ProgressRecord").list().size();
+        currentSession.delete(currentSession.createQuery("FROM ProgressRecord").list().get(size-1));
+    }
+
     public List<ProgressRecord> getAllRecord() {
         Session currentSession = this.sessionFactory.getCurrentSession();
         List<ProgressRecord> list = currentSession.createQuery("FROM ProgressRecord").list();

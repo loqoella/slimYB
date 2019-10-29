@@ -101,7 +101,7 @@ public class ProgressController {
             if (dates.size() > 10) {
                 dates = dates.subList(weights.size() - 10, weights.size());
             }
-
+            model.addAttribute("exist", true);
             model.addAttribute("progressWeights", weights);
             model.addAttribute("progressDates", dates);
             model.addAttribute("progressIntakes", intakes);
@@ -112,6 +112,7 @@ public class ProgressController {
             model.addAttribute("currentHip", currentHip);
             model.addAttribute("currentWaist", currentWaist);
         }
+        model.addAttribute("exist", false);
         return "progressViews/progress";
     }
 
@@ -188,6 +189,17 @@ public class ProgressController {
         model.addAttribute("now", formattedDate);
         model.addAttribute("title", "ProgressPage");
         System.out.println("added!=====================");
+        return "redirect:/goal";
+    }
+    @RequestMapping(value = "/deleteRecord", method = RequestMethod.POST)
+    public String deleteRecord(){
+        try {
+            progressRecordManager.deleteRecord();
+            System.out.println("delete=======================");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return "redirect:/goal";
     }
 
