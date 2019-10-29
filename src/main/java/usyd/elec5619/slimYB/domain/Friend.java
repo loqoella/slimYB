@@ -19,22 +19,23 @@ public class Friend implements Serializable {
 	private int id;
 	
 	@Column(name="Friends")
-	private String Friends;
+	private String friends;
 	
 	public int getId() {
 		return id;
 	}
 
 	public String getFriends() {
-		return Friends;
+		return friends;
 	}
 
 	public void setFriends(String friends) {
-		Friends = friends;
+		this.friends = friends;
 	}
 	
 	public void addFriend(String friend) {
-		Friends += " " + friend;
+		this.friends += " " + friend;
+		this.friends = this.friends.trim();
 	}
 	
 }

@@ -41,16 +41,17 @@ public class FriendManager implements Serializable {
 	}
 	
 	public void deleteFriend(int id, int friend) {
+		System.out.println(id + "......" + friend);
 		Session currentSession = this.sessionFactory.getCurrentSession();
 		Friend friends = (Friend) this.sessionFactory.getCurrentSession().get(Friend.class, id);
 		String friendList = friends.getFriends().trim();
 		int index = friendList.indexOf(String.valueOf(friend));  
-		String newFriendList = "";
+		String newFriendList = " ";
 		if(index != 0) {
-			newFriendList = friendList.substring(0, index - 1).trim();
+			newFriendList += friendList.substring(0, index - 1).trim();
 		}
-		if(index + String.valueOf(friend).length() + 2 < friendList.length())
-			newFriendList = newFriendList + " " + friendList.substring(index + 2);
+		if(index + String.valueOf(friend).length() + 2 <= friendList.length())
+			newFriendList += friendList.substring(index + 2);
 		friends.setFriends(newFriendList.trim());
 		currentSession.save(friends);
 	}

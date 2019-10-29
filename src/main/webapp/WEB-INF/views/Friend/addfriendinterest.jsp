@@ -52,7 +52,7 @@
 	    		<div class="form-inline align-items-center">
 				
 					<div class="form-check">
-						<input class="form-check-input" type="radio" name="gender" id="gender_male" value="male" checked>
+						<input class="form-check-input" type="radio" name="gender" id="gender_male" value="male">
 						<label class="form-check-label" for="gender_male">
 						    Male
 						</label>
@@ -71,33 +71,29 @@
 				<button class="btn btn-primary mt-4" type="submit">
                 	Search
            		</button>
-				<!-- <a type="search" class="btn btn-primary mt-4" href="/slimYB/friends/addfriendbygender?gender=male">Search</a> -->
-				<!-- <a type="search" class="btn btn-primary mt-4" onclick="search()">Search</a> -->
 			</form>
 		
 	      	<c:choose>
 			    <c:when test="${isShow}">
-			    <c:out value="${users}">
-			    </c:out>
-			    	<c:forEach items="${users}" var="user" varStatus="tagStatus">
-						<div id="card-239657">
-							<div class="card">
-								<div class="card-header">
+		    	<c:forEach items="${users}" var="user" varStatus="tagStatus">
+					<div id="card-239657">
+						<div class="card">
+							<div class="card-header">
+							
+								<div class="float-left">
+								 	<a class="card-link" data-toggle="collapse" data-parent="#card-239657" href="#card-element-975867"><c:out value="${user.getUsername()}"/></a>
+								</div>
 								
-									<div class="float-left">
-									 	<a class="card-link" data-toggle="collapse" data-parent="#card-239657" href="#card-element-975867"><c:out value="${user.getId()}"/></a>
-									</div>
-									
-									<div class="float-right">
-										<a href="/slimYB/friends/add?id=${user.getId()}" class="btn btn-outline-primary">
-									 			Add
-									 	</a>
-								 		<!-- <a id="modal-612657" href="#modal-container-612657" role="button" class="btn btn-outline-primary" data-toggle="modal">Add</a> -->
-									</div>
+								<div class="float-right">
+									<a href="/slimYB/friends/add?id=${user.getId()}" class="btn btn-outline-primary">
+								 			Add
+								 	</a>
+							 		<!-- <a id="modal-612657" href="#modal-container-612657" role="button" class="btn btn-outline-primary" data-toggle="modal">Add</a> -->
 								</div>
 							</div>
 						</div>
-					</c:forEach>
+					</div>
+				</c:forEach>
 			   </c:when>    
 			   <c:otherwise>
 			   </c:otherwise>

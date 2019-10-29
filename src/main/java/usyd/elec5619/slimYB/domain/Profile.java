@@ -20,6 +20,9 @@ public class Profile implements Serializable {
 	@Column(name="Username")
 	private String username;
 
+	@Column(name="Nickname")
+	private String nickname;
+
 	@Column(name="Email")
 	private String Email;
 
@@ -28,8 +31,7 @@ public class Profile implements Serializable {
 
 	@Column(name="Age")
 	private int Age;
-
-
+	
 	@Column(name="Gender")
 	private String Gender;
 
@@ -67,6 +69,14 @@ public class Profile implements Serializable {
 		this.username = username;
 	}
 
+	public String getNickname() {
+		return nickname;
+	}
+
+	public void setNickname(String nickname) {
+		System.out.println(nickname);
+		this.nickname = nickname;
+	}
 
 	public String getEmail() {
 		return Email;

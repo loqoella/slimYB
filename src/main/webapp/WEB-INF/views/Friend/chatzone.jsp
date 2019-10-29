@@ -27,73 +27,42 @@
 			</dl>
 			<br/>
 			<div class="row">
-				<div class="col-md-6">
-					<div class="row">
-						<div class="col-md-3">
-							<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" class="img-thumbnail">
-						</div>
-						<div class="col-md-6">
-							<dl>
-								<dt>
-									Emma Jing
-								</dt>
-							</dl>
-							<div class="row">
-								<div class="col-md-5">
-									<p>
-										23
-									</p>
-								</div>
-								<div class="col-md-7">
-									<p>
-										Famale
-									</p>
+				<c:forEach items="${friends}" var="friend" varStatus="tagStatus">
+					<div class="col-md-6">
+						<div class="row">
+							<div class="col-md-3">
+								<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" class="img-thumbnail">
+							</div>
+							<div class="col-md-6">
+								<dl>
+									<dt>
+										<c:out value="${friend.getUsername()}"/>
+										( <c:out value="${friend.getNickname()}"/> )
+									</dt>
+								</dl>
+								<div class="row">
+									<div class="col-md-5">
+										<p>
+											<c:out value="${friend.getAge()}"/>
+										</p>
+									</div>
+									<div class="col-md-7">
+										<p>
+											<c:out value="${friend.getGender()}"/>
+										</p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-3">
-						
-							 <a class="btn btn-outline-success" href="/slimYB/friends/chatzone/chatwithfriend">Chat</a>
-							 
-<!-- 						<button type="button" class="btn btn-outline-success" href="/slimYB/friends/chatzone/chatwithfriend">
-								Chat
-							</button> -->
-							
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="row">
-						<div class="col-md-3">
-							<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" class="img-thumbnail">
-						</div>
-						<div class="col-md-6">
-							<dl>
-								<dt>
-									Rene Guo
-								</dt>
-							</dl>
-							<div class="row">
-								<div class="col-md-5">
-									<p>
-										22
-									</p>
-								</div>
-								<div class="col-md-7">
-									<p>
-										Male
-									</p>
-								</div>
+							<div class="col-md-3">
+								<div class="float-right" style="margin-bottom: 15px">
+							 		<a href="/slimYB/friends/chatwithfriend" class="btn btn-primary align-items-center">
+							 			Chat
+							 		</a>
+								</div>							
 							</div>
 						</div>
-						<div class="col-md-3">
-							 
-							<button type="button" class="btn btn-outline-success">
-								Chat
-							</button>
-						</div>
 					</div>
-				</div>
+				</c:forEach>
 			</div>
 		</div>
 	</div>

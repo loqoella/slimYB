@@ -14,6 +14,8 @@ public class FriendManagerTest extends TestCase {
 	}
 	
 	public void testDeleteFriend() throws Exception {
+		
+		this.fm.addFriend(id, friend);
 		String[] now  = this.fm.getAllFriends(id);
 		//System.out.println(now);
 		this.fm.deleteFriend(id, friend);
@@ -21,6 +23,7 @@ public class FriendManagerTest extends TestCase {
 	}
 
 	public void testAddFriend() throws Exception {
+		this.fm.deleteFriend(id, friend);
 		String[] now = this.fm.getAllFriends(id);
 		this.fm.addFriend(id, friend);
 		assertEquals(now.length, this.fm.getAllFriends(id).length - 1);

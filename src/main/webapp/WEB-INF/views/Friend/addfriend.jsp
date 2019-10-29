@@ -43,15 +43,18 @@
 			</div>
 
 			<br/><br/>
-			
+			<form id="username_form" action="/slimYB/friends/addfriendbyusername?username" method="GET">
 			<div class="container h-100">
       			<div class="d-flex justify-content-center h-100">
 					<div class="searchbar">
-						<input class="search_input" type="text" name="" placeholder="Search...">
-						<a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-					</div>
+						<input class="search_input" type="text" name="username" placeholder="Search...">
+						<a type="submit">
+							<a class="search_icon"><i class="fas fa-search"></i></a>
+						</a>
+						</div>
 				</div>
 			</div>
+			</form>
 			
 			<br/><br/>
 			
@@ -61,7 +64,7 @@
 						<div class="card-header">
 						
 							<div class="float-left">
-							 	<a class="card-link" data-toggle="collapse" data-parent="#card-239657" href="#card-element-975867"><c:out value="${user.getId()}"/></a>
+							 	<a class="card-link" data-toggle="collapse" data-parent="#card-239657" href="#card-element-975867"><c:out value="${user.getUsername()}"/></a>
 							</div>
 							
 							<div class="float-right">
@@ -71,30 +74,29 @@
 							</div>
 						</div>
 						
-<%-- 						<div id="card-element-975867" class="collapse show">
-							<div class="card-body">
-								<div class="row">
-									<div class="col-md-3">
-										<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" class="img-thumbnail">
-									</div>
-									<div class="col-md-9">
-										<div class="row">
-											<div class="col-md-5">
-												<p>
-													<c:out value="${user.getAge()}"> </c:out>
-												</p>
-											</div>
-											<div class="col-md-7">
-												<p>
-													<c:out value="${user.getGender()}"> </c:out>
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> --%>
-						
+                            <div id="card-element-975867" class="collapse show">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" class="img-thumbnail">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>
+                              							<c:out value="${user.getAge()}"/>
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <p>
+                                                    	<c:out value="${user.getGender()}"/>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 					</div>
 				</div>
 			</c:forEach>

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.classic.Session;
 
 import usyd.elec5619.slimYB.domain.Profile;
@@ -44,7 +45,15 @@ public Profile getProfileByEmail(String Email)throws Exception {
 		Session currentSession = this.sessionFactory.getCurrentSession();
 		currentSession.update(p);
 	}
-		
+	
+	public void updateProfileNickname(int id, String newName) throws Exception{
+		this.sessionFactory.getCurrentSession()
+			.createQuery("update Profile set nickname  = :newName where Id = :id")
+			.setString( "newName", newName )
+	        .setInteger( "id", id )
+	        .executeUpdate();
+	}
+	
 
 	public Profile getProfileByGender(String gender) {
 		Profile q = (Profile) this.sessionFactory.getCurrentSession().get(Profile.class, gender);
@@ -61,4 +70,5 @@ public Profile getProfileByEmail(String Email)throws Exception {
 		Profile profile = (Profile)currentSession.get(Profile.class,id);
 		currentSession.delete(profile);
 	}
+	
 }
