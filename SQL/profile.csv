@@ -1,0 +1,7 @@
+Id,Age,BMI,Birthday,Bust,Email,Gender,Height,Hips,Waist,Weight,Nickname,Username
+1,22,1,12,1,123@123,male,1,1,1,1,tom,test1
+2,23,1,12,1,123@123,female,1,1,1,1,yy,test2
+3,24,1,12,1,123@123,male,1,1,1,1,li,test3
+4,25,1,12,1,123@123,female,1,1,1,1,nick111,test4
+5,26,1,12,1,NULL,male,1,1,1,1,zoe,test5
+6,27,1,12,1,123@123,female,1,1,1,1,ff,test6
